@@ -13,7 +13,7 @@ _Java_ ในภายหลังนั่นแหละ
 ## องค์ประกอบของเทคโนโลยีจาวา
 โดยองค์ประกอบหลักนั้นสามารถแบ่งได้ 3 ส่วนได้แก่
 1. JDK ( Java Development Kit ) / J2SDK ( Java 2 Software Development Kit ) : เป็นชุดพัฒนาโปรแกรมภาษาจาวา
-2. JRE ( Java Runtime Environment ) มีหน้าที่ในการประมวลผลโปรแกรม
+2. JRE ( Java Runtime Environment ) : มีหน้าที่ในการประมวลผลโปรแกรม
 3. JVM ( Java Virtual Machine ) : ทำหน้าที่เป็นอินเตอร์พรีตเตอร์
 
 ## ขั้นตอนการทำงาน
