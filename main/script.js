@@ -1,6 +1,6 @@
 function litpage() {
     let rp = document.getElementById("ii");
-    let trp = document.getElementById("static");
+    let trp = document.getElementById("staticback");
     let lp = document.getElementById("iii");
     if (rp.style.width == "40%") {
         rp.style.left = "100%";
@@ -10,12 +10,8 @@ function litpage() {
     }
     else {
         rp.style.width = "40%";
-        
+        trp.style.display = "block"
         lp.style.width = "58%";
     }
 
 } 
-
-function profile(){
-    
-}
