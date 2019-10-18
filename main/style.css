@@ -7,8 +7,8 @@
    
     height: 100%;
     width: 97%;
-    
-
+    background-image: url(../img/bg-4.jpg);
+    background-size: 100% 100%;
     position: relative;
     top: 0; /* required */
     border-style: solid;
@@ -37,6 +37,8 @@
 }
 
 #iibox{/* กล่องครอบii iii*/
+    background-image: url(../img/bg-6.jpg);
+    background-size: 100% 100%;
     height: 400%;
     width: 98%;
     left: 1%;
@@ -93,6 +95,8 @@
 }
 
 #iiii{
+    background-image: url(../img/bg-5.jpg);
+    background-size: 100% 100%;
     position: relative;
     height: 99.8%;
     width: 97%;
@@ -129,6 +133,8 @@
 }
 
 #contact{
+    background-image: url(../img/bg-7.jpg);
+    background-size: 100% 100%;
     position: relative;
     height: 40%;
     width: 98%;
@@ -272,7 +278,7 @@
 
     position: relative;
     left: 2%;
-    margin: 3%;
+    margin: 4%;
 }
 
 .staticicon{
@@ -280,7 +286,7 @@
     position: relative;
     height: 100%;
     width: 30%;
-    background-color: #bbb;
+    
 }
 
 .statictext{
