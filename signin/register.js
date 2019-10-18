@@ -6,18 +6,20 @@ function register() {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorCode, errorMessage)
+
+        if (errorCode == 'auth/email-already-in-use') {
+            alert("Email already registed");
+        }
     }).then(function (cred) {
         if (cred) {
             cred.user.updateProfile({
-                displayName: username
-            })
-            console.log("Success");
-            console.log(cred.user);
-            setTimeout(() => {
-                window.location.href="signin1.html"
-            }, 2000);
-        
+                displayName:username
+            }).then(function () {
+                if (cred.user.displayName != null)
+                    window.location.href = "signin1.html"
+            });
+
+
         }
     });
 
