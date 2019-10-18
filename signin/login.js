@@ -8,11 +8,14 @@ function loginEmail(){
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
           alert('Wrong password.');
-        } else {
-          alert(errorMessage);
+        } else if(errorCode === 'auth/user-not-found') {
+          alert('User not found');
         }
         
-      }).then(function(){
+      }).then(function(cred){
+          if(cred){
+
           window.location = "signin1.html";
+          }
       });
 }
