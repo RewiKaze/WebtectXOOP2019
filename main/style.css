@@ -14,8 +14,6 @@ body{
     background-size: 100% 100%;
     position: relative;
     top: 0; /* required */
-   
-     
 }
 
 .logo{
@@ -27,13 +25,16 @@ body{
     top: 95%;
     left: 50%;
     position: absolute;
+    
 }
 
 .logo img{
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
+    top: -4%;
+    left: -5%;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
 }
 
 #iibox{/* กล่องครอบii iii*/
@@ -321,4 +322,13 @@ body{
 .grid-item{
     height: auto;
     width: 100%;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
