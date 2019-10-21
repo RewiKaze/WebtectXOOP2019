@@ -1,5 +1,10 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(/rsufont/RSU_BOLD.ttf) format("truetype");
+ }
+
 * {
-    font-family: 'Krub', sans-serif;
+    font-family: 'myFirstFont', sans-serif;
 }
 
 
@@ -7,26 +12,25 @@
     position: fixed;
     height: 96%;
     width: 98%;
-    background-color: aliceblue;
+    
     top: 1%;
     left: 1%;
-    border-spacing: 1%;
-    border-style: solid;
+    
 }
 
 .desbutton{
-    top: 10%;
+    top: 3vw;
     left: 5%;
     margin: 3%;
-    height: 10%;
+    height: 10vw;
     width: 30%;
-    
-    background-color: rgb(240, 236, 191);
+    font-size: 3vw;
+    background-color: #ffffe0;
     position: relative;
 } 
 
 #start{
-    background-color: rgb(23, 216, 152);
+    background-color: #afeeee;
 }
 .center{
     transform: translate(-50%,-50%);
@@ -36,7 +40,7 @@
 }
 
 #contentBox {
-    top: 10%;
+    top: 5vw;
     left: 40%;
     position: absolute;
     height: 70%;
@@ -48,15 +52,15 @@
   
 #Content1 {
     display: block;
-    height: 800px;
-    width: 2000px;
-    background-color: rgb(245, 179, 242);
+    height: 10vw;
+    width: 10vw;
+    
 }
 #Content2 {
     display: none;
-    height: 800px;
-    width: 2000px;
-    background-color: rgb(245, 179, 242);
+    height: 10vw;
+    width: 10vw;
+
 
 }
 
@@ -65,9 +69,10 @@
     position: absolute;
     top: 85%;
     left: 12%;
-    height: 6%;
-    width: 20%;
-    background-color: rgb(138, 176, 209);
+    height: 6vw;
+    width: 25vw;
+    background-color: #c0c0c0;
+    text-align: center;
 }
 #next{
     position: absolute;
@@ -75,7 +80,7 @@
     left: 79%;
     height: 6%;
     width: 15%;
-    background-color: rgb(138, 176, 209);
+    background-color: #afeeee;
 }
 #back{
     position: absolute;
@@ -83,36 +88,36 @@
     left: 60%;
     height: 6%;
     width: 15%;
-    background-color: rgb(138, 176, 209);
+    background-color: #c0c0c0;
 }
 
 #next:hover{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    background-color: rgb(182, 228, 255);
+    
 }
 
 #back:hover{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    background-color: rgb(182, 228, 255);
+    
 }
 #db1:hover{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    background-color: rgb(182, 228, 255);
+   
 }
 
 #db2:hover{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    background-color: rgb(182, 228, 255);
+   
 }
 
 #db1:active{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+    
 }
 
 #db2:active{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+    
 }
 
 #next:active{
@@ -132,5 +137,13 @@
 
 #backtomain:hover{
     box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    background-color: rgb(182, 228, 255);
+    
+}
+
+#start:hover{
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
+}
+
+#start:active{
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
 }

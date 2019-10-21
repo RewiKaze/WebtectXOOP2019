@@ -7,13 +7,13 @@ function description(i){
         d1.style.display = "block";
         db1.style.backgroundColor = "gray";
         d2.style.display = "none";
-        db2.style.backgroundColor = "rgb(240, 236, 191)";
+        db2.style.backgroundColor = "#ffffe0";
         db1.style.boxShadow = "3px 5px 15px 3px rgb(46, 46, 46) inset";
         db2.style.boxShadow = "";
     }
     else{
         d1.style.display = "none";
-        db1.style.backgroundColor = "rgb(240, 236, 191)";
+        db1.style.backgroundColor = "#ffffe0";
         db2.style.boxShadow = "3px 5px 15px 3px rgb(46, 46, 46) inset";
         d2.style.display = "block";
         db2.style.backgroundColor = "gray";

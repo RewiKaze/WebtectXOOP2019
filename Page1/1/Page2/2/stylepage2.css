@@ -1,7 +1,11 @@
-* {
-    font-family: 'Krub', sans-serif;
-}
+@font-face {
+    font-family: myFirstFont;
+    src: url(/rsufont/RSU_BOLD.ttf) format("truetype");
+ }
 
+* {
+    font-family: 'myFirstFont', sans-serif;
+}
 body{
     padding: 0%;
     margin: 0%;
@@ -21,21 +25,22 @@ body{
 .title{
     position: relative;
     width: 100%;
-    height: 10%;
-    background-color: rgb(255, 255, 177);
+    height: 6vw;
+    background-color: #ffffe0;
 }
 
 #b{
     position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
+    transform: translate(-50%,-5vw);
+    top: 5vw;
     left: 50%;
-    font-size: 250%;
+    font-size: 4vw;
     color: #555;
+    width: 100vw;
 }
 
 #contentBox {
-    top: 10%;
+    top: 10vw;
     left: 5%;
     position: absolute;
     height: 70%;
@@ -46,7 +51,7 @@ body{
 }
 
 #Content1 {
-    
+    font-size: 2vw;
     height: 100%;
     width: 90%;
     margin: 5%;
@@ -56,7 +61,7 @@ body{
 #quiz{
     bottom: 0%;
     position: static;
-    font-size: 200%;
+    font-size: 2vw;
     height: 30%;
     width: 96%;
     border-style: solid;
@@ -67,7 +72,7 @@ body{
 #qq{
     bottom: 1%;
     position: static;
-    background-color: rgb(157, 244, 255);
+    background-color: #afeeee;
     height: 90%;
     width: 96%;
     opacity: 50%;
@@ -75,7 +80,7 @@ body{
 }
 
 #right {
-    top: 10%;
+    top: 10vw;
     right: 5%;
     position: absolute;
     height: 70%;
@@ -88,23 +93,35 @@ body{
 .bbb{
     display: inline-block;
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     right: 5%;
-    height: 5%;
+    height: 4vw;
     width: 15%;
     text-align: center;
-    font-size: 180%;
-    background-color: rgb(155, 255, 255);
+    font-size: 3vw;
+    background-color: #afeeee;
 }
 
 .bb{
     display: inline-block;
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     right: 25%;
-    height: 5%;
+    height: 4vw;
+    width: 15vw;
+    text-align: center;
+    font-size: 3vw;
+    background-color: rgb(111, 252, 170);
+}
+
+.b{
+    display: inline-block;
+    position: absolute;
+    bottom: 4%;
+    left: 5vw;
+    height: 4vw;
     width: 15%;
     text-align: center;
-    font-size: 180%;
-    background-color: rgb(111, 252, 170);
+    font-size: 3vw;
+    background-color: #c0c0c0;
 }
