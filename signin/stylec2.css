@@ -1,5 +1,24 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(/rsufont/RSU_BOLD.ttf) format("truetype");
+ }
+
 * {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'myFirstFont', sans-serif;
+}
+
+body{
+    background-image: url(../img/bg-3.jpg);
+    background-size: 100vw auto;
+}
+
+.profile{
+    font-size: 6vw;
+    color: #575757;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 15%;
 }
 
 .back{
@@ -7,14 +26,14 @@
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    height: 70%;
-    width: 80%;
-    background-color: rgb(255, 255, 167);
+    height: 40vw;
+    width: 70vw;
+    background-color: #ffffe0;
 }
 
 .container-fluid{
     height: 100%;
-    width: 100%;
+    width: 100vw;
 }
 
 .row{
@@ -26,8 +45,8 @@
     height: 10%;
 }
 .pic1{
-    height: 300px;
-    width: 300px;
+    height: 20vw;
+    width: 20vw;
     background-color: aliceblue;
     position: absolute;
     transform: translate(-50%,0%);
@@ -37,37 +56,101 @@
 }
 
 .choose{
-    height: 40px;
-    width: 200px;
-    background-color: rgb(155, 252, 255);
+    height: 3vw;
+    width: 20vw;
+    background-color: #afeeee;
     border-radius: 10px;
-    font-size: 200%;
+    font-size: 2vw;
+    text-align: center;
     position: absolute;
     color: white;
     transform: translate(-50%,0);
-    top: 80%;
+    top: 70%;
     left: 50%;
 }
 
 .input{
-    width: 400px;
-    height: 50px;
+    width: 25vw;
+    height:3vw;
+    
 }
 
 .center1{
     position: relative;
     transform: translate(-50%,-50%);
     top: 50%;
-    left: 50%;
+    left: 30%;
     height: 50%;
     width: 50%;
 }
 
-@media screen and (max-width: 800px) and (min-width:400px){
+.bi{
+    border-radius: 10px;
+    width: 15vw;
+    height: 4vw;
+    background-color: rgb(255, 137, 210);
+    font-size: 3vw;
+}
+
+.bii{
+    border-radius: 10px;
+    width: 15vw;
+    height: 4vw;
+    background-color: #c0c0c0;
+    font-size: 3vw;
+}
+
+.biii{
+    font-size: 3vw;
+    border-radius: 10px;
+    width: 15vw;
+    height: 4vw;
+    background-color: rgb(137, 255, 200);
+}
+@media screen and (max-width: 600px) {
     b{
+        font-size: 3vw;
         position: relative;
         transform: translate(-50%,0);
         left: 50%;
         top: 50%;
+    }
+    p{
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width:400px){
+    .back{
+        height: 60%;
+        top: 50%;
+    }
+    .row{
+        width: 120%;
+    }
+    .choose{
+        top: 200%;
+    }
+    .pic1{
+        height: 40vw;
+        width: 40vw;
+    }
+    .center1{
+        top: 70%;
+        left: 50%;
+        margin: 0;
+    }
+    b{
+        font-size: 3vw;
+        position: relative;
+        transform: translate(-50%,0);
+        left: 40%;
+        top: 50%;
+    }
+    p{
+        font-size: 1vw;
+    }
+    .input{
+        width: 35vw;
     }
 }
