@@ -66,6 +66,7 @@ body {
     border-spacing: 2%;
     display: block;
     z-index: 1;
+    right: 0vw;
 }
 
 .ii{
@@ -107,10 +108,10 @@ body {
 
 #lit {
     transform: translate(-50%, -50%);
-    height: 5%;
-    width: 10%;
+    height: 5vw;
+    width: 5vw;
     background-image: url(../img/icon/litbutton.png);
-    background-size: 100vw auto;
+    background-size: 5vw 5vw;
     position: absolute;
     top: 50%;
     right: 90%;
