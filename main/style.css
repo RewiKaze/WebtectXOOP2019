@@ -252,8 +252,11 @@ body {
 
 .cenbut p {
     font-size: 2vw;
-    position: absolute;
+    
     left: 20%;
+    padding-left: 20%;
+    padding-top: 2%;
+    text-align: left;
 }
 
 .desbutton {
