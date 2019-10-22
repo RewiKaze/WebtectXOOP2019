@@ -60,7 +60,7 @@ body{
     opacity: 0.5;
     filter: alpha(opacity=50);
     height: 25%;
-    width: 40%;
+    width: 40vw;
     border-color: rgb(189, 189, 189);
     border-style: dotted;
     border-spacing: 2%;
@@ -94,13 +94,13 @@ body{
     transform: translate(-50%, -50%) ; 
     height: 5%;
     width: 10%;
-    background-color: rgb(255, 242, 127);
+    background-image: url(../img/icon/litbutton.png);
+    background-size: 100vw auto;
     position: absolute;
     top: 50%;
     right: 90%;
     display: block;
-    border-style: solid;
-    border-color: blueviolet;
+    
 }
 
 #iiii{
