@@ -4,10 +4,13 @@ body{
 * {
     font-family: 'Krub', sans-serif;
 }
+.setFont{
+    font-size: 20px !important;
+    align-content: center;
+    margin: auto;
+}
 
 #i{
-    
-   
     height: 100%;
     width: 100%;
     background-image: url(../img/bg-4.jpg);
@@ -53,7 +56,9 @@ body{
     position: -webkit-sticky;
     position: sticky;
     top: 0%;
-    
+    background-color: #ffffff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
     height: 25%;
     width: 40%;
     border-color: rgb(189, 189, 189);
@@ -64,6 +69,10 @@ body{
    
     
     z-index: 1;
+}
+#ii:hover{
+    opacity: 1.0;
+    filter: alpha(opacity=100);
 }
 #iii{
     position: absolute;
@@ -249,7 +258,7 @@ body{
     position: absolute;
     bottom: 10%;
     height: 10%;
-    width: 40%;
+    width: 45%;
     border-style: dotted;
     border-radius: 20px;
     border-color: rgb(189, 189, 189);
