@@ -366,3 +366,8 @@ body {
     font-size:160%;
     cursor: pointer;
 }
+
+#gospan:hover{
+    box-shadow: 5px 5px grey ;
+    cursor : pointer;
+}
