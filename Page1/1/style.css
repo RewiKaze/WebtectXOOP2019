@@ -53,13 +53,13 @@
 #Content1 {
     display: block;
     height: 10vw;
-    width: 10vw;
+    width: 100%;
     
 }
 #Content2 {
     display: none;
     height: 10vw;
-    width: 10vw;
+    width: 100%;
 
 
 }
