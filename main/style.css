@@ -68,6 +68,25 @@ body {
     z-index: 1;
 }
 
+.ii{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    background-color: #ffffff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    height: 25%;
+    width: 40vw;
+    border-color: rgb(189, 189, 189);
+    border-style: dotted;
+    border-spacing: 2%;
+    display: block;
+    
+   
+    
+    z-index: 1;
+}
+
 #ii:hover {
     opacity: 1.0;
     filter: alpha(opacity=100);
