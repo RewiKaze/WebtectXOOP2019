@@ -1,6 +1,6 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(/rsufont/RSU_BOLD.ttf) format("truetype");
+    src: url(../../../../rsufont/RSU_BOLD.ttf) format("truetype");
  }
 
 * {
