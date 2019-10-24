@@ -1,0 +1,87 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(rsufont/RSU_BOLD.ttf) format("truetype");
+ }
+
+* {
+    font-family: 'myFirstFont', sans-serif;
+}
+body{
+    background-color: white;
+    margin: 3%;
+}
+#logo{
+    width: 55%;
+    height: auto;
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+#header{
+    background-color: rgb(255,127,92);
+    border-radius: 25px;
+    height: 70vh;
+    margin-bottom: 5vw;
+}
+#headercontent{
+    margin-top: 5%;
+    height: auto;
+}
+#logocontent{
+    font-size: 8vw;
+    color: rgb(102,102,102);
+}
+#menu{
+    margin-top: 1vw;
+}
+#description{
+    
+}
+#description-head{
+    background-color: rgb(176,237,238);
+    border-radius: 25px;
+    height: 30vh;
+    width: auto;
+    margin-bottom: 5vw;
+}
+#description-head-content{
+    color: rgb(102,102,102);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: 50%;
+}
+#description-content{
+    background-color: rgb(176,237,238);
+    border-radius: 25px;
+    height: 30vh;
+    width: auto;
+    margin-bottom: 5vw;
+}
+#description-content-content{
+    color: rgb(102,102,102);
+    text-align: center;
+    margin: auto;
+}
+#howtolearn{
+    border: 2px solid rgb(102,102,102);
+    color: rgb(102,102,102);
+    border-radius: 20px;
+    text-align: center;
+    width: auto;
+    font-size: 2vw;
+}
