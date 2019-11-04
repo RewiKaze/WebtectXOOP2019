@@ -1,0 +1,44 @@
+#titlebox{
+    
+    width: 96vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+   
+}
+
+#titlename{
+    font-size: 3.5rem;
+}
+
+#titlename p{
+    margin: 0;
+    color: #6a6a6a;
+}
+
+#signupbutton{
+    text-align: center;
+    margin: 1vw;
+    padding-top: 0vh;
+    padding-left: 0vw;
+    border-radius: 50px;
+    border-style: solid;
+    font-size: 2rem;
+    color: #6a6a6a;
+}
+
+#signinbutton{
+    text-align: center;
+    margin: 1vw;
+    padding-top: 0vh;
+    padding-left: 0vw;
+    font-size: 2rem;
+    color: #6a6a6a;
+}
+
+@media (min-width:200px){
+}
+@media (max-width:767px){
+    #titlename p{
+        text-align: center;
+    }
+}

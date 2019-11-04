@@ -1,0 +1,51 @@
+#description{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 96vw;
+    background-color: #ffffe0;
+    text-align: center;
+    padding: 0;
+}
+
+#descriptionbox{
+    height: 60vh;
+    width: 66vw;
+    border-style: dotted;
+    margin: 0;
+    padding: 0;
+    margin-left: 15vw;
+    border-radius: 50px;
+    position: relative;
+}
+
+.col-12{
+    padding: 0;
+}
+
+#descriptionbutton{
+    height: 7vh;
+    width: 20vw;
+    padding: 1vh;
+    background-color: #afeeee;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    
+    position: absolute;
+    bottom: 2vh;
+    transform: translate(-50%,0);
+    left: 50%;
+}
+
+@media (max-width: 584px){
+    #descriptionbox{
+        width: 76vw;
+        margin-left: 10vw;
+    }
+}
+
+@media (max-width: 700px){
+    #descriptionbutton{
+        width: 45vw;
+    }
+}

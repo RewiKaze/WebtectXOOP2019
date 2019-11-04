@@ -1,0 +1,105 @@
+#popup2{
+    margin-left: 0vw;
+    width: 96vw;
+    height: 100vh;
+    background-color: #dbdb1e;
+    position: fixed;
+}
+
+#popup2 .col-12{
+    
+    height: 10vh;
+    background-color: #afeeee;
+}
+
+.modal-footer{
+     padding: 0;
+     padding-bottom: 1%;
+}
+
+.close{
+    position: absolute;
+    right: 3%;
+    top: 6%;
+} 
+.close mark{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: rgb(216, 87, 87);
+}
+
+#howtolearnhead{
+    background-color: #afeeee;
+    text-align: center;
+    margin: 0;
+}
+
+#howtolearnhead h4{
+    font-size: 2rem;
+}
+
+
+#howtolearnicon{
+    height: 40vh;
+    margin: 0;
+    background-color: #ffffe0;
+}
+
+#howtolearnicon img{
+    width: 100%;
+}
+
+#howtolearnicon div{
+    text-align: center;
+}
+
+#howtolearnicon h6{
+    margin-top: 3vh;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 400px){
+    #howtolearnicon{
+        height: 50vh;
+    }
+   
+}
+
+@media (max-width: 575px){
+    #howtolearnicon{
+        height: 60vh;
+    }
+    #howtolearnicon div{
+        padding: 0vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 2vh;
+    }
+
+}
+
+@media (max-width: 991px){
+    #howtolearnicon{
+        height: 30vh;
+    }
+    #howtolearnicon div{
+        padding: 0vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-top: 2vh;
+    }
+}
+
+@media (min-width: 992px){
+    #howtolearnicon{
+        height: 40vh;
+    }
+    #howtolearnicon div{
+        padding: 0vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 2vh;
+    }
+    
+}

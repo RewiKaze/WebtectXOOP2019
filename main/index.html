@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="firststyle.css" />
+    <link rel="stylesheet" href="description.css">
+    <link rel="stylesheet" href="scrolldown.css">
+    <link rel="stylesheet" href="titlebox.css">
+    <link rel="stylesheet" href="popup.css">
+    <title>Planet</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="titlebox" class="row"><!-- title bar -->
+            <div id="titlename" class="col-md-7">
+                <p>Study Planet</p>
+            </div>
+            <div id="signinbox" class="col-md-2">
+                <div id="signinbutton">Sign in</div>
+            </div>
+            <div id="signupbox" class="col-md-3">
+                <div id="signupbutton">Sign up</div>
+            </div>
+        </div>
+
+
+        <div id="firstBox" class="row rounded">
+            <!-- first -->
+            <div class="col-md-6 col-lg-6 col-xl-5">
+                <img src="../img/logo.png" class="rounded float-right img-fluid" alt="Chania" id="logoimg">
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-7">
+                <h1 id="webname">Study <mark>Planet</mark></h1>
+                <h3 id="title">เว็บเรียนรู้การเขียนโปรแกรมด้วยภาษา JAVA</h3>
+            </div>
+        </div>
+
+        <div id="scrolldown" class="row">
+            <div class="col-6" id="scroll">
+                <p class=" border-top-0 border-left-0 border-right-0">Scroll</p>
+            </div>
+            <img src="../img/icon/sunny (1).png" id="sunny"> 
+            <div class="col-6" id="down">
+                <p class="border-top-0 border-left-0 border-right-0">Down</p>
+            </div>
+        </div>
+
+        <div id="description" class="row">
+            <h1 class="col-12">D e s c r i p t i o n</h1>
+            <div class="col-12">
+                <div  id="descriptionbox">
+                    <div id="descriptionbutton"  data-toggle="modal" data-target="#myModal">
+                        How To Learn
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade " id="myModal">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content ">
+              
+                <!-- Modal Header -->
+                <div id="howtolearnhead" class="modal-header row">
+                  <h4 class="modal-title col-12">วิธีการใช้งานเว็บไซต์</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal"><mark>X</mark></button>
+                
+                <!-- Modal body -->
+                <div class="modal-footer">
+                <div id="howtolearnicon" class="row ">
+                <div class="modal-body col-3">
+                    <img src="../img/icon/login (1).png" alt="">
+                    <h6>สร้างแอคเคาท์</h6>
+                </div>
+                <div class="modal-body col-3">
+                    <img src="../img/icon/contacts.png" alt="">
+                    <h6>สร้างโปร์ไฟล์</h6>
+                </div>
+                <div class="modal-body col-3">
+                    <img src="../img/icon/email.png" alt="">
+                    <h6>เริ่มเรียนได้</h6>
+                </div>
+                <div class="modal-body col-3">
+                    <img src="../img/icon/caution.png" alt="">
+                    <h6>ทำ Quiz เพื่อทดสอบท้ายบท</h6>
+                </div>
+                </div>
+                
+                <!-- Modal footer -->
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+    
+</body>
+
+</html>
