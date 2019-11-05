@@ -1,0 +1,22 @@
+#copyright img{
+    width: 5%;
+}
+
+
+
+@media (min-width:320px){
+    #copyright{
+        padding: 0;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        width: 96vw;
+        padding-bottom: 1.5vh;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px){
+    #copyright{
+        font-size: 2rem;
+    }
+}
