@@ -30,7 +30,6 @@ body{
   height: 45vh;
   width: auto;
   margin-top: 25vh;
-  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
   animation: logojump 2s infinite;
 }
 
@@ -82,9 +81,9 @@ body{
   }
   
   @keyframes logojump {
-    from {margin-top: 5vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
-    50% {margin-top: 0vh;margin-bottom:  10vh; filter: drop-shadow(0 5vh 0.75rem rgb(0, 0, 0));}
-    to {margin-top: 5vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
+    from {margin-top: 5vh;margin-bottom: 5vh;}
+    50% {margin-top: 0vh;margin-bottom:  10vh;}
+    to {margin-top: 5vh;margin-bottom: 5vh;}
   }
 }
 
@@ -95,9 +94,9 @@ body{
     height: auto;
   }
   @keyframes logojump {
-    from {margin-top: 5vh;margin-bottom: 0vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
-    50% {margin-top: 0vh;margin-bottom:  5vh; filter: drop-shadow(0 5vh 0.75rem rgb(0, 0, 0));}
-    to {margin-top: 5vh;margin-bottom: 0vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
+    from {margin-top: 5vh;margin-bottom: 0vh;}
+    50% {margin-top: 0vh;margin-bottom:  5vh;}
+    to {margin-top: 5vh;margin-bottom: 0vh;}
   }
 }
 
@@ -119,9 +118,9 @@ body{
     text-align: center;
   }
   @keyframes logojump {
-    from {margin-top: 20vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
-    50% {margin-top: 15vh;margin-bottom:  10vh; filter: drop-shadow(0 5vh 0.75rem rgb(0, 0, 0));}
-    to {margin-top: 20vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
+    from {margin-top: 20vh;margin-bottom: 5vh;}
+    50% {margin-top: 15vh;margin-bottom:  10vh;}
+    to {margin-top: 20vh;margin-bottom: 5vh;}
   }
 }
 
@@ -141,9 +140,9 @@ body{
     text-align: center;
   }
   @keyframes logojump {
-    from {margin-top: 20vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
-    50% {margin-top: 15vh;margin-bottom:  10vh; filter: drop-shadow(0 5vh 0.75rem rgb(0, 0, 0));}
-    to {margin-top: 20vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
+    from {margin-top: 20vh;margin-bottom: 5vh;}
+    50% {margin-top: 15vh;margin-bottom:  10vh;}
+    to {margin-top: 20vh;margin-bottom: 5vh;}
   }
 }
 
@@ -165,9 +164,9 @@ body{
     text-align: left;
   }
   @keyframes logojump {
-    from {margin-top: 15vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
-    50% {margin-top: 10vh;margin-bottom:  10vh; filter: drop-shadow(0 5vh 0.75rem rgb(0, 0, 0));}
-    to {margin-top: 15vh;margin-bottom: 5vh; filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));}
+    from {margin-top: 15vh;margin-bottom: 5vh;}
+    50% {margin-top: 10vh;margin-bottom:  10vh;}
+    to {margin-top: 15vh;margin-bottom: 5vh;}
   }
 }
 

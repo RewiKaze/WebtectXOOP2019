@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="scrolldown.css">
     <link rel="stylesheet" href="titlebox.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="category.css">
     <title>Planet</title>
 </head>
 
 <body>
     <div class="container">
-        <div id="titlebox" class="row"><!-- title bar -->
+        <div id="titlebox" class="row">
+            <!-- title bar -->
             <div id="titlename" class="col-md-7">
                 <p>Study Planet</p>
             </div>
@@ -32,7 +34,7 @@
 
 
         <div id="firstBox" class="row rounded">
-            <!-- first -->
+            <!-- firstpage -->
             <div class="col-md-6 col-lg-6 col-xl-5">
                 <img src="../img/logo.png" class="rounded float-right img-fluid" alt="Chania" id="logoimg">
             </div>
@@ -43,20 +45,22 @@
         </div>
 
         <div id="scrolldown" class="row">
+            <!-- scroll down -->
             <div class="col-6" id="scroll">
                 <p class=" border-top-0 border-left-0 border-right-0">Scroll</p>
             </div>
-            <img src="../img/icon/sunny (1).png" id="sunny"> 
+            <img src="../img/icon/sunny (1).png" id="sunny">
             <div class="col-6" id="down">
                 <p class="border-top-0 border-left-0 border-right-0">Down</p>
             </div>
         </div>
 
         <div id="description" class="row">
+            <!-- descriptionBox and HowtolearnButton -->
             <h1 class="col-12">D e s c r i p t i o n</h1>
             <div class="col-12">
-                <div  id="descriptionbox">
-                    <div id="descriptionbutton"  data-toggle="modal" data-target="#myModal">
+                <div id="descriptionbox">
+                    <div id="descriptionbutton" data-toggle="modal" data-target="#myModal">
                         How To Learn
                     </div>
                 </div>
@@ -64,44 +68,182 @@
         </div>
 
         <div class="modal fade " id="myModal">
+            <!-- popUp 2 -->
             <div class="modal-dialog modal-xl">
-              <div class="modal-content ">
-              
-                <!-- Modal Header -->
-                <div id="howtolearnhead" class="modal-header row">
-                  <h4 class="modal-title col-12">วิธีการใช้งานเว็บไซต์</h4>
+                <div class="modal-content ">
+
+                    <!-- Modal Header -->
+                    <div id="howtolearnhead" class="modal-header row">
+                        <h4 class="modal-title col-12">วิธีการใช้งานเว็บไซต์</h4>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal"><mark>X</mark></button>
+
+                    <!-- Modal body -->
+                    <div class="modal-footer">
+                        <div id="howtolearnicon" class="row ">
+                            <div class="modal-body col-3">
+                                <img src="../img/icon/login (1).png" alt="">
+                                <h6>สร้างแอคเคาท์</h6>
+                            </div>
+                            <div class="modal-body col-3">
+                                <img src="../img/icon/contacts.png" alt="">
+                                <h6>สร้างโปร์ไฟล์</h6>
+                            </div>
+                            <div class="modal-body col-3">
+                                <img src="../img/icon/email.png" alt="">
+                                <h6>เริ่มเรียนได้</h6>
+                            </div>
+                            <div class="modal-body col-3">
+                                <img src="../img/icon/caution.png" alt="">
+                                <h6>ทำ Quiz เพื่อทดสอบท้ายบท</h6>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer ขอบล่างให้fade มลๆ -->
+                    </div>
+
                 </div>
-                <button type="button" class="close" data-dismiss="modal"><mark>X</mark></button>
-                
-                <!-- Modal body -->
-                <div class="modal-footer">
-                <div id="howtolearnicon" class="row ">
-                <div class="modal-body col-3">
-                    <img src="../img/icon/login (1).png" alt="">
-                    <h6>สร้างแอคเคาท์</h6>
-                </div>
-                <div class="modal-body col-3">
-                    <img src="../img/icon/contacts.png" alt="">
-                    <h6>สร้างโปร์ไฟล์</h6>
-                </div>
-                <div class="modal-body col-3">
-                    <img src="../img/icon/email.png" alt="">
-                    <h6>เริ่มเรียนได้</h6>
-                </div>
-                <div class="modal-body col-3">
-                    <img src="../img/icon/caution.png" alt="">
-                    <h6>ทำ Quiz เพื่อทดสอบท้ายบท</h6>
-                </div>
-                </div>
-                
-                <!-- Modal footer -->
-                </div>
-                
-              </div>
             </div>
-          </div>
-    </div>
+        </div>
+
+        <div id="backgroundcategorytitle">
+            <div id="categorytitle">
+                <h1>C A T E G O R Y</h1>
+            </div>
+        </div>
+
+        <div class="row even">
+            <div id="evenleft" class="col-8">
+                <h1>หัวข้อบทที่ 1</h1>
+                <h5>คำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรย</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <div id="golesson">
+                            เข้าสู่บทเรียน
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="lessons" data-toggle="modal" data-target="#popup1">
+                            บทเรียนย่อย
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="../img/icon/bulb.png" alt="">
+            </div>
+        </div>
+
+        <div class="row old">
+            <div class="col-4">
+                <img src="../img/icon/full-moon.png" alt="">
+            </div>
+            <div id="evenleft" class="col-8">
+                <h1 class="text-right">หัวข้อบทที่ 2</h1>
+                <h5 class="text-right">คำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรยคำโปรย</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <div id="golesson">
+                            เข้าสู่บทเรียน
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="lessons" data-toggle="modal" data-target="#popup2">
+                            บทเรียนย่อย
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="modal fade " id="popup1">
+            <!-- popUp 1 -->
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content ">
+
+                    <!-- Modal Header -->
+                    <div id="lessonshead" class="modal-header row">
+                        <h4 class="modal-title col-12">หัวข้อบทที่ 1</h4>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal"><mark>X</mark></button>
+
+                    <!-- Modal body -->
+
+                    <div id="lessonsnumber" class="row ">
+                        <div class="modal-body col-12">
+
+                            <h6>1. หัวข้อ 1</h6>
+                        </div>
+                        <div class="modal-body col-12">
+
+                            <h6>2. หัวข้อ 2</h6>
+                        </div>
+                        <div class="modal-body col-12">
+                            <h6>3. หัวข้อ 3</h6>
+                        </div>
+                        <div class="modal-body col-12">
+
+                            <h6>4. หัวข้อ 4</h6>
+                        </div>
+                        <div class="modal-body col-12">
+                            <h6>5. หัวข้อ 5</h6>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+
+                    <!-- Modal footer ขอบล่างให้fade มลๆ -->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade " id="popup2">
+                <!-- popUp 1 -->
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content ">
     
+                        <!-- Modal Header -->
+                        <div id="lessonshead" class="modal-header row">
+                            <h4 class="modal-title col-12">หัวข้อบทที่ 2</h4>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal"><mark>X</mark></button>
+    
+                        <!-- Modal body -->
+    
+                        <div id="lessonsnumber" class="row ">
+                            <div class="modal-body col-12">
+    
+                                <h6>1. หัวข้อ 1</h6>
+                            </div>
+                            <div class="modal-body col-12">
+    
+                                <h6>2. หัวข้อ 2</h6>
+                            </div>
+                            <div class="modal-body col-12">
+                                <h6>3. หัวข้อ 3</h6>
+                            </div>
+                            <div class="modal-body col-12">
+    
+                                <h6>4. หัวข้อ 4</h6>
+                            </div>
+                            <div class="modal-body col-12">
+                                <h6>5. หัวข้อ 5</h6>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+    
+                        <!-- Modal footer ขอบล่างให้fade มลๆ -->
+                    </div>
+    
+                </div>
+            </div>
+    </div>
+    </div>
+
 </body>
 
 </html>

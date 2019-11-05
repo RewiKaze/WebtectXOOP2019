@@ -1,0 +1,330 @@
+#backgroundcategorytitle{
+    height: 20vh;
+    width: 96vw;
+    background-color: #ffffe0;
+    padding-left: 8vw;
+    padding-top: 6vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#categorytitle{
+    width: 80vw;
+    background-color: #afeeee;
+    text-align: center;
+    padding: 1vh;
+    font-size: 4rem;
+    color: #6a6a6a;
+}
+
+.even img{
+    width: 100%;
+}
+
+#evenleft h1{
+    font-size: 4rem;
+}
+
+#evenleft h5{
+    font-size: 2rem;
+}
+
+.even{
+    height: 70vh;
+    width: 96vw;
+    background-color: #ffffe0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 5vh;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.even #golesson{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-left: 0;
+    background-color: #afeeee;
+    font-size: 2rem;
+}
+
+.even #lessons{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0.5vw;
+    font-size: 2rem;
+}
+@media (max-width:420px){
+    .even .col-6{
+        padding: 0;
+    }
+    .even .col-4{
+        padding: 0;
+    }
+    .even #golesson{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1vw;
+        margin-left: 0;
+        background-color: #afeeee;
+        font-size: 0.5rem;
+    }
+    
+    .even #lessons{
+        text-align: center;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 1vw;
+        font-size: 0.5rem;
+    }
+    #evenleft h1{
+        font-size: 2rem;
+    }
+    
+    #evenleft h5{
+        font-size: 0.75rem;
+    }
+    
+    .even{
+        height: 40vh;
+        width: 96vw;
+        background-color: #ffffe0;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+@media (max-width:768px){
+    .even #golesson{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1vw;
+        margin-left: 0;
+        background-color: #afeeee;
+        font-size: 1rem;
+    }
+    
+    .even #lessons{
+        text-align: center;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 0.5vw;
+        font-size: 1rem;
+    }
+    #evenleft h1{
+        font-size: 2rem;
+    }
+    
+    #evenleft h5{
+        font-size: 0.75rem;
+    }
+    
+    .even{
+        height: 40vh;
+        width: 96vw;
+        background-color: #ffffe0;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+
+@media (min-width:1200px){
+
+.even img{
+    width: 100%;
+}
+
+#evenleft h1{
+    font-size: 4rem;
+}
+
+#evenleft h5{
+    font-size: 2rem;
+}
+
+.even{
+    height: 70vh;
+    width: 96vw;
+    background-color: #ffffe0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.even #golesson{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-left: 0;
+    background-color: #afeeee;
+    font-size: 2rem;
+}
+.even #lessons{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0.5vw;
+    font-size: 2rem;
+}
+}
+
+
+/* odl */
+
+
+.old img{
+    width: 100%;
+}
+
+#evenleft h1{
+    font-size: 4rem;
+}
+
+#evenleft h5{
+    font-size: 2rem;
+}
+
+.old{
+    height: 70vh;
+    width: 96vw;
+    background-color: #afeeee;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 5vh;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.old #golesson{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-left: 0;
+    background-color: orange;
+    font-size: 2rem;
+}
+
+.old #lessons{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0.5vw;
+    font-size: 2rem;
+}
+@media (max-width:420px){
+    .old .col-6{
+        padding: 0;
+    }
+    .old .col-4{
+        padding: 0;
+    }
+    .old #golesson{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1vw;
+        margin-left: 0;
+        font-size: 0.5rem;
+    }
+    
+    .old #lessons{
+        text-align: center;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 1vw;
+        font-size: 0.5rem;
+    }
+    #evenleft h1{
+        font-size: 2rem;
+    }
+    
+    #evenleft h5{
+        font-size: 0.75rem;
+    }
+    
+    .old{
+        height: 40vh;
+        width: 96vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+@media (max-width:768px){
+    .old #golesson{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1vw;
+        margin-left: 0;
+        font-size: 1rem;
+    }
+    
+    .old #lessons{
+        text-align: center;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 0.5vw;
+        font-size: 1rem;
+    }
+    #evenleft h1{
+        font-size: 2rem;
+    }
+    
+    #evenleft h5{
+        font-size: 0.75rem;
+    }
+    
+    .old{
+        height: 40vh;
+        width: 96vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
+
+@media (min-width:1200px){
+
+.old img{
+    width: 100%;
+}
+
+#evenleft h1{
+    font-size: 4rem;
+}
+
+#evenleft h5{
+    font-size: 2rem;
+}
+
+.old{
+    height: 70vh;
+    width: 96vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.old #golesson{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-left: 0;
+    font-size: 2rem;
+}
+.old #lessons{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0.5vw;
+    font-size: 2rem;
+}
+}

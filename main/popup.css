@@ -1,20 +1,8 @@
-#popup2{
-    margin-left: 0vw;
-    width: 96vw;
-    height: 100vh;
-    background-color: #dbdb1e;
-    position: fixed;
-}
-
-#popup2 .col-12{
-    
-    height: 10vh;
-    background-color: #afeeee;
-}
 
 .modal-footer{
      padding: 0;
      padding-bottom: 1%;
+     background-color: #ffffe0;
 }
 
 .close{
@@ -102,4 +90,43 @@
         padding-top: 2vh;
     }
     
+}
+
+/* popup1 */
+
+#lessonshead{
+    background-color: #ffffe0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+#lessonshead h4{
+    font-size: 3.5rem;
+}
+
+#lessonsnumber .col-12{
+    text-align: center;
+    
+}
+
+#lessonsnumber h6{
+    background-color: #afeeee;
+    padding: 0;
+    margin: 0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    font-size: 2rem;
+}
+
+#lessonsnumber{
+    padding: 0;
+    padding-bottom: 5%;
+    width: 100%;
+    margin-left: 0%;
+    background-color: #ffffe0;
+
 }

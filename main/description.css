@@ -9,11 +9,11 @@
 
 #descriptionbox{
     height: 60vh;
-    width: 66vw;
+    width: 80vw;
     border-style: dotted;
     margin: 0;
     padding: 0;
-    margin-left: 15vw;
+    margin-left: 8vw;
     border-radius: 50px;
     position: relative;
 }
