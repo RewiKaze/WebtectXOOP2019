@@ -12,10 +12,17 @@
     width: 80vw;
     border-style: dotted;
     margin: 0;
-    padding: 0;
+    padding: 1.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 4vh;
     margin-left: 8vw;
     border-radius: 50px;
     position: relative;
+}
+
+#descriptionbox h3{
+    font-size: 2rem;
 }
 
 .col-12{
@@ -52,5 +59,8 @@
 @media (max-width: 700px){
     #descriptionbutton{
         width: 45vw;
+    }
+    #descriptionbox h3{
+        font-size: 1rem;
     }
 }
