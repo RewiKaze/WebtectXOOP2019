@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+  
+body{
+    font-family: RSU;
+}
+  
+
+@font-face{
+    font-family: RSU;
+    src: url(../rsufont/RSU_BOLD.ttf) format(truetype);
+}
+
+.container-fluid{
+    padding-top: 1vh;
+    background-image: url(../img/bg-3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    padding-bottom: 2vh;
+}
+
+mark{
+    background-color: #afeeee;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+h5{
+    margin-top: 1vh;
+    font-size: 1.5rem;
+    margin-right: 2vw;
+}
+
+
+#lognout{
+    background-color: rgb(255, 47, 99);
+    padding: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#head{
+    font-size: 2.5rem;
+}
+
+#logo{
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 15vh;
+    left: 12vw;
+    width: 20vw;
+}
+
+#content{
+    background-color:rgba(255, 255, 224, 0.7);
+    width: 96vw;
+    height: 72vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-radius: 20px;
+    border-style: dotted;
+    padding-top: 5vh;
+}
+
+#left{
+    font-size: 1.5rem;
+    text-indent: 20vw;
+    word-wrap:break-word;
+    padding: 2vw;
+    padding-right: 1vw;
+    
+}
+
+#right{
+    font-size: 1.5rem;
+    padding: 2vw;
+    padding-left: 1vw;
+    word-wrap: break-word;
+}
+
+#buttonrow{
+    width: 96vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5vh;
+}
+
+#buttonrow .col-12{
+    padding: 0;
+}
+
+#go{
+    padding: 0vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: greenyellow;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-right: 2vw;
+}
+
+#back{
+    margin-right: 2vw;
+    padding: 0vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: rgb(255, 47, 99);
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+@media (max-width:776px){
+    #logo{
+        top: 20vh;
+    }
+}
+
+@media (max-width: 576px){
+    #content{
+        height: auto;
+    }
+}
+
+.example{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: #9090ff;
+    border-radius: 5px;
+    color: white;
+}

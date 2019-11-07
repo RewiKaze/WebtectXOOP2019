@@ -1,0 +1,146 @@
+html{
+    scroll-behavior: smooth;
+}
+  
+body{
+    font-family: RSU;
+    background-image: url(../img/bg-3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+}
+  
+
+@font-face{
+    font-family: RSU;
+    src: url(../rsufont/RSU_BOLD.ttf) format(truetype);
+}
+
+.container{
+    margin: 0;
+    
+}
+
+#logosunny{
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 20vh;
+    left: 12vw;
+    width: 20vw;
+}
+#title{
+    margin-bottom: 2vh;
+}
+
+#quizBox{
+    background-color: #ffffea;
+    border-radius: 20px;
+    border-style: dashed;
+    padding: 5vw;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    margin: 5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 0;
+    border-width: 5px !important;
+    word-wrap:break-word;
+}
+
+form{
+    font-size: 2rem;
+}
+
+#quizhead{
+    background-color: orange;
+    text-align: center;
+    padding: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 6rem;
+    position: absolute;
+    transform: translate(-50%,-40%);
+    top: 0;
+    left: 50%;
+}
+
+mark{
+    background-color: #afeeee;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+h5{
+    margin-top: 1vh;
+    font-size: 1.5rem;
+    margin-right: 2vw;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+#lognout{
+    background-color: rgb(255, 47, 99);
+    padding: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#buttonrow{
+    width: 96vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5vh;
+}
+
+#buttonrow .col-12{
+    padding: 0;
+}
+
+#ans{
+    padding: 0vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: greenyellow;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+#back{
+    margin-right: 2vw;
+    padding: 0vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #c0c0c0;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 810px){
+    #quizhead{
+        font-size: 2rem;
+    }
+    #ans{
+        margin-right: 2vw;
+        font-size: 1.5rem;
+    }
+    #back{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    #logosunny{
+        top: 15vh;
+        left: 15vw;
+    }
+    #quizBox{
+        padding-top: 5vh;
+    }
+    form{
+        font-size: 1.5rem;
+    }
+}
