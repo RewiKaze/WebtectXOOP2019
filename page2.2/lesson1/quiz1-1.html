@@ -17,21 +17,19 @@
             });
         });
 
-        function refresh(){
+        function refresh() {
             document.getElementById('bgWrong').className = 'none';
         }
 
-        function check() 
-        {
+        function check() {
             let choise1 = document.getElementById('choise1');
             let choise2 = document.getElementById('choise2');
-            if(choise1.checked){
+            if (choise1.checked) {
                 document.getElementById('bgCorrect').className = 'background';
-            }
-            else{
+            } else {
                 document.getElementById('bgWrong').className = 'background';
             }
-            
+
         }
     </script>
     <title>Lesson QUIZ 1</title>
@@ -54,11 +52,13 @@
                 <form action="">
                     <label for="">คำถาม : ก่อนที่ภาษาจาวาจะชื่อจาวาในปัจจุบัน แต่เดิมเคยชื่ออะไรมาก่อน ? </label><br>
                     <p>ตอบ :
-                    <label for="">
-                        <input id="choise1" class="choise1" type="checkbox" type="text" value="1">Oak
-                        <input id="choise2" class="choise2" type="checkbox" type="text" value="2">Olive
+                        <br>
+                        <label for="">
+                            &nbsp;<input id="choise1" class="choise1" type="checkbox" type="text" value="1"> Oak
+                            <br>
+                            &nbsp;<input id="choise2" class="choise2" type="checkbox" type="text" value="2"> Olive
 
-                    </label></p>
+                        </label></p>
                 </form>
             </div>
         </div>
@@ -70,7 +70,8 @@
         <div id="buttonrow" class="row p-1">
             <div class="col-12">
                 <button id="ans" class="float-right" type="button" onclick="check()">ตอบ</button>
-                <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';">กลับไปอ่านเนื้อหา</div>
+                <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';">
+                    กลับไปอ่านเนื้อหา</div>
             </div>
         </div>
     </div>
@@ -80,8 +81,8 @@
         <div class="correct rounded">
             <h1>Correct</h1>
             <h5>ถูกต้องนะค้าบ ไปต่อกันเลย</h5>
-            <img id="play" src="../../img/icon/play (1).png" onclick="location.href='../../page2.1/lesson1/lesson1-2.html';"
-                alt="">
+            <img id="play" src="../../img/icon/play (1).png"
+                onclick="location.href='../../page2.1/lesson1/lesson1-2.html';" alt="">
         </div>
     </div>
     <div id='bgWrong' class="none">
