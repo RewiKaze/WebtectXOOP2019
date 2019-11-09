@@ -13,12 +13,9 @@ function register() {
     }).then(function (cred) {
         if (cred) {
             cred.user.updateProfile({
-                displayName:username
-            }).then(function () {
-                if (cred.user.displayName != null){
-                    writeUserData(cred.user.displayName, cred.user.email, cred.user.uid);
-                    //window.location.href = "signin1.html";
-                }
+                displayName: username
+            }).then(function(){
+                window.location.href="signin1.html";
             });
 
 
@@ -30,7 +27,8 @@ function register() {
 
 function writeUserData(name, email, userId) {
     firebase.database().ref().child('users').child(userId).set({
-      username: name,
-      email: email
+        username: name,
+        email: email,
+        lesson: 1
     });
-  }
+}

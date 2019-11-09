@@ -1,0 +1,43 @@
+.button-learn {
+    border-radius: 4px;
+    background: #afeeee !important;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    
+  }
+  .button-learn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .button-learn span:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button-learn:hover span {
+    padding-right: 25px;
+  }
+  .button-learn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button_cont{
+    bottom: 5vh;
+    transform: translate(-50%,0);
+    left: 50%;
+    position: absolute;
+  }

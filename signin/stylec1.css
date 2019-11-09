@@ -1,6 +1,9 @@
 * {
     font-family: RSU;
 }
+body{
+    scroll-behavior: smooth;
+}
 
 @font-face{
     font-family: RSU;
