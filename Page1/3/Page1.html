@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Lesson 2</title>
 </head>
 
 <body>
     <div id="bg">
         <div id="db1" class="desbutton" onclick="description(1)"> <b class="center">Description 1</b></div>
         <div id="db2" class="desbutton" onclick="description(2)"> <b class="center">Description 2</b></div>
-        <a href="Page2/1/Page2.html"><div id="start" class="desbutton" ><b class="center">Start Lesson</b> </div></a>
+        <div id="start" class="desbutton" onclick="location.href='Page2/1/Page2.html';"><b class="center">Start Lesson</b></div>
         <div id="contentBox">
             <div id="Content1">CONTENT1!</div>
             <div id="Content2">CONTENT2!</div>
         </div>
-        <a href="/main/main.html"> <div id="backtomain" ><b class="center" style="font-size:2vw">BACK TO MAIN</b></div></a>
-        <a ><div id="next"> <b class="center">NEXT</b></div></a>
-        <a href="../2/Page1.html"><div id="back"><b class="center">BACK</b></div></a>
+        <div id="backtomain" onclick="location.href='../../main/index.html';" ><b class="center">BACK TO MAIN</b></div>
+        <div id="next" onclick="location.href='../3/Page1.html';" ><b class="center">NEXT</b></div>
+        <div id="back" onclick="location.href='../2/Page1.html';" ><b class="center">BACK</b></div>
     </div>
 </body>
 

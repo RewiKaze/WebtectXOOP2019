@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allquiz.css">
     <link rel="stylesheet" href="../allpopup.css">
+    <script href='../popupShow.js'></script>
     <title>Lesson QUIZ 1</title>
 </head>
 <body>
@@ -39,19 +40,19 @@
         </div>
         <div id="buttonrow" class="row p-1">
                 <div class="col-12">
-                    <div id="ans" class="float-right">ตอบ</div>
-                    <div id="back" class="float-right">กลับไปอ่านเนื้อหา</div>
+                    <div id="ans" class="float-right" onclick="playPopUp()">ตอบ</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';">กลับไปอ่านเนื้อหา</div>
                 </div>
             </div>
     </div>
-    <div class="background">
+    <div id='bgCorrect' class="none">
         <div class="correct rounded">
             <h1>Correct</h1>
             <h5>ถูกต้องนะค้าบ ไปต่อกันเลย</h5>
-            <img id="play" src="../../img/icon/play (1).png" alt="">
+            <img id="play" src="../../img/icon/play (1).png" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';" alt="">
         </div>
     </div>
-    <div class="background">
+    <div id='bgWrong' class="none">
         <div class="wrong rounded">
             <h1>Wrong</h1>
             <h5>แงง ตอบผิดอะ ลองใหม่นะ!</h5>
