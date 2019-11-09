@@ -25,7 +25,7 @@
         {
             let choise1 = document.getElementById('choise1');
             let choise2 = document.getElementById('choise2');
-            if(choise1.checked){
+            if(choise2.checked){
                 document.getElementById('bgCorrect').className = 'background';
             }
             else{
@@ -52,11 +52,11 @@
                 </div>
 
                 <form action="">
-                    <label for="">คำถาม : ก่อนที่ภาษาจาวาจะชื่อจาวาในปัจจุบัน แต่เดิมเคยชื่ออะไรมาก่อน ? </label><br>
+                    <label for="">คำถาม : ถ้ามีข้อความ "084.811" แต่อยากแปลงให้เป็นทศนิยมโดยการใช้เมธอดจากคลาส Wrapper จะทำอย่างไร ? </label><br>
                     <p>ตอบ :
                     <label for="">
-                        <input id="choise1" class="choise1" type="checkbox" type="text" value="1">Oak
-                        <input id="choise2" class="choise2" type="checkbox" type="text" value="2">Olive
+                        &nbsp;<input id="choise1" class="choise1" type="checkbox" type="text" value="1"> Integer.parseSting("084.811);
+                        &nbsp;<input id="choise2" class="choise2" type="checkbox" type="text" value="2"> Double.parseDouble("084.811"); 
 
                     </label></p>
                 </form>
