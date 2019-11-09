@@ -49,13 +49,15 @@
     margin-left: 0;
     background-color: #afeeee;
     font-size: 2rem;
+    border: solid #afeeee;
 }
 
 .even #lessons {
     text-align: center;
-    border-style: solid;
+    border-style: solid ;
     border-radius: 10px;
-    padding: 0.5vw;
+    padding: 1vw;
+    margin-left:0;
     font-size: 2rem;
 }
 
@@ -69,7 +71,7 @@
 .even #golesson:hover {
     color: #494949 !important;
     border-radius: 50px;
-    border-color: #494949 !important;
+    border-color: #afeeee!important;
     transition: all 0.3s ease 0s;
 }
 
@@ -87,6 +89,7 @@
         margin-left: 0;
         background-color: #afeeee;
         font-size: 0.5rem;
+        border: solid #afeeee;
     }
     .even #lessons {
         text-align: center;
@@ -120,12 +123,13 @@
         margin-left: 0;
         background-color: #afeeee;
         font-size: 1rem;
+        border: solid #afeeee;
     }
     .even #lessons {
         text-align: center;
         border-style: solid;
         border-radius: 10px;
-        padding: 0.5vw;
+        padding: 1vw;
         font-size: 1rem;
     }
     #evenleft h1 {
@@ -176,7 +180,7 @@
         text-align: center;
         border-style: solid;
         border-radius: 10px;
-        padding: 0.5vw;
+        padding: 1vw;
         font-size: 2rem;
     }
 }
@@ -218,7 +222,7 @@
 .old #golesson:hover {
     color: #494949 !important;
     border-radius: 50px;
-    border-color: #494949 !important;
+    border-color: #afeeee !important;
     transition: all 0.3s ease 0s;
 }
 
@@ -233,7 +237,7 @@
     text-align: center;
     border-style: solid;
     border-radius: 10px;
-    padding: 0.5vw;
+    padding: 1vw;
     font-size: 2rem;
 }
 
@@ -286,7 +290,7 @@
         text-align: center;
         border-style: solid;
         border-radius: 10px;
-        padding: 0.5vw;
+        padding: 1vw;
         font-size: 1rem;
     }
     #evenleft h1 {
@@ -334,7 +338,7 @@
         text-align: center;
         border-style: solid;
         border-radius: 10px;
-        padding: 0.5vw;
+        padding: 1vw;
         font-size: 2rem;
     }
 }
