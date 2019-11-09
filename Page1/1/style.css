@@ -10,6 +10,9 @@
 
 body{
     background-image: url("../../img/bg-1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
 }
 #bg{
     position: fixed;
@@ -24,10 +27,12 @@ body{
 .desbutton{
     top: 3vw;
     left: 4vw;
-    margin: 3%;
-    height: 10vw;
+    padding: 0;
+    margin: 2%;
+    height: 13vh;
     width: 31vw;
-    font-size: 3vw;
+    text-align: center;
+    font-size: 2rem;
     background-color: #ffffe0;
     position: relative;
 } 
@@ -46,28 +51,33 @@ body{
     top: 5vw;
     left: 40%;
     position: absolute;
-    height: 70%;
+    height: 70vh;
     width: 55%;
     padding-left: 1%;
     padding-right: 1%;
     border-spacing: 1%;
     border: dashed grey 3px;
+    font-size: 1.5rem;
   }
   
 #Content1 {
+    font-size: 1.2rem;
     text-indent: 5px;
     position: relative;
-    margin: 25% auto;
-    height: 10vw;
+    margin: 0;
+    padding-top: 20vh;
+    height: 70vh;
     width: 100%;
     
 }
 #Content2 {
+    font-size: 1.2rem;
     text-indent: 5px;
     position: relative;
-    margin: 25% auto;
+    margin: 0;
+    padding-top: 10vh;
     display: none;
-    height: 10vw;
+    height: 70vh;
     width: 100%;
 
 
@@ -77,11 +87,13 @@ body{
 #backtomain{
     position: absolute;
     top: 85%;
-    left: 12%;
+    left: 9%;
     height: 6%;
     width: 15%;
     background-color: #c0c0c0;
     text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 #next{
     position: absolute;

@@ -1,7 +1,15 @@
 * {
-    font-family: 'Dosis', sans-serif;
+    font-family: RSU;
 }
 
+@font-face{
+    font-family: RSU;
+    src: url(../rsufont/RSU_BOLD.ttf);
+}
+
+#logo{
+    width: 10vw;
+}
 
 .left{
     height: 65%;
