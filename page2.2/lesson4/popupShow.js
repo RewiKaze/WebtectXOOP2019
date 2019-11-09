@@ -1,5 +1,3 @@
-
 function check(){
     document.getElementById('bgCorrect').className = 'background';
-    console.log("check");
 }
