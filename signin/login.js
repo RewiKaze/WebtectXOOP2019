@@ -14,7 +14,7 @@ function loginEmail(){
         
       }).then(function(cred){
           if(cred){
-          window.location = "signin1.html";
+          window.location = "signin2.html";
           }
       });
 }

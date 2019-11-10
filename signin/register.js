@@ -15,7 +15,7 @@ function register() {
             cred.user.updateProfile({
                 displayName: username
             }).then(function(){
-                window.location.href="signin1.html";
+                window.location.href="signin2.html";
             });
 
 

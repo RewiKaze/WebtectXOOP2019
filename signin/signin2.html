@@ -34,6 +34,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles2.css">
     <script src="userMain.js"></script>
+    <script src="logout.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -52,7 +53,7 @@
             <div class="row p-1">
                 <div id="titlebar" class="col-12">
                     <div id="namePage" class="float-left">Study Planet</div>
-                    <div id="logout" class="float-right border border-secondary">Log out</div>
+                    <div id="logout" class="float-right border border-secondary" onclick="signout()" style="cursor:pointer;">Log out</div>
                 </div>
             </div>
             <div class="row">
@@ -64,7 +65,7 @@
                             <p class=" border-top-0 border-left-0 border-right-0"></p>
                         </div>
                         <div class="col-2">
-                            <img src="../img/icon/sunny (1).png" id="sunny" onmouseover="hover(this)" onmouseout="unhover(this)" />
+                            <img src="../img/icon/sunny (1).png" id="sunny" />
                         </div>
                         <div class="col-5" id="down">
                             <p class="border-top-0 border-left-0 border-right-0"></p>
@@ -73,16 +74,16 @@
                 </div>
                 <div id="colright" class="col-12 col-sm-6">
                     <b>
-                        <h1 id="show-username" class="float-left">Hello , <mark>Username</mark> </h1>
+                        <h1 id="show-username" class="float-left">Hello , <mark>--------</mark> </h1>
                     </b><br><br>
 
 
                     <p id="successtext">Your success lesson</p>
-                    <div class="success"></div>
-                    <div class="boxsuccess">20%</div>
-                    <p class="text">ใกล้จบแล้วนะพยามเช้า!</p>
+                    <div class="success" id="process"></div>
+                    <div class="boxsuccess" id="textprocess"></div>
+                    <p class="text">ใกล้จบแล้วนะพยายามเข้า!</p>
                     <div class="text-center">
-                        <button class="button">เริ่มเรียนกันเลย!</button>
+                        <button class="button" onclick="resume()">เริ่มเรียนกันเลย!</button>
                     </div>
                 </div>
             </div>
