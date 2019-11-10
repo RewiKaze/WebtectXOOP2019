@@ -23,19 +23,19 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    ตอนที่ 2 : การรับค่าเข้า
+                    ตอนที่ 2 : การรับค่าเข้า และการส่งค่าออก
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        <p>
+                        <p id="indent">
                             ในบทนี้เราจะมาเรียนรู้วิธีการรับค่าผ่านทางคีย์บอร์ดและแสดงผลออกทางหน้าจอกัน
                             ซึ่งถือเป็นเรื่องอันดับต้นๆ ในการเขียนโปรแกรมในทุกภาษาที่ควรจะเรียน
                             เพราะถือว่าเป็นวิธีเบื้องต้นที่จะทำให้เราสื่อสารกับคอมพิวเตอร์และผู้ใช้งานรู้เรื่องนั่นเอง!
                         </p>
-                        <p>
+                        <p id="indent">
                             โดยก่อนอื่นเราก็ควรที่จะรู้จักกับ <b>โครงสร้างช่องทางการสื่อสาร</b>
                             ก่อนเพื่อที่ว่าจะได้มองภาพรวมของบทนี้ได้ง่ายขึ้น
                         </p>
@@ -49,19 +49,58 @@
                                 <li>ปลายทาง ( Output Sink )
                             </ol>
                         </p>
+                        <h2>การรับค่าเข้า ( Input )</h2>
+                        <p>ในการรับค่าเข้าผ่านทางคีย์บอร์ดนั้น ภายในภาษาจาวาจะมีคลาส Scanner
+                            ที่คอยช่วยเหลือในการรับค่าเข้า</p>
+                        <p>
+                            โดยจะต้องทำการนำเข้าแพคเก็จหรือชุดคำสั่งก่อนที่จะมีการใช้งานทุกครั้ง!
+                        </p>
+                        <div class="example">
+                            &nbsp;&nbsp;import java.util.Scanner; —— เป็นการนำเข้าเฉพาะแพคเก็จ Scanner
+                            <br>
+                            &nbsp;&nbsp;import java.util.*; —— เป็นการนำเข้าทุกแพคเก็จของจาวา
+
+                        </div>
+                        <br>
+                        <p>ต่อไปจะเป็นการสร้างท่อเชื่อม (Object)</p>
+                        <div class="text-center example">
+                            Scanner Sc = new Scanner(System.in);
+                        </div>
+                        <p id="comment-code" class="text-center">โดยที่ Sc
+                            เป็นอ็อบเจ็กต์ที่ทำหน้าที่เป็นตัวกลางในการรับค่าจากคีย์บอร์ดมาสู่โปรแกรม</p>
+
+                        <p>ตอนนี้ก็สามารถทำการเรียกใช้เมธอด <code>Sc.next();</code> ในการรับค่าได้แล้ว
+                            โดยอย่าลืมที่จะนำตัวแปรมาเก็บค่าด้วย</p>
+                        <div class="example">
+                            &nbsp;&nbsp;int num = Sc.nextInt(); —— ต้องการรับค่าเข้ามาเป็น Integer
+                            <br>
+                            &nbsp;&nbsp;String str = Sc.next(); หรือ Sc.nextLine(); —— ต้องการรับค่าเข้ามาเป็น String
+                        </div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
+                        <h2>การแสดงผลออก ( Output )</h2>
+                        <p>การแสดงผลผ่านทางหน้าจอนั้นในภาษาจาวาสามารถเรียกใช้คำสั่ง <code>System.out.print</code> หรือ
+                            <code>System.out.println </code>ได้เลย
+                            โดยข้อแตกต่างของทั้งสองตัวนั้นคือ การใช้คำสั่ง <code>System.out.println</code>
+                            จะเป็นการแสดงผลพร้อมกับการขึ้นบรรทัดใหม่</p>
+                        <div class=" example">
+                            &nbsp;&nbsp;System.out.print("line 1");<br>
+                            &nbsp;&nbsp;System.out.print("line 2");<br>
+                            &nbsp;&nbsp;System.out.println("line 3");<br>
+                            &nbsp;&nbsp;System.out.println("line 4");<br>
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <br>
+                        <p>ผลลัพธ์ที่แสดงออกผ่านทางจอภาพจะเป็นดังนี้</p>
+                        <div class=" example">
+                            &nbsp;&nbsp;line1line2line3<br>
+                            &nbsp;&nbsp;line4
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-2.html';">
                         ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson1-1.html';">กลับ</div>
                 </div>
