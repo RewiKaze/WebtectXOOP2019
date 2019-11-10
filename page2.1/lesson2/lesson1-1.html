@@ -23,31 +23,104 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    บทที่ 2 : การทำงานแบบทำซ้ำ ( Iteration )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                    </div>
-                    <div id="right" class="col-12 col-sm-6">
+                        <p>เป็นการทำงานที่สามารถทำให้โปรแกรมทำงานได้หลายรอบ และทำงานไปเรื่อยๆจนกว่าเงื่อนไขจะเป็นเท็จ
+                            ซึ่งถือว่าเป็นการทำงานที่มีประโยชน์อย่างมาก โดยจะแบ่งการทำงานแบบซ้ำ
+                            ออกเป็น 2 ประเภทได้แก่
+                            <ol>
+                                <li>แบบตรวจสอบเงื่อนไขก่อน</li>
+                                <li>แบบตรวจสอบเงื่อนไขทีหลัง</li>
+                            </ol>
+                        </p>
+                        ก่อนที่เราจะไปดูความแตกต่างของทั้ง 2 แบบนั้นมาเรียนรู้ 2 คำสั่งพื้นฐานในบทนี้กันก่อนเลย!
+                        นั่นก็คือคำสั่ง `break` และ `continue`
+                        <h4>คำสั่ง break</h4>
+                        <p>เป็นคำสั่งที่จะทำให้จบหรือสิ้นสุดการทำงานของโครงสร้างแบบทำซ้ำ เช่น</p>
                         <div class="text-center example">
-                            System.out.println("Hello World");
+                            java
+                            for ( int i = 0; i < 5; i++ ) { if ( i==2 ) { break; } System.out.println("I love
+                                Webtech"); } </div>ดังตัวอย่างด้านบน จะได้ผลลัพธ์ของคำว่า I love Webtech ทั้งหมด 2
+                                ครั้งเนื่องจากครั้งที่ 3 ( i=2 ) ได้ทำการ break ทำให้สิ้นสุด<br>การทำงานนั่นเอง
+                                <h4>คำสั่ง break</h4>
+                                เป็นคำสั่งที่จะทำการข้ามการทำงานคำสั่งที่เหลือภายในบล็อก `{ }`
+                                โดยไปเริ่มการทำซ้ำในรอบต่อไปใหม่นั่นเอง เช่น
+                                <div class="text-center example">java
+                                    for ( int i = 0; i < 5; i++ ) { if ( i==2 ) { continue; } System.out.println("I
+                                        love Webtech"); } </div> ดังตัวอย่างด้านบน จะได้ผลลัพธ์ของคำว่า I love Webtech
+                                        ทั้งหมด 4 ครั้งเนื่องจากครั้งที่ 3 ( i=2 ) ได้ทำการ continue
+                                        หรือเป็นการตัดจบในรอบนั้น
+                                        และทำการขึ้นรอบใหม่โดยที่**ไม่**ทำการจบการทำงานแบบคำสั่ง break </div>
+                                         <div id="right" class="col-12 col-sm-6">
+                                        <h3>
+                                            แบบตรวจสอบเงื่อนไขก่อน
+                                            เป็นการทำงานที่ต้องทำการตรวจสอบเงื่อนไขก่อนที่จะทำการทำซ้ำของโปรแกรมได้ โดยจะมี 2
+                                            คำสั่งที่นิยมใช้กันนั่นก็คือ คำสั่ง `for` และ `while`</h3> <br><br>
+                                            <h4> คำสั่ง for
+                                            เป็นคำสั่งของการทำงานซ้ำที่สามารถทราบจำนวนรอบได้อย่างแน่นอน
+                                            โดยขอบเขตของตัวแปรที่ประกาศในคําสั่งกําหนดค่าจะใช้ได้เฉพาะภายในบล็อกคําสั่ง for
+                                            เท่านั้น รูปแบบ
+                                            ทั่วไปของคำสั่ง for จะมีดังนี้</h4>
+                                            <div class="text-center example">java
+                                            for ( start; stop; step )
+                                            {
+                                            คำสั่ง
+                                            }
+            
+                                            </div><br>
+                                            เราสามารถกำหนดค่าของ start ได้โดยที่จะถือว่าเป็นค่าเริ่มต้นภายในบล็อกของ for
+                                            นอกจากนี้ยังสามารถกำหนด stop ที่เป็นค่าหยุด โดยจะหยุดการทำงานทันทีเมื่อตรงกับคำสั่งนั้น
+                                            และ step เป็นการกำหนดเพิ่ม / ลดค่าหลังจากที่ทำงานจบในรอบนั้นเเล้วนั่นเอง
+            
+                                            <div class="text-center example">_**ตัวอย่าง**_ จงเขียนโปรแกรมที่ทำการแสดงผลคำว่า "I love Webtech" ผ่านทางจอภาพทั้งหมด 5
+                                                ครั้ง</div>
+                                            <br>
+                                            ลองคิดเล่นๆดูว่าก่อนหน้านี้ที่เรายังไม่ได้เรียนรู้เรื่องการทำงานแบบซ้ำนั้น
+                                            จะต้องทำการเขียนทั้งหมด 5 บรรทัด เช่น
+                                            <div class="text-center example">java
+                                            System.out.println("I love Webtech");
+                                            System.out.println("I love Webtech");
+                                            System.out.println("I love Webtech");
+                                            System.out.println("I love Webtech");
+                                            System.out.println("I love Webtech");
+                                            </div><br>
+                                            แต่ถ้าหากเราลองนำคำสั่ง for มาใช้จะออกมาเป็นยังไงนะ?
+                                            <div class="text-center example">java
+                                            for ( int i = 0; i < 5; i++ ) { System.out.println("I love Webtech"); } </div><br>
+                                                ดังตัวอย่างข้างบนแล้วก็จะเห็นได้ว่าโปรแกรมจะสามารถทำงานได้ง่ายและสะดวกกว่าแบบก่อนหน้าเยอะเลย
+                                                นอกจากนี้คำสั่ง for จะนิยมใช้กับข้อมูลแบบอาเรย์อีกด้วย (จะได้เจอกันในเร็วๆนี้แหละ!)<br><br>
+                                                <h4>คำสั่ง while เป็นคำสั่งของการทำงานซ้ำที่ไม่สามารถทราบจำนวนรอบได้อย่างแน่นอน
+                                                รูปแบบทั่วไปของคำสั่ง for จะมีดังนี้ </h4><div class="text-center example">java while ( เงื่อนไข )
+                                                //จะหยุดเมื่อเงื่อนไขเป็นเท็จ { คำสั่งที่ทำซ้ำขณะที่เงื่อนไขเป็นจริง } </div>
+                                                <p>เรามาลองเขียนโปรแกรมนับเลขโดยใช้คำสั่ง while กันดีกว่า!</p> <div class="text-center example">java int i=1; while ( i
+                                                <=10 ) { System.out.print (i + " " ); i++; } </div> จะได้ผลลัพธ์ออกมาเป็นดังนี้
+                                                ```<code>java 1 2 3 4 5 6 7 8 9 10 </code>```<br><br>
+                                                <h4> โครงสร้างแบบซ้อน ( Nested Structure )</h4>
+                                                เราสามารถที่จะเขียนคำสั่งโครงสร้างควบคุมใดๆ ให้ซ้อนอยู่ภายในได้ เช่น
+                                                การเขียนโครงสร้างทำซ้ำแบบซ้อน ( for อยู่ใน for ) โดยโครงสร้างควบคุมภายใน
+                                                และภายนอกไม่จำเป็นต้องเป็นคำสั่งชนิดเดียวกัน <div class="text-center example">java for (int i=1; i < 4; i++) {
+                                                for (int j=1; j < 5; j++) { System.out.print("*"); } System.out.println(); } </div>
+                                                จะได้ผลลัพธ์ออกมาเป็นดังนี้<br> <code> **** **** **** </code>
+                                                <p>โดยที่การเขียนคำสั่งโครงสร้างทำซ้ำแบบซ้อนสามารถที่จะนำไปเขียนโปรแกรมเมตริกซ์ขนาดต่างๆได้เช่นกัน</p>
+                                                <h3> แบบตรวจสอบเงื่อนไขทีหลัง การทำงานแบบนี้จะแตกต่างกับแบบแรกตรงที่ว่า
+                                                โปรแกรมจะทำการทำงานไปก่อน 1 รอบแล้วจึงตรวจสอบเงื่อนไขที่อยู่ภายในบล็อก
+                                                โดยคำสั่งที่นิยมใช้กันในประเภทนี้ก็คือคำสั่ง `do-while` นั่นเอง </h3><div class="text-center example">java do { //
+                                                command; } while ( เงื่อนไข ) ; </div>
+                                </div>
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                    </div>
+                    <div id="buttonrow" class="row">
+                        <div class="col-12">
+                            <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
+                            <div id="back" class="float-right" onclick="location.href='../../page1/1/Page1.html';">กลับ</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="buttonrow" class="row">
-                <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page1/1/Page1.html';">กลับ</div>
-                </div>
-            </div>
-        </div>
     </nav>
 </body>
 
