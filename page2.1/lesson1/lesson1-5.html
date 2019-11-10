@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
     <title>Study Planet Lesson 1 - Page 5</title>
 </head>
 
@@ -23,27 +24,132 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 5 : การเปลี่ยนแปลงประเภทข้อมูล
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">ในบทนี้เราจะมาเรียนรู้เกี่ยวกับการแปลงชนิดข้อมูลกัน!
+                            โดยการแปลงชนิดข้อมูลก็จะมีวิธีที่แตกต่างกันไป
+                            ซึ่งก็ขึ้นอยู่กับผู้ใช้งานว่าจะเลือกการแปลงชนิดข้อมูลแบบใด
+                            และนำไปใช้กับการเขียนโปรแกรมในสถานการณ์ใด</p>
+                        <p id="indent">ยกตัวอย่างเช่น การแปลงชนิดข้อมูลจากตัวอักขระ เป็นชนิดข้อมูลจำนวนเต็ม
+                            แต่ก่อนที่เราจะมาเรียนรู้วิธีการแปลงชนิดข้อมูลนั้น
+                            เราไปเรียนรู้เกี่ยวกับพื้นฐานเบื้องต้นกันดีกว่า!</p>
+                        <ul>
+                            <li>ขนาดของชนิดข้อมูลจำนวนเต็มจากน้อยไปมาก byte → short → int → long
+                            </li>
+                            <li>ชนิดข้อมูล boolean จะไม่มีความสัมพันธ์กับชนิดข้อมูลพื้นฐานอื่นๆเลย ( แปลงไม่ได้นั่นเอง )
+                            </li>
+                        </ul>
+                        <p>โดยที่ในบทนี้เราจะแบ่งวิธีการแปลงชนิดข้อมูลออกเป็น 4 แบบกันได้แก่</p>
+                        <h3>วิธีที่ 1 : การแปลงผ่านเครื่องหมายเท่ากับ (=)</h3>
+                        <p id="indent">ถือว่าเป็นการแปลงชนิดข้อมูลที่ค่อนข้างที่จะง่าย เนื่องจากแค่ใส่เครื่องหมาย =
+                            ชนิดข้อมูลก็จะเปลี่ยนแล้ว! เช่น</p>
+                        <div class=" example">
+                            &nbsp;int a = 10;<br>
+                            &nbsp;double b = a;
+                        </div>
+                        <p><br>
+                            แต่เดี๋ยวก่อน! แล้วถ้าเราลองสลับชนิดข้อมูลของทั้ง 2 ตัวแปรดู ก็จะพบว่า!
+                        </p>
+                        <div class=" example">
+                            &nbsp;double a = 10.0;<br>
+                            &nbsp;int b = a;
+                        </div>
+                        <p id="comment-code" class="text-center">จะเกิด ERROR ขณะ Compile นั่นเอง</p>
+                        <p id="indent">เนื่องจากว่าการแปลงชนิดข้อมูลแบบนี้สามารถแปลงเป็นขนาดใหญ่ขึ้นเท่านั้น เช่น แปลงจากชนิดข้อมูล
+                            float เป็น double
+                            ดังนั้นเราจะไม่สามารถแปลงชนิดข้อมูลที่ใหญ่กว่า ให้ลงมามีขนาดเล็กกว่าได้นั่นเอง
+
+                        </p>
+                        <h3>วิธีที่ 2 : การแปลงเมื่อเกิดการดำเนินการ</h3>
+                        <p id="indent">การแปลงข้อมูลวิธีนี้จะเกิดขึ้นได้ถ้าหากมีตัวแปร 2 ตัวมีการดำเนินการกันเกิดขึ้น เช่น a+b
+                        </p>
+                        <p id="indent">โดยที่ถ้าหาก<b>ชนิดข้อมูล</b>ของตัวใดตัวหนึ่งที่มีขนาด<b>ใหญ่กว่า</b> ชนิดข้อมูลของผลลัพธ์ที่ออกมา
+                            ก็จะกลายเป็นชนิดข้อมูลของ
+                            ตัวที่มีชนิดข้อมูลขนาดที่<b>ใหญ่กว่า</b>โดยอัตโนมัติก่อนที่จะทำการดำเนินการนั่นเอง</p>
+                        <div class=" example">
+                            &nbsp; int a = 10;<br>
+                            &nbsp;double b = 30;<br>
+                            &nbsp;System.out.println( a+b );
+                        </div>
+                        <p><br>ชนิดข้อมูลของ a+b ก็จะออกมาเป็น double นั่นเอง</p>
+                        <div class=" example">
+                            &nbsp;String str = "2009";<br>
+                            &nbsp;int a = Integer.pasrseInt(str);
+                        </div>
+                        <p id="comment-code" class="text-center">ผลลัพธ์ของ a ก็จะออกมาเป็น 2009 ที่มีชนิดข้อมูลเป็น int นั่นเอง</p>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
+                        <h3>วิธีที่ 3 : การแปลงผ่านการทำ Casting</h3>
+                        <p id="indent">จากที่วิธีแรกเราเคยบอกไว้ว่าสามารถแปลงชนิดข้อมูลให้เป็นขนาดใหญ่ขึ้นได้เท่านั้น แต่ทว่า!
+                            ถ้าเราแปลงผ่านการทำ Casting ก็จะสามารถแปลงชนิดข้อมูลที่ใหญ่กว่าให้มีขนาดเล็กลงได้นั่นเอง
+                        </p>
+                        <p>
+                            มองภาพง่ายๆว่าเป็นการตัดข้อมูลบางส่วนออกนั่นเอง ยกตัวอย่างเช่น
+                        </p>
+                        <div class=" example">
+                            &nbsp;double a = 10.0;<br>
+                            &nbsp;int b = (int) a;
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <br><p id="indent">จากตัวอย่างก็จะเห็นได้ว่าเราสามารถทำการครอบ <b>(int)</b> เข้าไปได้เลย
+                            แต่ก็มีข้อแม้ว่าข้อมูลอาจเกิดการผิดพลาดหรือสูญเสียที่เรียกว่า <i>Data loss</i> หรือ <i>Precision loss</i>
+                            และข้อแม้อีกอย่างหนึ่งก็คือเราสามารถครอบได้เฉพาะ<b>ชนิดข้อมูลพื้นฐาน</b>เท่านั้น</p>
+                        <h3>วิธีที่ 4 : การใช้เมธอดจากคลาส Wrapper</h3>
+                        <p>ก่อนที่จะมาเรียนรู้การเปลี่ยนแปลงวิธีนี้เรามารู้จักกับ <b>คลาส Wrapper</b> ก่อนดีกว่า</p>
+                        <h5>คลาสประเภท Wrapper</h5>
+                        <p id="indent">ป็นคลาสที่เลียนแบบชนิดข้อมูลพื้นฐานทุกประการ
+                            โดยจะช่วย<b>สร้างอ็อบเจ็กต์ที่เก็บชนิดข้อมูลแบบพื้นฐาน</b>ไว้ในคอลเล็คชั่นแบบ Heterogeneous
+                            โดยที่หน้าตาของมันมีความคล้ายคลึงกับ ชนิดข้อมูลแบบพื้นฐาน โดยส่วนใหญ่จะใช้กับชนิดข้อมูล
+                            String ควบคู่กัน</p>
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">DataType</th>
+                                    <th scope="col">ClassName</th>                      
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">boolean</th>
+                                    <td>Boolean</td>                                  
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">byte</th>
+                                    <td>Byte</td>                               
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">char</th>
+                                    <td>Character</td>                                   
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">int</th>
+                                    <td>Integer</td>
+                                  </tr>                                  
+                                </tbody>
+                              </table>
+                        <ul>
+                            <li>คำสั่ง Autoboxing คือ การแปลงจากชนิดข้อมูลพื้นฐานไปเป็นคลาสประเภท Wrapper</li>
+                            <li>คำสั่ง Auto-unboxing คือ การแปลงจากคลาสประเภท Wrapper ไปเป็นชนิดข้อมูลพื้นฐาน</li>
+                        </ul>
+                        <p id="indent">โดยวิธีการแปลงวิธีนี้จะเป็นการใช้เมธอดที่มาพร้อมคลาส เช่น parseInt หรือ parseBoolean
+                            เพื่อแปลงข้อมูลชนิดใดๆ ก็ได้มาเป็นข้อมูลชนิด int หรือ boolean ตามลำดับเป็นต้น
+                            ดังตัวอย่างต่อไปนี้</p>
+                        <div class=" example">
+                            &nbsp;String str = "2009";<br>
+                            &nbsp;int a = Integer.parseInt(str);
+                        </div>
+                        <p id="comment-code" class="text-center">ผลลัพธ์ของ a ก็จะออกมาเป็น 2009 ที่มีชนิดข้อมูลเป็น int นั่นเอง</p>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-5.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson1-4.html';">กลับ</div>
                 </div>
             </div>

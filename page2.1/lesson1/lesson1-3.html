@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
     <title>Study Planet Lesson 1 - Page 3</title>
 </head>
 
@@ -23,27 +24,123 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 3 : ตัวแปร
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        
+                        <p id="indent">
+                            ในบทนี้เราจะมาเรียนรู้ในเรื่อง <b>ตัวแปร</b> ( Variable ) กัน โดยถ้าหากนึกถึงตัวแปรแล้ว
+                            ก็อาจจะนึกถึงตัวแปรทางคณิตศาสตร์ เช่น x = 3
+                            หรือ อาจจะเป็นตัวแปรทางวิทยาศาสตร์ เช่น ตัวแปรต้น ตัวแปรตาม บลาๆ
+                        </p>
+                        <p id="indent">
+                            สำหรับทางคอมพิวเตอร์นั้น <b>ตัวแปร</b> คือ สิ่งที่ใช้จัดเก็บข้อมูลหรือสารสนเทศต่างๆ
+                            โดยที่เราสามารถ<b>เรียกใช้มันได้ภายหลัง</b>ด้วยนะ!
+                            นอกจากนี้แล้วยังเป็นการบ่งบอกว่าสิ่งที่เก็บคืออะไร หรือเป็นการให้ความหมายของสิ่งๆนั้นอีกด้วย
+                        </p>
+                        <div class="text-center example">
+                            'รถคันนี้สีแดง'
+                        </div>
+                        <p id="comment-code" class="text-center">สามารถเปลี่ยนให้เป็นตัวแปรอย่างไรได้บ้างนะ?</p>
+                        <p id="indent">
+                            ในการเขียนโปรแกรมนั้น
+                            ถ้าหากเราสามารถเลือกชนิดข้อมูลให้เหมาะสมกับข้อมูลที่เราต้องการจะเก็บได้นั้น
+                            จะช่วยลดพื้นที่ในการจัดเก็บได้
+                            เพราะถ้าหากเราเลือกใช้ชนิดข้อมูลที่ไม่เหมาะสมก็อาจจะเกิดผลเสียตามมาได้
+                        </p>
+                        <p id="indent">
+                            โดยตัวแปรในภาษาจาวานั้นสามารถแบ่งออกได้หลายแบบ ขึ้นอยู่กับว่าจะแบ่งตามอะไร ยกตัวอย่างเช่น
+                        </p>
+                        <ul>
+                            <li>แบ่งตามสิ่งที่เก็บ</li>
+                            <li>แบ่งตามจำนวนต่าที่เก็บ</li>
+                            <li>แบ่งตามการเปลี่ยนแปลง</li>
+                        </ul>
+                        <h3>
+                            ตัวแปรที่แบ่งตามสิ่งที่เก็บ
+                        </h3>
+                        <p>สามารถแบ่งได้ออกเป็น 2 ประเภท ได้แก่</p>
+                        <h4>ตัวแปรชนิดข้อมูลพื้นฐาน</h4>
+                        <ul>
+                            <li>จำนวนเต็ม ( Integer ) : แบ่งย่อยได้อีก 3 ชนิด คือ byte long และ short</li>
+                            <p class="text-center example">Note : ข้อมูลค่าคงที่ของเลขจำนวนเต็มชนิด long จะมีตัวอักษร l
+                                หรือ L ต่อท้าย เช่น 321L</p>
+                            <li>จำนวนทศนิยม ( Double )</li>
+                            <p class="text-center example">Note : ข้อมูลชนิดตัวเลขทศนิยมที่มีชนิดข้อมูลเป็น float
+                                จะมีตัวอักษร F หรือ f ต่อท้าย เช่น 21313.29F</p>
+                            <p id="comment-code" class="text-center">
+                                โดยทั่วไปแล้วข้อมูลตัวเลขชนิดทศนิยมจะถูกกำหนดให้เป็น double</p>
+                            <li>ตัวอักขระ ( Character ) : ถูกเก็บอยู่ในรูปของมาตรฐาน Unicode ขนาด 16bit
+                                โดยจะมีค่าตั้งแต่ '\u0000' ถึง '\uFFFF'</li>
+                            <div class="text-center example">char letter = '\u0050'; หรือ char letter = 'P';</div>
+                            <p id="comment-code" class="text-center">ประกาศแบบไหนก็ได้เพราะมีค่าเหมือนกัน</p>
+                            <p>และนี่คือตารางตัวอักขระเพิ่มเติม</p>
+                            <div class="text-center example">
+                                "\n" = ขึ้นบรรทัดใหม่<br>
+                                "\\" = blackslash<br>
+                                "\'" = single quote
+                            </div>
+                            <br>
+                            <li>ค่าความจริง ( Boolean ) : มีข้อมูลค่าคงที่อยู่ 2 ค่าคือ <i>true</i> และ <i>false</i>
+                            </li>
+
+                        </ul>
+                        <h4>ตัวแปรชนิดข้อมูลอ้างอิง</h4>
+                        <p >มีการเก็บข้อมูลในหน่วยความจำ สามารถแบ่งออกได้เป็นสองเเบบคือ Class และ Array</p>
+                        <ul>
+                            <li>Class String : เป็นคลาสที่ถูกกำหนดไว้อยู่ใน Java API ตัวแปรชนิดที่มีข้อมูลเป็น String
+                                ซึ่งเป็นคลาสที่มีอ็อบเจ็กต์ที่มีข้อความ อยู่ภายในเครื่องหมาย double quote (" ")</li>
+                            <p class="text-center">สามารถสร้าง หรือ กำหนดค่าได้โดยที่ไม่ต้องใช้คำสั่ง
+                                <b class="text-center example">new</b></p>
+                            <div class="text-center example">String name = "Sushi"; </div>
+                            <p id="comment-code" class="text-center">ตรวจดู String Pool
+                                ก่อนถ้ามีก็จะเรียกมาใช้แต่ถ้าไม่มีก็จะสร้างใหม่</p>
+                            <div class="text-center example">String name = new String("Shushi"); </div>
+                            <p id="comment-code" class="text-center">จะสร้างข้อความใหม่และจองพื้นที่ในหน่วยความจำ</p>
+
+                        </ul>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <h3>ตัวแปรที่แบ่งตามจำนวนค่าที่เก็บ</h3>
+                        <p>สามารถแบ่งออกเป็น 2 ประเภท ได้แก่</p>
+                        <ol>
+                            <li>ตัวแปรเดียว</li>
+                            <li>ตัวแปรชุด</li>
+                        </ol>
+                        <h3>ตัวแปรที่แบ่งตามการเปลี่ยนแปลง</h3>
+                        <p>สามารถแบ่งออกเป็น 2 ประเภท ได้แก่</p>
+                        <ol>
+                            <li>ตัวแปร : เป็นตัวแปรทั่วไปที่สามารถเปลี่ยนแปลงค่าภายหลังได้</li>
+                            <li>ตัวแปรค่าคงที่ : สามารถประกาศค่าตัวแปรได้เพียงครั้งเดียว นิยมใช้ <b>final</b>
+                                นำหน้าก่อนที่จะประกาศตัวแปรค่าคงที่</li>
+                            <div class="text-center example">final int MAX_VALUE = 50;</div>
+                        </ol>
+                        <h3>วิธีประกาศตัวแปร</h3>
+                        <p id="indent">ก่อนที่จะทำการใช้งานตัวแปรนั้น
+                            จะต้องทำการประกาศค่าตัวแปรให้มันก่อนเพื่อให้คอมพิวเตอร์สามารถไปจองพื้นที่ในหน่วยความจำ
+                            ก่อนที่จะมีการใช้งานตัวแปรนั่นเอง</p>
+                            <p>โดยในภาษาจาวามีวิธีการประกาศตัวแปร ได้แก่</p>
+                            <div class="text-center example">int num;</div>
+                            <p id="indent"><br>ถ้าหากอยากที่จะทำการประกาศ และกำหนดดค่าตัวแปรไปพร้อมกัน ให้ทำการใส่เครื่องหมาย <b>=</b> ต่อท้าย</p>
+                            <div class="text-center example">int num = 10;</div>
+                            <p><br>โดยภาษาจาวาจะมีหลักในการตั้งชื่อดังนี้</p>
+                            <ul>
+                                <li>ต้องขึ้นต้นด้วยอักขระ A-Z , a-z, _ หรือ $ เท่านั้น</li>
+                                <li>ต้องไม่ตรงกับ<a href="https://en.wikipedia.org/wiki/List_of_Java_keywords">คีย์เวิร์ดในภาษาจาวา</a></li>
+                                <li>ตัวแรกของตัวแปรห้ามป็นตัวเลข 0-9</li>
+                                <li>ในภาษาจาวาเป็น <b>case sensitive </b>ทำให้ mynum แตกต่างจาก myNum ( พิมพ์ใหญ่พิมพ์เล็กก็คือไม่เหมือนกันนั่นเอง )</li>
+                            </ul>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-3.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson1-2.html';">กลับ</div>
                 </div>
             </div>
