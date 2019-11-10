@@ -25,6 +25,17 @@
     font-size: 2rem;
     color: #6a6a6a;
 }
+#signupbutton:hover{
+    text-align: center;
+    margin: 1vw;
+    padding-top: 0vh;
+    padding-left: 0vw;
+    border-radius: 50px;
+    border-style: solid;
+    font-size: 2rem;
+    background-color: #afeeee;
+    color: white;
+}
 
 #signinbutton{
     text-align: center;
@@ -33,6 +44,18 @@
     padding-left: 0vw;
     font-size: 2rem;
     color: #6a6a6a;
+}
+#signinbutton:hover{
+    text-align: center;
+    margin: 1vw;
+    padding-top: 0vh;
+    padding-left: 0vw;
+    border-radius: 50px;
+    color: orange;
+    border-color: white;
+    border-style: solid;
+    font-size: 2rem;
+    background-color: #ffffe0;
 }
 
 @media (min-width:200px){
