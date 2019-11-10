@@ -68,11 +68,14 @@ h5{
 
 #left{
     font-size: 1.2rem;
-    text-indent: 20vw;
+
     word-wrap:break-word;
     padding: 2vw;
     padding-right: 1vw;
     
+}
+#indent {
+    text-indent: 5vw;
 }
 
 #right{
@@ -126,9 +129,13 @@ h5{
 }
 
 .example{
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 0.8vh;
+    
     background-color: #46a6dd;
     border-radius: 5px;
     color: white;
+    
+}
+#comment-code {
+    color: #6a6a6a;
 }
