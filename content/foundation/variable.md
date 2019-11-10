@@ -37,9 +37,9 @@ char letter = '\u0050'; หรือ char letter = 'P';         #ประกา
 ```
 และนี่คือตารางตัวอักขระเพิ่มเติม <br>
 ```
-'\n' = ขึ้นบรรทัดใหม่
-'\\' = blackslash
-'\'' = single quote
+"\n" = ขึ้นบรรทัดใหม่
+"\\" = blackslash
+"\'" = single quote
 ```
 
 * ค่าความจริง ( Boolean ) : มีข้อมูลค่าคงที่อยู่ 2 ค่าคือ `true` และ `false`
