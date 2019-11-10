@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
     <title>Study Planet Lesson 1 - Page 4</title>
 </head>
 
@@ -23,27 +24,148 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 4 : ตัวดำเนินการ ( Opearators )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">คือ กลุ่มของเครื่องหมายหรือสัญลักษณ์ที่ใช้ในการทำงาน
+                            โดยตัวดำเนินการเเต่ละประเภทก็จะมีการทำงานที่แตกต่างกัน</p>
+                        <p id="indent">ในบทนี้เราจะมาเรียนรู้เกี่ยวกับตัวดำเนินการต่างๆในภาษาจาวา
+                            โดยตัวดำเนินการนั้นมีหลายประเภท
+                            โดยในบทนี้เราจะมาเรียนรู้เกี่ยวกับ
+                            ตัวดำเนินการทั้งหมด 7 ประเภท ได้แก่</p>
+                        <ul>
+                            <li>การกำหนดค่า</li>
+                            <li>คอมเม็นต์</li>
+                            <li>คณิตศาสตร์</li>
+                            <li>เปรียบเทียบ</li>
+                            <li>ตรรกศาสตร์</li>
+                            <li>เชื่อมข้อความ</li>
+                            <li>ระบุขอบเขต</li>
+                        </ul>
+                        <h3>ตัวดำเนินการกำหนดค่า ( Assignment Operator )</h3>
+                        <p id="indent">ตัวดำเนินการชนิดนี้ถือว่าเป็นตัวดำเนินการที่พื้นฐานมากที่สุด
+                            โดยทุกภาษาจำเป็นที่จะต้องใช้มัน
+                            เพราะว่ามันสามารถกำหนดค่าตัวแปรได้ นั่นก็คือ! เครื่องหมายเท่ากับ = นั่นเอง</p>
+                        <div class="text-center example">double weight = 60;</div>
+                        <h3><br>ตัวดำเนินการคอมเม็นต์ ( Comment Operator )</h3>
+                        <p id="indent">ตัวดำเนินการชนิดนี้เป็นตัวดำเนินการที่มีไว้เพื่ออธิบายโปรแกรม ยกตัวอย่างเช่น
+                            เวลาที่เราไปอ่านโค้ดของเพื่อนแต่ละคนก็จะมีสไตล์การเขียนที่ต่างกัน
+                            ซึ่งตัวดำเนินการคอมเม็นต์เนี่ย จะช่วยให้เราเข้าใจโค้ดที่เพื่อนเราเขียนมากขึ้น (
+                            มีไว้กันงงนั่นเอง )
+                        </p>
+                        <p id="indent">
+                            โดยนอกจากนี้ถ้าหากเกิดบัคหรือข้อผิดพลาดของโปรแกรมก็ทำการแก้ไขและปรับปรุงได้สะดวกขึ้น (
+                            เพราะมีตัวอธิบายยังไงละ! )
+                        </p>
+                        <p>คอมเม็นต์ในภาษาจาวาถูกแบ่งออกเป็นสามประเภทหลักๆ ดังนี้</p>
+                        <div class=" example">
+                            &nbsp;//This is a comment —— สำหรับบรรทัดเดียว<br>
+                            &nbsp;/* This is also a comment */ —— สำหรับข้อความตั้งแต่หนึ่งบรรทัดขึ้นไป<br>
+                            &nbsp;/** This is a comment for documentation */
+                            —— สำหรับข้อความที่ต้องการสร้างเป็นไฟล์เอกสารที่เป็นไฟล์ประเภท HTML
+                        </div>
+                        <h3><br>ตัวดำเนินการคณิตศาสตร์ ( Arithmetic Operators )</h3>
+                        <p id="indent">
+                            ตัวดำเนินการชนิดนี้เป็นตัวดำเนินการพื้นฐานที่ใช้ในการคิดคำนวณทางด้านคณิตศาสตร์พื้นฐานเช่น
+                            บวก ลบ คูณ หาร
+                            โดยรวมไปถึง มอดดูโล (เศษจากการหาร) และเลขยกกำลังอีกด้วย
+
+                        </p>
+                        <p>ถ้าหากต้องการย่อรูปตัวดำเนินการคณิตศาสตร์ สามารถทำได้ดังนี้</p>
+                        <div class="text-center example">int a = 0;<br>
+                            a += 3; —— มีค่าเท่ากับ a = a+3;
+                        </div>
+                        <h5>ตัวดำเนินการเพิ่มค่าและลดค่า</h5>
+                        <p>จะมีหลักๆทั้งหมด 4 ตัวได้แก่ a++ ++a a-- --a ( a ถือว่าเป็นตัวแปรนะ อย่าสับสน! )</p>
+                        <div class="text-center example">
+                            ถ้าเป็น a++ และ a-- จะทำการเพิ่ม/ลดค่า หลังจากบรรทัดนั้น<br>
+                            ถ้าเป็น ++a และ --a จะทำการเพิ่ม/ลดค่า ภายในบรรทัดนั้นเลย
+                        </div>
+
+                        <h3><br>ตัวดำเนินการเปรียบเทียบ ( Comparison Operators )</h3>
+                        <p id="indent">ตัวดำเนินการชนิดนี้เป็นตัวดำเนินการที่ใช้ในการเปรียบเทียบ
+                            โดยผลลัพธ์ที่ได้จะออกมาเป็นค่าความจริง true หรือ false เท่านั้น</p>
+                        <p>ตัวอย่างของตัวดำเนินการเปรียบเทียบ</p>
+                        <div class="text-center example">
+                            <>
+                                <=>= == !=
+                        </div>
+                        <div id="comment-code" class="text-center">3.5 != 2 —— true เนื่องจาก 3.5 ไม่เท่ากับ 2 จริง
+                        </div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
+
+
+                        <h3>ตัวดำเนินการตรรกศาสตร์ ( Logical Operators )</h3>
+                        <p id="indent">เป็นตัวดำเนินการที่ใช้ประเมินค่าทางคณิตศาสตร์
+                            โดยส่วนใหญ่จะนิยมใช้ในการเชื่อมเงื่อนไขตั้งแต่
+                            2 อันขึ้นไปเข้าด้วยกัน ซึ่งผลลัพธ์ที่ได้ออกมาจะมีเพียงค่า true และ false เท่านั้น</p>
+                        <div class="text-center example">&& || & | !</div>
+                        <p id="comment-code" class="text-center"><br>โดยที่ความแตกต่างระหว่าง && || และ & | ก็คือถ้าเป็น
+                            && ||
+                            จะไม่นำเงื่อนไขหลังเข้ามาคิดร่วมด้วย ( คิดแต่เงื่อนไขหน้านั่นเอง )</p>
+
+                        <h3>ตัวดำเนินการเชื่อมข้อความ</h3>
+                        <p id="indent">ตัวดำเนินการประเภทนี้จะใช้กับข้อมูลชนิด String โดยสามารถใช้เครื่องหมาย +
+                            เชื่อมกับ String
+                            ด้วยกันเองหรือเชื่อมกับชนิดข้อมูลอื่นๆได้</p>
                         <div class="text-center example">
-                            System.out.println("Hello World");
+                            String var1 = "I love";<br>
+                            String var2 = "OOP";<br>
+                            String var3 = var1 + var2;
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p><br>ผลลัพธ์ที่ได้จะออกมาเป็น</p>
+                        <div class="text-center example">I love OOP</div>
+
+                        <h3><br>ตัวดำเนินการระบุขอบเขต</h3>
+                        <p id="indent">ตัวดำเนินการประเภทนี้จะใช้เพื่อระบุขอบเขต ( scope )
+                            ของการทำงานว่าภายในโปรแกรมนี้สามารถทำงานได้ถึงส่วนไหน
+                            โดยตัวดำเนินการระบุขอบเขตจะมีทั้งหมด 3 ตัวหลักๆ ได้แก่ ; () {}</p>
+                        <div class="example">
+                            &nbsp;int num_a = 100;<br>
+                            &nbsp;if ( num_a == 100 ){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;int b = 101;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &nbsp;}
+                        </div>
+                        <p><br>ดังโปรแกรมข้างต้นก็จะเห็นได้ว่า จะเกิดข้อผิดพลาดเกิดขึ้น ดังนี้</p>
+                        <div class="text-center example">
+                            error: cannot find symbol<br>
+                            System.out.println(b);<br>
+                            ^<br>
+                            symbol: variable b<br>
+                            location: class Main<br>
+                        </div>
+                        <br><p id="indent">เนื่องจากขอบเขตของตัวแปร b ถูกกำหนดไว้แค่เพียงในขอบเขตของ if
+                            ทำให้เมื่อเราเรียกใช้ตัวแปร b
+                            นอกขอบเขตของ <b>if</b> จะทำให้ไม่สามารถใช้งานได้ จึงทำให้เกิดข้อผิดพลาดขึ้นนั่นเอง
+                            แต่ถ้าอยากให้ใช้งาน<b>ตัวแปร b</b> ได้ราสามารถแก้ไขได้ดังนี้</p>
+                        <div class="example">
+                            &nbsp;int num_a = 100;<br>
+                            &nbsp;int b = 101;<br>
+                            &nbsp;if ( num_a == 100 ){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &nbsp;}
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-4.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson1-3.html';">กลับ</div>
                 </div>
             </div>
