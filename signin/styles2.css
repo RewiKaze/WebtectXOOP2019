@@ -10,7 +10,15 @@
 #logo{
     width: 10vw;
 }
+body{
+    width:100vw;
+}
 
+#logout:hover{
+    transition: 0.3s;
+    border-color:white;
+    color:white;
+}
 .left{
     height: 65%;
     width: 10vw;
@@ -20,7 +28,12 @@
     background-color: rgb(255, 255, 202);
 
 }
-
+#start-button:hover{
+    border-color: white;
+    transition: 0.3s;
+    color:white;
+    background-color:rgb(255,173,91);
+}
 
 .center{
     position: absolute;
