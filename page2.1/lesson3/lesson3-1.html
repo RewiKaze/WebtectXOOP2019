@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../allLesson.css">
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
+    <title>Study Planet Lesson 3 - Page 1</title>
+</head>
+
+<body>
+    <nav class=" navbar-light m-0 p-0">
+        <div class="container-fluid">
+            <div class="row p-1">
+                <div class="col-12">
+                    <div id="lognout" class="float-right border border-secondary">Log out</div>
+                    <h5 class="float-right">Hello! , <mark>username</mark></h5>
+                </div>
+            </div>
+            <div class="row text-center p-1">
+                <div id="head" class="col">
+                    ตอนที่ 1 : การเขียนโปรแกรมเชิงวัตถุเบื้องต้น
+                </div>
+            </div>
+            <div class="row">
+                <div id="content" class="row">
+                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
+                    <div id="left" class="col-12 col-sm-6">
+                        <p id="indent">ในบทเรียนนี้เราจะเรียนรู้เกี่ยวกับพื้นฐานของการเขียนโปรแกรมเชิงวัตถุกัน
+                            ซึ่งก่อนที่จะไปเข้าเนื้อหาเเบบจัดเต็มกันนั้น ก็ควรที่จะปูพื้นฐานในเรื่องนี้กันก่อน!
+                            ซึ่งหัวใจสำคัญของ การเขียนโปรแกรมเชิงวัตถุ หรืออ็อบเจ็กต์นั้นก็คือ <b>คลาส </b>( Class ) นั่นเองง
+                        </p>
+                        <p id="indent">ก่อนที่จะไปรู้ว่าคลาสคืออะไร?
+                            ก่อนอื่นมาเข้าใจความแตกต่างระหว่างกาษาเชิงกระบวนการและภาษาเชิงอ็อปเจ็กต์กันก่อนดีกว่า</p>
+                        <h4>ภาษาเชิงกระบวนการ</h4>
+                        <p id="indent">เป็นภาษาที่ตัวโปรแกรมนั้นจะทำการแบ่งออกเป็นส่วนย่อยๆ หรือที่เรียกกันว่า<b> โมดูล</b> ( Module )
+                            โดยที่ต้นทุนการพัฒนาโปรแกรมนั้นค่อนข้างที่จะแพง ตัวอย่างคร่าวๆ ของภาษาเชิงกระบวนการ
+                            ก็คือภาษา C ที่เรารู้จักกันในทุกวันนี้นั่นแหละ</p>
+                        <p>แล้วมันต่างกับภาษาเชิงอ็อปเจ็กต์ยังไง?</p>
+                        <h3>ภาษาเชิงอ็อปเจ็กต์</h3>
+                        <p id="indent">มองภาพง่ายๆว่าภาษาชนิดนี้จะมองภาพรวมการทำงานเป็นก้อนๆ หรือที่เรียกกันว่าอ็อปเจ็กต์ /
+                            วัตถุนั่นแหละ ซึ่งการมองแบบนี้จะทำให้เราสามารถที่จะนำโปรแกรมกลับมาใช้ใหม่ ( Reuse )
+                            ได้ดีกว่าภาษาเชิงกระบวนการ
+                        </p>
+                        <p>นอกจากนี้แล้วภาษาเชิงอ็อปเจ็กต์ยังมีแนวคิดการวิเคราะห์ปัญหาใกล้เคียงกับธรรมชาติของมนุษย์
+                            ซึ่งทำให้ง่ายต่อการแก้ไขอีกด้วย</p>
+                        <p>โดยมีหลักการทำงานดังนี้</p>
+                        <ol>
+                            <li>วิเคราะห์ปัญหา โดยมองว่าปัญหาประกอบไปด้วย Object ต่างๆ</li>
+                            <div class="text-center example">มองว่ามีปัญหาอะไรบ้าง แล้วทำการแบ่งปัญหาเป็นส่วนๆ</div>
+                            <li>จำลองคุณลักษณะและพฤติกรรมของ Object</li>
+                            <div class="text-center example">กำหนดสถานะ และพฤติกรรมของวัตถุแต่ละชนิด</div>
+                            <li>Object จะส่งข้อมูลกันโดยผ่านข่าวสาร ( Message ) เช่น ดูว่าแต่ละ Object
+                                มีความสัมพันธ์กันอย่างไร</li>
+                            <div class="text-center example">ทำการเชื่อมโยงวัตถุแต่ละก้อนที่มีความสัมพันธ์เข้าด้วยกัน</div>
+                            <li>พิจารณาลำดับการทำงาน และแบ่งการทำงานของโปรแกรมตามหน้าที่</li>
+                            <div class="text-center example">จัดเรียงลำดับการทำงาน!</div>
+                        </ol>
+
+                    </div>
+                    <div id="right" class="col-12 col-sm-6">
+                        <h3>คลาส ( Class )</h3>
+                        <p id="indent">คลาสเป็นแบบแผ่น/แม่แบบ ที่ใช้สำหรับการสร้างวัตถุ ( Object ) เพื่อกำหนด Attribute
+                            ( อธิบายรายละเอียด ) และ Method ( หน้าที่ต่างๆ ) ของวัตถุ</p>
+                        <p id="indent"><b>วัตถุ ( Object )</b> คือ สิ่งที่มีสถานะ หรือแอททริบิวท์ ( Attribute ) และแสดงพฤติกรรม หรือเมธอด (
+                            Method ) บางครั้งอาจะเรียกได้ว่าเป็น Instance ของคลาสซึ่งหนึ่งคลาสสามารถสร้างได้หลาย Object
+                        </p>
+                        <p id="indent">คิดซะว่าถ้าหาก<b>คลาส</b>เป็นพิมพ์เขียวที่ไว้ใช้สร้างบ้านแต่ละหลัง
+                        <b>วัตถุ</b>ก็เปรียบเสมือนบ้านแต่ละหลังที่สร้างจากพิมพ์เขียวนั่นแหละ</p>
+                        <h3>การสร้างคลาส</h3>
+                        <div class="example">&nbsp;[ modifier ] class < Classname > {<br>
+                            &emsp;&emsp;[ class member ]<br>
+                            &nbsp;}</div>
+                        <ul>
+                            <li>[ modifier ] คือ คีย์เวิร์ดของภาษาจาวาที่ใช้ในการอธิบายระดับการเข้าถึง</li>
+                            <li>class คือ คีย์เวิร์ดของภาษาจาวาเพื่อระบุเป็นการประกาศคลาส ( ปกติจะชื่อเดียวกับชื่อไฟล์ )
+                            </li>
+                            <li>
+                                < Classname > คือ ชื่อคลาส
+                            </li>
+                            <li>[ class member ] คือ เมธอดหรือคุณลักษณะ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="buttonrow" class="row">
+                <div class="col-12">
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page1/1/Page1.html';">กลับ</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
