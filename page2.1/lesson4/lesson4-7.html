@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
-    <title>Study Planet Lesson 1 - Page 1</title>
+    <title>Study Planet Lesson 4 - Page 7</title>
 </head>
 
 <body>
@@ -23,30 +23,116 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 7 : Special parts (1)
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                    </div>
-                    <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
+                        <p>ในบทเรียนนี้เราจะมาเรียนรู้กันถึงเมธอดต่างๆ
+                            ที่ถ้าหากใช้งานเป็นก็จะสามารถทำให้การเขียนโปรแกรมเชิงวัตถุนั้น มองภาพรวมได้ง่ายขึ้น
+                            รวมไปถึงจะไปเรียนรู้กันว่า ตัวดำเนินการ instance of คืออะไร?
+                            ปิดท้ายด้วยคียเวิร์ดที่สำคัญอีกตัวอย่าง final อีกด้วย
+                        </p>
+                        <h2>
+                            เมธอด toString()</h2>
+                        <p>
+                            ใช้สำหรับแปลงข้อมูลของแอททริบิวท์ในวัตถุนั้นๆ เป็น String ซึ่งจะต้อง Overridden เมธอด
+                            toString() จากคลาส Object มาด้วย โดยเมื่อมีการเรียกใช้ วัตถุดังกล่าวจะถูกเรียก toString()
+                            เองโดยอัตโนมัติ</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String id; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String name; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (String ID, String n) { <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id = ID; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = n; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String toString() { <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "ID is " + this.id + " Name is " + this.name; <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br><br>
+
+                                        &nbsp;&nbsp;&nbsp;&nbsp;public class TestStudent{ <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main( String[] args) { <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student s = new Student("00","Study Planet");<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println( s.toString() );<br><br>
+
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;}
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                    </div>
+                        <p>ผลลัพธ์ที่ได้จะออกมาเป็นดังนี้</p>
+                    <div class="example">
+                    ID is 00 Name is Study Planet
                 </div>
+                <br>
+                <h2>
+                    เมธอด equals()</h2>
+                <p>
+                    ใช้สำหรับสร้างเงื่อนไขการเปรียบเทียบ 2 วัตถุว่ามีความคล้ายกันหรือไม่</p>
+                <div class="example">
+                    public class Student{
+                    private String id;
+                    private String name;
+                    public Student (String ID, String n) {
+                    id = ID;
+                    name = n;
+                    }
+                    public boolean equals(Student s){
+                    return (this.id.equals(s.id));
+                    }
+                    }
+                    public class Main{
+                    public static void main( String[] args) {
+                    Student s1 = new Student("203", "Tara");
+                    Student s2 = new Student("203", "Bank");
+                    System.out.println(s1.equals(s2));
+                    }
+                    }</div><br>
+                <p>
+                    จากโปรแกรมตัวอย่างจะเห็นได้ว่า เราได้ทำการเปรียบเทียบตัวแปร id ของทั้ง 2 วัตถุด้วยกัน
+                    โดยผ่านเมธอด equals() ซึ่งตัวเมธอดจะทำการ return ค่าออกมา เป็น boolean นั่นเอง</p>
             </div>
-            <div id="buttonrow" class="row">
-                <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page1/1/Page1.html';">กลับ</div>
-                </div>
+            <div id="right" class="col-12 col-sm-6">
+                <p>โดย s1.equals(s2) เปรียบเสมือนว่าเป็นการโยนวัตถุ s2 เข้าไปเปรียบเทียบกับ s1 ( เหมือนว่า s1
+                เป็นตัวตั้ง )</p>
+<ol>
+                <li>this.id ภายในเมธอด equals() จะหมายถึงวัตถุ s1</li>
+                <li>s.id จะหมายถึงวัตถุของ s2 โดยผลลัพธ์ที่ออกมาได้ก็จะเป็น ดังนี้</li>
+</ol><div class="example">
+        &nbsp;&nbsp;&nbsp;&nbsp;true&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // เนื่องจาก id ของทั้ง 2 วัตถุเท่ากัน</div>
+                <h2>ตัวดำเนินการ instance of</h2>
+
+                <p>เป็นอีกหนึ่งตัวดำเนินการที่ใช้กับอ็อบเจ็กต์และคลาส
+                เพื่อตรวจสอบว่าเป็นอ็อบเจ็กต์ของคลาสนั้นหรือไม่ ซึ่งจะให้ผลลัพธ์เป็นข้อมูลชนิด boolean</p> <br>
+<div class="example">
+        &nbsp;&nbsp;&nbsp;&nbsp;GradStudent s1 = new GradStudent(); <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof GradStudent) &nbsp;&nbsp;&nbsp;&nbsp;// จะได้ผลลัพธ์ออกมาเป็น true <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof String) &nbsp;&nbsp;&nbsp;&nbsp;// ไม่สามารถรันโปรแกรมได้ เนื่องจาก s1 เป็นวัตถุไม่ใช่ตัวแปร String</div><br>
+                <p>โดยตัวดำเนินการ instance of จะสามารถนำไปใช้ได้หลากหลายรูปแบบ
+                ขึ้นอยู่กับว่าผู้เขียนต้องการจะนำไปประยุกต์กับอะไร เช่น คำสั่ง if-else</p> <br>
+
+                <h2>คีย์เวิร์ด final</h2><br>
+
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;คีย์เวิร์ด final สามารถจะใช้ได้กับคลาส เมธอด และตัวแปร โดยถ้าหากอยู่ในตำแหน่งที่ต่างกัน
+                ก็จะมีความหมายที่แตกต่างกัน ได้แก่</p>
+<ol>
+                <li>คลาส : ทำให้คลาสอื่นไม่สามารถสืบทอดคลาสนี้ได้</li>
+                <li>เมธอด : ไม่สามารถ overridden ได้</li>
+                <li>ตัวแปร : เป็นค่าคงที่ โดยกำหนดค่าได้เพียงครั้งเดียวเท่านั้น</li>
+</ol>
+                <div class="example">
+                        &nbsp;&nbsp;&nbsp;&nbsp;final dataType VariableName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// final อยู่ที่ตำแหน่งตัวแปร</div>
             </div>
+        </div>
+        </div>
+        <div id="buttonrow" class="row">
+            <div class="col-12">
+                <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-7.html';">ไปต่อ!</div>
+                <div id="back" class="float-right" onclick="location.href='lesson4-6.html';">กลับ</div>
+            </div>
+        </div>
         </div>
     </nav>
 </body>

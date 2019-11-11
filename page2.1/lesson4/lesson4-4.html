@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
-    <title>Study Planet Lesson 1 - Page 4</title>
+    <title>Study Planet Lesson 4 - Page 4</title>
 </head>
 
 <body>
@@ -23,28 +23,112 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 4 : การมีได้หลากหลายรูปแบบ ( Polymorphism )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+
+                        <p>ในบทเรียนนี้เราจะมาเรียนรู้เรื่องการมีได้หลากหลายรูปแบบ
+                            ซึ่งถือว่าเป็นอีกคุณสมบัติของอ็อบเจ็กต์ของคลาสที่ต่างกันสามารถตอบสนองต่อเมธอดเดียวกันในวิธีการต่างกันได้
+                            เช่น Overloaded, Overridden และการใช้ Dynamic Binding</p>
+
+                        <h2>Dynamic Binding</h2>
+
+                        <p>คือ ชนิดข้อมูลของตัวแปรชนิดอ้างอิง โดยจะถูกกำหนดก็ต่อเมื่อโปรแกรมประมวลผล( runtime )
+                            ซึ่งเป็นหลักการของการสร้างวัตถุของคลาสที่มีการสิบทอดกันได้หลากหลายรูปแบบ</p>
+                        <div class="example text-center">
+                            Superclass obj;</div><br>
+                        <p>โดยสามารถสร้างได้ 2 แบบได้แก่</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;obj = new Superclass();&nbsp;&nbsp;&nbsp;&nbsp; // คลาสนั้นเอง<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;obj = new Subclass();&nbsp;&nbsp;&nbsp;&nbsp; //
+                            คลาสอื่นๆที่เป็นคลาสลูก
+                        </div><br>
+                        <h2>Overloaded</h2>
+
+                        <p>เป็นการทำให้เมธอดที่มีชื่อเหมือนกัน ภายในคลาสเดียวกันมีการทำงาน อินพุท หรือ
+                            มีผลลัพธ์ที่แตกต่างกัน เพื่อรองรับอินพุทอย่างหลากหลาย ส่งผลให้เมธอดมีความ
+                            ยืดหยุ่นในการใช้งานมากยิ่งขึ้น ยกตัวอย่างเช่น</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;public void setDetail ( String ID, String n ) {}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;public void setDatail ( String ID, double GPA ) {}
+                        </div> <br>
+                        <h2>Overridden</h2>
+
+                        <p>เป็นการอนุญาตให้คลาสลูก ( Sublclass ) สามารถเพิ่มเติมการทำงานจำเพาะเช่น
+                            เพิ่มโค้ดในเมธอดที่คลาสแม่ ( Superclass ) มีไว้แล้วก็ได้ โดยมีเงื่อนไขดังนี้</p>
+                        <ol>
+                            <li>จำนวนและชนิดของ arguement จะต้องเหมือนเดิม</li>
+                            <li>ชนิดข้อมูลของค่าที่ส่งกลับมาจะต้องเหมือนเดิม</li>
+                            <li>Access Modifier จะต้องมีระดับไม่ต่ำกว่าเดิม</li>
+                        </ol>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String id;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String name;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected double gpa;<br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void printDetail(){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID
+                            ”+id);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name
+                            ”+name);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}</div>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;public class GradStudent extends Student{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String thesisTitle;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String getThesisTitle(){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+                            this.thesisTitle;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void printDetail(){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID
+                            ”+id);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name
+                            ”+name);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“GPA
+                            ”+gpa);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Title
+                            ”+thesisTitle);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;จากโปรแกรมดังกล่าวข้างบน เราจะสามารถสังเกตเห็นได้ว่ามีการทำงานบางส่วนที่ซ้ำกัน นั่นก็คือ</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID ”+id);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name ”+name);</div>
+                        <p>ทำให้เราสามารถที่จะนำหลักการ Overridden มาใช้ได้โดยเปลี่ยนส่วนที่ซ้ำกันในเมธอด printDetail()
+                            ได้ดังนี้</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;super.printDetail();</div>
+                        <p>ซึ่งเป็นการเรียกใช้เมธอด printDetail() จากคลาส Student ได้เนื่องจากเราได้ทำการ extends
+                            คลาสมาแล้วจ้า ~</p>
+
+                        <h2>Virtual Method Invocation</h2>
+
+                        <p>โปรแกรมภาษาจาวาจะพิจารณาเรียกใช้เมธอดจากชนิดของอ็อบเจ็กต์ที่สร้างขึ้น
+                            แต่คอมไพเลอร์ของภาษาจาวาจะไม่อนุญาตให้เรียกใช้เมธอดใดๆก็ตามที่ไม่มีการประกาศ
+                            อยู่ในเมธอดของคลาสแม่ ที่กำหนดไว้</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;Student s1 = new GradStudent();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;s1.getThesisTitle();
+                        </div><br>
+                        <p>จากตัวอย่างโปรแกรมด้านบนจะไม่สามารถรันโปรแกรมได้เนื่องจากเราไม่ได้ทำการประกาศเมธอด
+                            getThesisTitle() ไว้ในคลาส Student นั่นเอง</p>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='lesson1-3.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-4.html';">ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='lesson4-3.html';">กลับ</div>
                 </div>
             </div>
         </div>
