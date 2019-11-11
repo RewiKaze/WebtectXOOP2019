@@ -113,10 +113,10 @@
                         <p id="indent">ตัวดำเนินการประเภทนี้จะใช้กับข้อมูลชนิด String โดยสามารถใช้เครื่องหมาย +
                             เชื่อมกับ String
                             ด้วยกันเองหรือเชื่อมกับชนิดข้อมูลอื่นๆได้</p>
-                        <div class="text-center example">
-                            String var1 = "I love";<br>
-                            String var2 = "OOP";<br>
-                            String var3 = var1 + var2;
+                        <div class="example">
+                            &nbsp;String var1 = "I love";<br>
+                            &nbsp;String var2 = "OOP";<br>
+                            &nbsp;String var3 = var1 + var2;
                         </div>
                         <p><br>ผลลัพธ์ที่ได้จะออกมาเป็น</p>
                         <div class="text-center example">I love OOP</div>
@@ -128,21 +128,21 @@
                         <div class="example">
                             &nbsp;int num_a = 100;<br>
                             &nbsp;if ( num_a == 100 ){<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;int b = 101;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &emsp;int b = 101;<br>
+                            &emsp;System.out.println(num_a);<br>
+                            &emsp;System.out.println(num_b);<br>
                             &nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_a);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(num_b);<br>
+                            &emsp;System.out.println(num_a);<br>
+                            &emsp;System.out.println(num_b);<br>
                             &nbsp;}
                         </div>
                         <p><br>ดังโปรแกรมข้างต้นก็จะเห็นได้ว่า จะเกิดข้อผิดพลาดเกิดขึ้น ดังนี้</p>
-                        <div class="text-center example">
-                            error: cannot find symbol<br>
-                            System.out.println(b);<br>
-                            ^<br>
-                            symbol: variable b<br>
-                            location: class Main<br>
+                        <div class=" example">
+                            &nbsp;error: cannot find symbol<br>
+                            &nbsp;System.out.println(b);<br>
+                            &emsp;&emsp;^<br>
+                            &nbsp;symbol: variable b<br>
+                            &nbsp;location: class Main<br>
                         </div>
                         <br><p id="indent">เนื่องจากขอบเขตของตัวแปร b ถูกกำหนดไว้แค่เพียงในขอบเขตของ if
                             ทำให้เมื่อเราเรียกใช้ตัวแปร b
