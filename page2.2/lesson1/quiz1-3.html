@@ -10,32 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allquiz.css">
     <link rel="stylesheet" href="../allpopup.css">
-    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
-    <script href='popupShow.js'>
-        $(document).ready(function () {
-            $('input:checkbox').click(function () {
-                $('input:checkbox').not(this).prop('checked', false);
-            });
-        });
-
-        function refresh(){
-            document.getElementById('bgWrong').className = 'none';
-        }
-
-        function check() 
-        {
-            let choise1 = document.getElementById('choise1');
-            let choise2 = document.getElementById('choise2');
-            if(choise2.checked){
-                document.getElementById('bgCorrect').className = 'background';
-            }
-            else{
-                document.getElementById('bgWrong').className = 'background';
-            }
-            
-        }
-    </script>
-    <title>Lesson QUIZ 1</title>
+    <script type="text/javascript" src="../popupShow.js"></script>
+    <title>Lesson 1 QUIZ 3</title>
 </head>
 
 <body>
@@ -53,13 +29,13 @@
                 </div>
 
                 <form action="">
-                    <label for="">คำถาม : ข้อใดไม่ถูกต้องในการตั้งชื่อตัวแปรของภาษาจาวา </label><br>
+                    <label for="">คำถาม : ข้อใดไม่ถูกต้องในการตั้งชื่อตัวแปรของภาษาจาวา ? </label><br>
                     <p>ตอบ :</p>
-                    <label for="">
-                        &nbsp;<input id="choise1" class="choise1" type="checkbox" type="text" value="1"> ต้องขึ้นต้นด้วย 0-9, อักขระ A-Z และห้ามใช้ _ หรือ $ ในการตั้งชื่อ
-                        &nbsp;<input id="choise2" class="choise2" type="checkbox" type="text" value="2"> ต้องขึ้นต้นด้วยอักขระ A-Z , a-z, _ หรือ $ เท่านั้น 
+         
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="choise1" class="choise rounded" type="checkbox" type="text" value="1">  &nbsp;<label for="choise1">ต้องขึ้นต้นด้วย 0-9, อักขระ A-Z และห้ามใช้ _ หรือ $ ในการตั้งชื่อ</label></input>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="choise2" class="choise rounded" type="checkbox" type="text" value="2">  &nbsp;<label for="choise2">ต้องขึ้นต้นด้วยอักขระ A-Z , a-z, _ หรือ $ เท่านั้น </label>
 
-                    </label>
                 </form>
             </div>
         </div>
@@ -70,8 +46,8 @@
         </div>
         <div id="buttonrow" class="row p-1">
             <div class="col-12">
-                <button id="ans" class="float-right" type="button" onclick="check()">ตอบ</button>
-                <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';">กลับไปอ่านเนื้อหา</div>
+                <button id="ans" class="float-right" type="button" onclick="check(2)"><img id="tick" src="../../img/icon/double-tick.png">ตอบ</button>
+                <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson1/lesson1-3.html';">กลับไปอ่านเนื้อหา</div>
             </div>
         </div>
     </div>
