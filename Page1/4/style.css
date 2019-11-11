@@ -9,9 +9,9 @@
 
 
 body{
-    background-image: url("../../img/bg-1.jpg");
+    background-image: url("../../img/bg-12.jpg");
     background-size: 100vw;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-size: 1.5rem;
 }
 #bg{
@@ -33,7 +33,7 @@ body{
     width: 31vw;
     text-align: center;
     font-size: 2rem;
-    background-color: #ffffe0;
+    background-color: rgb(166, 157, 286);
     position: relative;
 } 
 
