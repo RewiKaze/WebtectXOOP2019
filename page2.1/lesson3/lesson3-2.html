@@ -24,28 +24,42 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 2 : วัตถุ ( Object )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">ในบทที่แล้วเราได้พูดถึงคลาส ซึ่งคลาสถือว่าเป็นการกำหนดส่วนประกอบต่างๆ ที่จะนำไปสร้างออบเจ็ค
+                            หรือวัตถุนั่นเอง</p>
+                        <p id="indent">เราสามารถทำการสร้างคลาสได้ โดยทำการประกาศคลาสตามด้วยตัวแปรประเภทวัตถุ ( Object ) ของคลาส เช่น
+                        </p>
+                        <div class="example">
+                            &nbsp;String str1;<br>
+                            &nbsp;String str2;
+                        </div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
+                        <p id="indent">
+                            โดยตัวแปร <b>str1 str2</b> จะเป็นอิสระซึ่งกันและกัน
+                            แต่ทว่าการที่เราสร้างคลาสแล้วยังไม่ถือว่าคลาสนั้นถูกสร้างแล้ว
+                            จึงจำเป็นที่จะต้องทำการประกาศคลาสให้มันด้วย ซึ่งเราสามารถประกาศคลาสได้ ดังนี้
+                        </p>
+                        <div class="example">
+                            &nbsp;ตัวแปรประเภทวัตถุ = new คลาส();<br>
+                            &nbsp;เช่น str1 = new String();
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p><br>นอกจากนี้เราก็ทำการสร้างและประกาศวัตถุไปพร้อมๆกันได้ ยกตัวอย่างเช่น</p>
+                        <div class="text-center example">String str1 = new String();</div>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='lesson1-1.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson3/quiz3-2.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson3/lesson3-1.html';">กลับ</div>
                 </div>
             </div>
         </div>
