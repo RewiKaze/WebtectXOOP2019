@@ -1,0 +1,46 @@
+#start {
+    background-color: #f47772;
+    color: white;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#start:hover {
+    box-shadow: 2px 2px 15px 3px rgb(226, 100, 101,.5);
+}
+
+#backtomain:hover {
+    box-shadow: 3px 3px 15px 3px #c0c0c0cc;
+}
+#backtomain {
+    position: absolute;
+    top: 85%;
+    left: 9%;
+    transition: all .2s;
+    height: 2em;
+    color: white;
+    width: 8em;
+    background-color: #c0c0c0;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+cursor:pointer;
+}
+
+อีลีเมนตอนกด {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
+}
+
+element.style {
+    background-color: rgb(255, 255, 224);
+    border-left: .25em solid rgb(244, 119, 114);
+    color: rgb(68, 68, 68);
+    box-shadow: rgb(232, 233, 189) 3px 5px 15px 3px inset;
+}
+
+#db2:hover {
+    box-shadow: 3px 3px 10px 3px rgba(46, 46, 46, 0.1);
+}
