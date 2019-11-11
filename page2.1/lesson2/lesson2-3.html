@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
     <title>Study Planet Lesson 1 - Page 3</title>
 </head>
 
@@ -42,27 +43,27 @@
                             นั่นก็คือคำสั่ง break และ continue</p>
                         <h4>คำสั่ง break</h4>
                         <p>เป็นคำสั่งที่จะทำให้จบหรือสิ้นสุดการทำงานของโครงสร้างแบบทำซ้ำ เช่น</p>
-                        <div>
-                            for ( int i = 0; i < 5; i++ )<br>{ 
+                        <div class="example">
+                            for ( int i = 0; i < 5; i++ ){<br></5> 
                                 if ( i==2 ) { <br>
                                     break; <br>
                                 }<br>
                                  System.out.println("I love Webtech");<br>
                                 }<br> </div>
-                                 <p id="indent">ดังตัวอย่างด้านบน จะได้ผลลัพธ์ของคำว่า I love Webtech ทั้งหมด 2
+                                <br><p id="indent">ดังตัวอย่างด้านบน จะได้ผลลัพธ์ของคำว่า I love Webtech ทั้งหมด 2
                                 ครั้งเนื่องจากครั้งที่ 3 ( i = 2 ) ได้ทำการ break ทำให้สิ้นสุด
                                 การทำงานนั่นเอง</p>
                                 <h4>คำสั่ง continue</h4>
                                 <p id="indent">เป็นคำสั่งที่จะทำการข้ามการทำงานคำสั่งที่เหลือภายในบล็อก { }
                                     โดยไปเริ่มการทำซ้ำในรอบต่อไปใหม่นั่นเอง เช่น</p>
-                                <div>
-                                    for ( int i = 0; i < 5; i++ ) {<br>
-                                         if ( i==2 ) { <br>
-                                            continue; <br>
-                                        }<br>
-                                         System.out.println("I love
+                                <div class="example">
+                                    &nbsp;for ( int i = 0; i < 5; i++ ) {<br>
+                                        &emsp;if ( i==2 ) { <br>
+                                            &nbsp;&emsp;continue; <br>
+                                        &nbsp;&nbsp;}<br>
+                                        &nbsp;&nbsp;System.out.println("I love
                                         Webtech"); <br>
-                                    } <br>
+                                    &nbsp;} <br>
                                 </div>
                                 <p id="indent">ดังตัวอย่างด้านบน จะได้ผลลัพธ์ของคำว่า I love Webtech
                                     ทั้งหมด 4 ครั้งเนื่องจากครั้งที่ 3 ( i = 2 ) ได้ทำการ continue
@@ -76,84 +77,95 @@
                                 <p id="indent">เป็นคำสั่งของการทำงานซ้ำที่สามารถทราบจำนวนรอบได้อย่างแน่นอน
                                     โดยขอบเขตของตัวแปรที่ประกาศในคําสั่งกําหนดค่าจะใช้ได้เฉพาะภายในบล็อกคําสั่ง
                                     for เท่านั้น รูปแบบ ทั่วไปของคำสั่ง for จะมีดังนี้</p>
-                                <div>for ( start; stop; step )<br>
-                                    {<br>
-                                    คำสั่ง<br>
-                                    }<br></div>
-                                <p id="indent">เราสามารถกำหนดค่าของ start ได้โดยที่จะถือว่าเป็นค่าเริ่มต้นภายในบล็อกของ for
+                                <div class="example">
+                                    &nbsp;for ( start; stop; step )<br>
+                                    &nbsp;{<br>
+                                    &emsp;&emsp;// คำสั่ง<br>
+                                    &nbsp;}</div>
+                                    <br><p id="indent">เราสามารถกำหนดค่าของ start ได้โดยที่จะถือว่าเป็นค่าเริ่มต้นภายในบล็อกของ for
                                     นอกจากนี้ยังสามารถกำหนด stop ที่เป็นค่าหยุด
                                     โดยจะหยุดการทำงานทันทีเมื่อตรงกับคำสั่งนั้น และ step เป็นการกำหนดเพิ่ม /
                                     ลดค่าหลังจากที่ทำงานจบในรอบนั้นเเล้วนั่นเอง</p>
-                                
+                                    <p><b><i>ตัวอย่าง</i></b> จงเขียนโปรแกรมที่ทำการแสดงผลคำว่า "I love Webtech" ผ่านทางจอภาพทั้งหมด 5
+                                        ครั้ง
+                                        ลองคิดเล่นๆดูว่าก่อนหน้านี้ที่เรายังไม่ได้เรียนรู้เรื่องการทำงานแบบซ้ำนั้น
+                                        จะต้องทำการเขียนทั้งหมด 5 บรรทัด เช่น</p>
+                                    <div class="text-center example">
+                                        System.out.println("I love Webtech");<br>
+                                        System.out.println("I love Webtech");<br>
+                                        System.out.println("I love Webtech");<br>
+                                        System.out.println("I love Webtech");<br>
+                                        System.out.println("I love Webtech");
+    
+                                    </div>
+                                    <p id="comment-code" class="text-center">แต่ถ้าหากเราลองนำคำสั่ง for มาใช้จะออกมาเป็นยังไงนะ?</p>
+                                    
                                 </div>
                                 <div id="right" class="col-12 col-sm-6">
-                                        <p>ตัวอย่าง จงเขียนโปรแกรมที่ทำการแสดงผลคำว่า "I love Webtech" ผ่านทางจอภาพทั้งหมด 5
-                                                ครั้ง
-                                                ลองคิดเล่นๆดูว่าก่อนหน้านี้ที่เรายังไม่ได้เรียนรู้เรื่องการทำงานแบบซ้ำนั้น
-                                                จะต้องทำการเขียนทั้งหมด 5 บรรทัด เช่น</p>
-                                            <div>
-                                                System.out.println("I love Webtech");
-                                                System.out.println("I love Webtech");
-                                                System.out.println("I love Webtech");
-                                                System.out.println("I love Webtech");
-                                                System.out.println("I love Webtech");
-            
-                                            </div>
-                                            <p>แต่ถ้าหากเราลองนำคำสั่ง for มาใช้จะออกมาเป็นยังไงนะ?</p>
-                                            <div>
-                                                for ( int i = 0; i < 5; i++ ) { System.out.println("I love Webtech"); } </div> 
-                                                <p id="indent">
-                                                    ดังตัวอย่างข้างบนแล้วก็จะเห็นได้ว่าโปรแกรมจะสามารถทำงานได้ง่ายและสะดวกกว่าแบบก่อนหน้าเยอะเลย
-                                                    นอกจากนี้คำสั่ง for จะนิยมใช้กับข้อมูลแบบอาเรย์อีกด้วย
-                                                    ( จะได้เจอกันในเร็วๆนี้แหละ! )
-                                                    </p>
+                                    <div class="example">
+                                        &nbsp;for ( int i = 0; i < 5; i++ ) {<br>
+                                        &emsp;System.out.println("I love Webtech"); <br>
+                                        &nbsp;} </div> 
+                                        <br><p id="indent">
+                                            ดังตัวอย่างข้างบนแล้วก็จะเห็นได้ว่าโปรแกรมจะสามารถทำงานได้ง่ายและสะดวกกว่าแบบก่อนหน้าเยอะเลย
+                                            นอกจากนี้คำสั่ง for จะนิยมใช้กับข้อมูลแบบอาเรย์อีกด้วย
+                                            ( จะได้เจอกันในเร็วๆนี้แหละ! )
+                                            </p>
                                     <h4>คำสั่ง while</h4>
                                     <p id="indent">เป็นคำสั่งของการทำงานซ้ำที่ไม่สามารถทราบจำนวนรอบได้อย่างแน่นอน
                                         รูปแบบทั่วไปของคำสั่ง for จะมีดังนี้</p>
 
-                                    <div>
-                                        while ( เงื่อนไข ) //จะหยุดเมื่อเงื่อนไขเป็นเท็จ<br>
-                                        {<br>
-                                        คำสั่งที่ทำซ้ำขณะที่เงื่อนไขเป็นจริง<br>
-                                        }<br>
+                                    <div class="example">
+                                        &nbsp;while ( เงื่อนไข ) —— จะหยุดเมื่อเงื่อนไขเป็นเท็จ<br>
+                                        &nbsp;{<br>
+                                        &emsp;&emsp;คำสั่งที่ทำซ้ำขณะที่เงื่อนไขเป็นจริง<br>
+                                        &nbsp;}<br>
                                     </div>
-                                    <p>เรามาลองเขียนโปรแกรมนับเลขโดยใช้คำสั่ง while กันดีกว่า!</p>
-                                    <div>int i = 1;<br>
-                                        while ( i <= 10 ) { <br>
-                                            System.out.print (i + " " ); <br>
-                                            i++;<br> } </div> <p>
+                                    <br><p>เรามาลองเขียนโปรแกรมนับเลขโดยใช้คำสั่ง while กันดีกว่า!</p>
+                                    <div class="example">
+                                        &nbsp;int i = 1;<br>
+                                        &nbsp;while ( i <= 10 ) { <br>
+                                            &emsp;&emsp;System.out.print (i + " " ); <br>
+                                            &emsp;&emsp;i++;<br> 
+                                            &nbsp;} </div>
+                                            <br><p>
                                             จะได้ผลลัพธ์ออกมาเป็นดังนี้</p>
-                                            <div>1 2 3 4 5 6 7 8 9 10</div>
-                                            <h4>โครงสร้างแบบซ้อน ( Nested Structure )</h4>
+                                            <div class="text-center example">1 2 3 4 5 6 7 8 9 10</div>
+                                            <br><h4>โครงสร้างแบบซ้อน ( Nested Structure )</h4>
                                             <p id="indent">เราสามารถที่จะเขียนคำสั่งโครงสร้างควบคุมใดๆ ให้ซ้อนอยู่ภายในได้ เช่น
                                                 การเขียนโครงสร้างทำซ้ำแบบซ้อน ( for อยู่ใน for ) โดยโครงสร้างควบคุมภายใน
                                                 และภายนอกไม่จำเป็นต้องเป็นคำสั่งชนิดเดียวกัน</p>
-                                            <div>
-                                                for (int i=1; i < 4; i++) { for (int j=1; j < 5; j++) {
-                                                    System.out.print("*"); } System.out.println(); } </div> <p>
+                                            <div class="example">
+                                                &nbsp;for (int i=1; i < 4; i++) { <br>
+                                                &nbsp;&emsp;for (int j=1; j < 5; j++) {<br>
+                                                    &nbsp;&emsp;&emsp;System.out.print("*"); <br>
+                                                    &nbsp;&emsp;} <br>
+                                                &nbsp;System.out.println(); <br>
+                                                &nbsp;} </div> <br><p>
                                                     จะได้ผลลัพธ์ออกมาเป็นดังนี้</p>
-                                                    <div>
-                                                        ****<br>
-                                                        ****<br>
-                                                        ****<br>
+                                                    <div class="example">
+                                                        &nbsp;****<br>
+                                                        &nbsp;****<br>
+                                                        &nbsp;****<br>
                                                     </div>
-                                                    <p id="indent">โดยที่การเขียนคำสั่งโครงสร้างทำซ้ำแบบซ้อนสามารถที่จะนำไปเขียนโปรแกรมเมตริกซ์ขนาดต่างๆได้เช่นกัน</p>
+                                                    <br><p id="indent">โดยที่การเขียนคำสั่งโครงสร้างทำซ้ำแบบซ้อนสามารถที่จะนำไปเขียนโปรแกรมเมตริกซ์ขนาดต่างๆ ได้เช่นกัน</p>
                                                     <h3>แบบตรวจสอบเงื่อนไขทีหลัง</h3>
                                                     <p id="indent">การทำงานแบบนี้จะแตกต่างกับแบบแรกตรงที่ว่า โปรแกรมจะทำการทำงานไปก่อน 1 รอบแล้วจึงตรวจสอบเงื่อนไขที่อยู่ภายในบล็อก โดยคำสั่งที่นิยมใช้กันในประเภทนี้ก็คือคำสั่ง do-while นั่นเอง</p>
-                                                    <div>do <br>
-                                                        {<br>
-                                                              // command;<br>
-                                                        }<br>
-                                                        while ( เงื่อนไข ) ;</div>
+                                                    <div class="example">
+                                                        &nbsp;do <br>
+                                                        &nbsp;{<br>
+                                                        &emsp;&emsp;// command;<br>
+                                                        &nbsp;}<br>
+                                                        &nbsp;while ( เงื่อนไข ) ;</div>
                                                 </div>
                                     </div>
                                 </div>
                                 <div id="buttonrow" class="row">
                                     <div class="col-12">
                                         <div id="go" class="float-right"
-                                            onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">
+                                            onclick="location.href='../../page2.2/lesson2/quiz2-3.html';">
                                             ไปต่อ!</div>
-                                        <div id="back" class="float-right" onclick="location.href='lesson1-2.html';">
+                                        <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson2/lesson2-2.html';">
                                             กลับ</div>
                                     </div>
                                 </div>
