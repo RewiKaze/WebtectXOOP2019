@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
-    <title>Study Planet Lesson 1 - Page 2</title>
+    <title>Study Planet Lesson 4 - Page 2</title>
 </head>
 
 <body>
@@ -23,28 +23,67 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 2 : การสืบทอด ( Inheritance )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">เป็นกระบวนการภายในคลาสใหม่ที่ได้มาจากคลาสที่มีอยู่แล้ว
+                            ในภาษาจาวาคลาสอาจจะได้แอททริบิวท์หรือเมธอด มาจากคลาสอื่นๆ</p>
+                        <ul>
+                            <li>
+                                คลาสที่ได้รับแอททริบิวท์หรือเมธอดมาจากคลาสอื่น = คลาสลูก ( subclass )</li>
+                            <li> คลาสที่ถูกสืบทอดมา = คลาสแม่ (superclass)
+                            </li>
+                        </ul>
+                        <p id="indent">โดยทั่วไปแล้วคลาสลูกจะสามารถสืบทอดมาจากคลาสแม่เพียงคลาสเดียว
+                            แต่ว่าคลาสแม่จะสามารถมีลูกมาสืบทอดกี่คนก็ได้ ซึ่งถ้าไม่มีการสืบทอดใดๆเกิดขึ้น
+                            จาวาจะกำหนดคลาส Object ให้เป็นคลาสแม่ทันที</p>
+                        <p id="indent">ซึ่งมีข้อแม้ว่าถ้าหากต้องการที่จะทำการสืบทอดคลาสแม่เข้ามาในคลาสลูก จะต้องทำการ <b>extends</b> ก่อน
+                        </p>
+                        <h4>วิธีการออกแบบการสืบทอด</h4>
+                        <p>สามารถแบ่งการออกแบบได้ทั้งหมด 2 ประเภทได้แก่</p>
+                        <ol>
+                            <li>Top-Down คือ การมองจากบนคลาสแม่ก่อน</li>
+                            <li>Bottom-Up คือ การที่ค่อยๆ เจาะรายละเอียดลงไปในคลาสลูก</li>
+                        </ol>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                            <div class="example">
+                                    &nbsp;public class Animal {<br>
+                                    &emsp;private String size;<br>
+                                    &emsp;private int age;<br>
+                                    &emsp;private String color;<br>
+        
+                                    &emsp;public void sit(){ …}<br>
+                                    &emsp;public void sleep(){ …}<br>
+                                    &nbsp;}<br>
+        
+                                    &nbsp;public class Dog extends Animal {<br>
+                                        &emsp;private String breed;<br>
+        
+                                        &emsp;public void bark(){ …}<br>
+                                        &emsp;public void run(){ …}<br>
+                                    &nbsp;}
+                                </div>
+                        <br><p id="indent">จากตัวอย่างขั้นต้นนั้นจะทำให้คลาส Dog ของเรานั้นสามารถเรียกใช้คลาส Animal
+                            โดยทั้งสองคลาสจะเป็นคลาสแม่-ลูกกันนั่นเอง!</p>
+                        <p id="indent">แต่ถ้าหากมีการสืบทอดมากกว่าหนึ่งคลาส และคลาสทั้งสอง<b>มีการสืบทอดมาจากคลาสเดียวกัน</b>และเกิดการ
+                            Overridden จะทำให้เกิดปัญหา <i>“Diamond Problem”</i></p>
+                        <p id="indent">ซึ่งการสืบทอดสามารถลดปริมาณโค้ดที่มีความซ้ำซ้อนกันลง
+                            โดยการแชร์โค้ดหรือทรัพยากรในส่วนที่ใช้ร่วมกันกับคลาสลูกทั้งหลาย นอกจากนี้
+                            เทคนิคการสืบทอดยังช่วยให้โปรแกรมของเรามีความยืดหยุ่นต่อการเปลี่ยนแปลงอีกด้วย</p>
+                        
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='lesson1-1.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-2.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson4/lesson4-1.html';">กลับ</div>
                 </div>
             </div>
         </div>

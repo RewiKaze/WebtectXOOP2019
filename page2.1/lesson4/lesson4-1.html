@@ -24,28 +24,80 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 1 : การห่อหุ้ม ( Encapsulation )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">สำหรับการห่อหุ้มนั้นมีความหมายที่หลากหลายด้วยกัน เช่น ในเชิงเน็ตเวิร์ก
+                            ในเชิงการเขียนโปรแกรมเชิงวัตถุ ซึ่งในบทเรียนนี้ การห่อหุ้มจะเป็นกระบวนการปกปิดโค้ดและข้อมูล
+                            จากการเข้าถึงจากภายนอกหรือโปรแกรมอื่นๆ ( Data-hiding )</p>
+                        <p id="indent">โดยการห่อหุ้มนั้นสามารถป้องกันวัตถุอื่นๆที่อาจจะเข้ามาทำลายวัตถุบางอย่างได้
+                            ซึ่งการห่อหุ้มนั้นจะมีความยืดหยุ่นสูง
+                            เนื่องจากสามารถที่จะเปลี่ยนแปลงชนิดของตัวแปรได้โดยไม่กระทบคลาสอื่น
+                        </p>
+                        <p id="indent">สามารถห่อหุ้มได้โดยการกำหนดให้ทุกแอททริบิวท์เป็น private
+                            และทำการสร้างเมธอดเพื่อใช้ในการเข้าถึงเป็น public โดยเมธอดเหล่านั้นจะเรียกว่า set และ get
+                        </p>
+                        <h3>Modifier</h3>
+                        <p id="indent">คือ ตัวกำหนดขอบเขตและสิทธิในการเข้าถึงคลาส แอททริบิวท์ และเมธอด
+                            โดยสามารถแบ่งได้ทั้งหมด 4
+                            ประเภท ได้แก่</p>
+                        <ol>
+                            <li>public : <b>ทุกคลาส</b>สามารถเข้าถึงและเรียกใช้งานได้</li>
+                            <li>private : <b>ภายในคลาสเท่านั้น</b>ที่สามารถเข้าถึงและเรียกใช้งานได้</li>
+                            <li>protected : <b>คลาสแม่ลูก</b>กันเท่านั้นที่สามารถเข้าถึงและเรียกใช้งานได้</li>
+                            <li>default : <b>ทุกคลาสภายใน package</b> เดียวกันที่สามารถเข้าถึงและเรียกใช้งานได้</li>
+                        </ol>
+                        <div class="example">
+                            &nbsp;public class Rectangle {<br>
+                            &emsp;private double width;<br>
+                            &emsp;private double height;<br>
+                            &emsp;&nbsp;public double getArea() {<br>
+                            &emsp;&emsp;return width * height;<br>
+                            &emsp;}<br>
+                            &nbsp;}<br>
+
+                            &nbsp;public class TestPrivate {<br>
+                                &emsp;public static void main ( String[] args ) {<br>
+                            &emsp;&emsp;Rectangle rect = new Rectangle();<br>
+                            &emsp;&emsp;rect.width = 10;<br>
+                            &emsp;}<br>
+                            &nbsp;}
+                        </div>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p>จากตัวอย่างข้างต้นจะแสดงให้เห็นถึงการเรียกใช้คลาส <i>Rectangle</i> แต่ทว่าผลลัพธ์ที่ได้จะออกมาเป็น
+                            ดังนี้</p>
+                        <div class="text-center example">TestPrivate.java:5: width has private access in Rectangle</div>
+                        <br><p id="indent">เนื่องจาก การเรียกใช้ <b>rect.width = 10;</b> เป็นการเรียกใช้ตัวแปร<b> width </b>ซึ่งมีข้อแม้ว่า Modifier
+                            ของตัวแปร width นั้นเป็นตัวกำหนดขอบเขตสิทธิประเภท private
+                            ทำให้ไม่สามารถที่จะเรียกใช้ข้ามระหว่างคลาสได้</p>
+                        <p id="indent">ซึ่งวิธีแก้ก็สามารถทำได้หลายแบบ แต่ในบทเรียนนี้เราจะมาสอนวิธีการใช้<b>เมธอดแบบ accesstor</b> กัน!
+                        </p>
+                        <h3>Method ( set/get )</h3>
+                        <p id="indent">เมธอดแบบ accesstor สามารถแบ่งออกได้เป็น 2 ประเภทได้แก่ เมธอดแบบ setter และเมธอดแบบ getter</p>
+                        <h4>setter :</h4>
+                        <p>กำหนดค่าของคุณลักษณะ มักจะขึ้นต้นด้วยคำว่า set แล้วตามด้วยชื่อของคุณลักษณะ</p>
+                        <div class="example">&nbsp;public void setAttributeName( dataType arg ) {<br>
+                            &emsp;attributeName = arg;<br>
+                            &nbsp;}</div>
+                        <br><h4>getter :</h4>
+                        <p>เรียกค่าของคุณลักษณะ มักจะขึ้นต้นด้วยคำว่า set แล้วตามด้วยชื่อของคุณลักษณะ</p>
+                        <div class="example">&nbsp;public dataType getAttributeName() {<br>
+                            &emsp;return attributeName;<br>
+                            &nbsp;}</div>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page1/1/Page1.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-1.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page1/4/Page1.html';">กลับ</div>
                 </div>
             </div>
         </div>
