@@ -10,6 +10,8 @@ function loginEmail(){
           alert('Wrong password.');
         } else if(errorCode === 'auth/user-not-found') {
           alert('User not found');
+        } else{
+          alert("กรุณาเชื่อมต่ออินเตอร์เน็ต");
         }
         
       }).then(function(cred){
