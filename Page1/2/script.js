@@ -6,7 +6,7 @@ function description(i){
     if(i == 1){
         d1.style.display = "block";
         db1.style.backgroundColor = "rgb(254,210,165)";
-        db1.style.borderLeft = ".25em solid rgb(126,226,226)";
+        db1.style.borderLeft = ".25em solid rgb(255, 197, 87)";
         db1.style.color ="rgb(68, 68, 68)";
         d2.style.display = "none";
 
@@ -21,7 +21,7 @@ function description(i){
         d1.style.display = "none";
         db1.style.borderLeft = "";
         db1.style.backgroundColor = "rgb(254,210,165)";
-        db2.style.borderLeft = ".25em solid rgb(126,226,226)";
+        db2.style.borderLeft = ".25em solid rgb(255, 197, 87)";
         db2.style.boxShadow = "3px 5px 15px 3px rgb(210, 178, 145) inset";
         d2.style.display = "block";
         db2.style.backgroundColor = "rgb(254,210,165)";

@@ -38,7 +38,7 @@ body{
 } 
 
 #start{
-    background-color: rgb(126,226,226);
+    background-color: rgb(255, 197, 87);
     transition: .3s;
     cursor:pointer;
     color: white;
@@ -68,7 +68,7 @@ body{
     text-indent: 5px;
     position: relative;
     margin: 0;
-    padding-top: 20vh;
+    padding-top: 10vh;
     height: 70vh;
     width: 100%;
     
@@ -107,7 +107,7 @@ body{
     left: 79%;
     height: 6%;
     width: 15%;
-    background-color: rgb(126,226,226);;
+    background-color: rgb(255, 197, 87);
     cursor:pointer;
 }
 #back{

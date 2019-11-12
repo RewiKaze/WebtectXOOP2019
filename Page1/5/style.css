@@ -34,14 +34,15 @@ body{
     width: 31vw;
     text-align: center;
     font-size: 2rem;
-    background-color: rgb(176, 237, 238);
+    background-color: rgb(199, 243, 242);
     position: relative;
 } 
 
 #start{
-    background-color: rgb(255, 143, 159);
+    background-color: rgb(30, 209, 180);
     transition: .3s;
     cursor:pointer;
+    color: white;
 }
 .center{
     transform: translate(-50%,-50%);
@@ -68,7 +69,7 @@ body{
     text-indent: 5px;
     position: relative;
     margin: 0;
-    padding-top: 20vh;
+    padding-top: 10vh;
     height: 70vh;
     width: 100%;
     
