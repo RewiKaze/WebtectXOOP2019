@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../allLesson.css">
+    <title>Study Planet Lesson 4 - Page 5</title>
+</head>
+
+<body>
+    <nav class=" navbar-light m-0 p-0">
+        <div class="container-fluid">
+            <div class="row p-1">
+                <div class="col-12">
+                    <div id="lognout" class="float-right border border-secondary">Log out</div>
+                    <h5 class="float-right">Hello! , <mark>username</mark></h5>
+                </div>
+            </div>
+            <div class="row text-center p-1">
+                <div id="head" class="col">
+                    ตอนที่ 5 : คอนสตรัคเตอร์ ( Constructor )
+                </div>
+            </div>
+            <div class="row">
+                <div id="content" class="row">
+                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
+                    <div id="left" class="col-12 col-sm-6">
+                        <p>คือ เมธอดที่ชื่อเหมือนกับคลาส ซึ่งใช้กำหนดค่าเริ่มต้นให้กับแอททริบิวท์หรือการทำงานเบื้องต้น</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String id, name; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected double gpa; <br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (){ // defualt constructor
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id = “unknown”; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = “unknown”;
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gpa = 0.0; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (String id, String name) {
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.id = id; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.gpa = 0.0; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (String id, String name,
+                            double gpa) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.id = id; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.gpa = gpa; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        </div> <br>
+                        <p>และคอนสตัคเตอร์จะถูกเรียกใช้งานเมื่อเราสร้างวัตถุด้วยคำสั่ง new ยกตัวอย่างเช่น</p>
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;Student s1 = new Student(); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Student s2 = new Student("204", "Pamnana"); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Student s3 = new Student("204", "Pamnana", "99.99");
+                        </div>
+                    </div>
+                    <div id="right" class="col-12 col-sm-6">
+                        <b>Default constructor</b> จะถูกสร้างอัตโนมัติในกรณีที่คลาสนั้นไม่มี constructor แต่<b>ถ้ามีคอนสตรีคเตอร์อยู่แล้วก็จะไม่ถูกสร้างขึ้นนั่นเอง
+                        </b>
+                        <br><br>
+                        <p>โดยคอนสตรัคเตอร์จะมีหลักการทำงานของคอนสตรัคเตอร์ประกอบไปด้วย 4 ขั้นตอนดังนี้</p>
+                        <ol>
+                            <li>จองพื้นที่หน่วยความจำให้กับวัตถุ</li>
+                            <br>
+                            <div class="example">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Student s3 = new Student("204", "Pamnana", "99.99"); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;// จะทำการจองพื้นที่หน่วยความจำใน s3</div>
+                            <br>
+                            <li>กำหนดค่าเริ่มต้นให้กับแอททริบิวท์ของวัตถุ</li>
+                            <br>
+                            <div class="example">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;// ทำการเรียกคอนสตรัคเตอร์มากำหนดค่าเริ่มต้น <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;id = "unknown"; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;name = "unknown"; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;gpa = 0.0;</div>
+                            <br>
+                            <li>กำหนดค่าแอททริบิวท์ของวัตถุตามที่ได้ประกาศไว้</li>
+                            <br>
+                            <div class="example">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;id = "204"; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;name = "Pamnana"; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;gpa = 99.99;</div>
+                            <br>
+                            <li>เรียกใช้งานคอนสตรัคเตอร์</li>
+                            <br>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div id="buttonrow" class="row">
+                <div class="col-12">
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-5.html';">ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='lesson4-4.html';">กลับ</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

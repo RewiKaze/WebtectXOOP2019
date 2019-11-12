@@ -51,11 +51,10 @@
     padding-top: 0vh;
     padding-left: 0vw;
     border-radius: 50px;
-    color: orange;
-    border-color: white;
+    color: white;
     border-style: solid;
     font-size: 2rem;
-    background-color: #ffffe0;
+    background-color: #ffaf5b;
 }
 
 @media (min-width:200px){

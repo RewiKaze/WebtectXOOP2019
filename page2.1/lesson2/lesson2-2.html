@@ -9,7 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
-    <title>Study Planet Lesson 1 - Page 2</title>
+    <link rel="icon" href="../../img/logo.ico" type="image/icon type">
+    <title>Study Planet Lesson 2 - Page 2</title>
 </head>
 
 <body>
@@ -44,123 +45,138 @@
                         <p id="indent">เราสามารถใช้คำสั่ง If เพื่อใช้ในการเปรียบเทียบเงือนไขเพื่อให้โปรแกรมทำงานได้
                             ซึ่งจะมีรูปแบบการทำงานดังนี้</p>
                         <div class="example">
-                            if (เงื่อนไข) —— ค่าที่ออกมาจะเป็นค่าความจริงจริง หรือ เท็จเท่านั้น<br>
-                            {<br>
-                            คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นจริง;<br>
-                            }<br>
+                            &nbsp;if ( เงื่อนไข ) —— ค่าที่ออกมาจะเป็นค่าความจริงจริง หรือ เท็จเท่านั้น<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นจริง;<br>
+                            &nbsp;}<br>
                         </div>
-                        <br><p>
-                            ตัวอย่าง จงเขียนโปรแกรมรับรหัสลูกค้าและราคาสินค้ามา โดยโปรโมชั่นพิเศษคือถ้าหากลูกค้ามีรหัส
+                        <br>
+                        <p>
+                            <b><i>ตัวอย่าง</i></b> จงเขียนโปรแกรมรับรหัสลูกค้าและราคาสินค้ามา
+                            โดยโปรโมชั่นพิเศษคือถ้าหากลูกค้ามีรหัส
                             61011909 จะได้รับส่วนลดถึง 90% จากนั้นก็ให้ทำการแสดงผลออกมาทางจอภาพ
                         </p>
                         <div class="example">
-                            Scanner sc = new Scanner(System.in);<br>
-                            String ID = sc.nextLine();<br>
-                            double price = sc.nextDouble();<br>
-
-                            if (ID == "61011909") {<br>
-                            price = 0.1 * price;<br>
-                            }<br>
-                            System.out.println(price);<br>
+                            &nbsp;Scanner sc = new Scanner(System.in);<br>
+                            &nbsp;String ID = sc.nextLine();<br>
+                            &nbsp;double price = sc.nextDouble();<br>
+                            <br>
+                            &nbsp;if (ID == "61011909") {<br>
+                            &nbsp;&emsp;price = 0.1 * price;<br>
+                            &nbsp;}<br>
+                            &nbsp;System.out.println(price);<br>
                         </div>
-                        <br><p>ดังตัวอย่างจะเห็นได้ว่า ถ้าหากไม่ใช่ลูกค้าที่มีรหัส 61011909
+                        <br>
+                        <p id="indent">ดังตัวอย่างจะเห็นได้ว่า ถ้าหากไม่ใช่ลูกค้าที่มีรหัส 61011909
                             แล้วราคาที่จะทำการแสดงผลออกมาก็จะเป็นราคาปกติทันที</p>
                         <h3>เงื่อนไขแบบทางเลือกสองทาง ( Double Selection )</h3>
-                        <p>เป็นการทำงานมีทางเลือกสองทาง เช่น ถ้าหากค่าความจริงเป็นจริง ก็จะทำงานอย่างหนึ่ง
+                        <p id="indent">เป็นการทำงานมีทางเลือกสองทาง เช่น ถ้าหากค่าความจริงเป็นจริง ก็จะทำงานอย่างหนึ่ง
                             แต่ถ้าไม่ใช่ก็จะทำงานอีกอย่างหนึ่ง</p>
-                        <div class="example">if (เงื่อนไข)<br>
-                            {<br>
-                            คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นจริง;<br>
-                            }<br>
-                            else<br>
-                            {<br>
-                            คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นเท็จ;<br>
-                            }</div>
-                        <p>ตัวอย่าง จงเขียนโปรแกรมที่ตรวจเช็คตัวเลขว่าเป็นเลขที่สามารถหารสามลงตัวได้หรือไม่
+                        <div class="example">&nbsp;if ( เงื่อนไข )<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นจริง;<br>
+                            &nbsp;}<br>
+                            &nbsp;else<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานเมื่อเงื่อนไขเป็นเท็จ;<br>
+                            &nbsp; }</div>
+                        <br>
+                        <p><b><i>ตัวอย่าง</i></b>
+                            จงเขียนโปรแกรมที่ตรวจเช็คตัวเลขว่าเป็นเลขที่สามารถหารสามลงตัวได้หรือไม่
                             โดยที่ให้ผู้ใช้ทำการรับค่าเข้ามา ถ้าหากเลขที่รับเข้ามาสามารถหารสามลงตัวให้แสดงผลผ่านจอภาพว่า
                             "Yes" แต่ ถ้าไม่ใช่ให้แสดงผลว่า "No" ดังตัวอย่าง</p>
                         <div class="example">
-                            Scanner sc = new Scanner(System.in);<br>
-                            double num = sc.nextDouble();<br>
+                            &nbsp;Scanner sc = new Scanner(System.in);<br>
+                            &nbsp;double num = sc.nextDouble();<br>
                             <br>
-                            if (num % 3 == 0) {<br>
-                            System.out.println("Yes");<br>
-                            }<br>
-                            else {<br>
-                            System.out.println("No");<br>
-                            }<br>
+                            &nbsp;if (num % 3 == 0) {<br>
+                            &nbsp;&emsp;System.out.println("Yes");<br>
+                            &nbsp;}<br>
+                            &nbsp;else {<br>
+                            &nbsp;&emsp;System.out.println("No");<br>
+                            &nbsp;}<br>
                         </div>
-                        <p>นอกจากนี้เราสามารถเขียน Double Selection ในรูปแบบย่อได้
+                        <br><p id="indent">นอกจากนี้เราสามารถเขียน Double Selection ในรูปแบบย่อได้
                             แต่ก็อย่าลืมที่จะสร้างตัวแปรมารองรับด้วย สามารถทำได้ดังนี้</p>
-                        <div class="example">ตัวแปร = เงื่อนไข ? a : b ;</div>
-                        <p>โดยที่ถ้าค่าความจริงเป็นจริง a ก็จะทำงาน แต่ถ้าหากค่าความจริงเป็นเท็จ b ก็จะทำงาน</p>
-                        <p>ถ้าหากลองนำตัวอย่างด้านบนมาเขียนในรูปย่อ Double Selection ก็จะสามารถเขียนได้ดังนี้</p>
-                        <div class="example">String answer = (num%3 == 0) ? "Yes": "No"; </div>
-                        
+                        <div class="text-center example">ตัวแปร = เงื่อนไข ? a : b ;</div>
+                        <p class="text-center" id="comment-code">โดยที่ถ้าค่าความจริงเป็นจริง a ก็จะทำงาน แต่ถ้าหากค่าความจริงเป็นเท็จ b ก็จะทำงาน</p>
+                        <p id="indent">ถ้าหากลองนำตัวอย่างด้านบนมาเขียนในรูปย่อ Double Selection ก็จะสามารถเขียนได้ดังนี้</p>
+                        <div class="text-center example">String answer = (num%3 == 0) ? "Yes": "No"; </div>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
                         <h3>เงื่อนไขแบบทางเลือกหลายทาง ( Multiple Selection )</h3>
-                        <p>เป็นการทำงานที่มีทางเลือกตั้งแต่ 2 ทางขึ้นไปโดยที่แต่ละเงื่อนไขมีหลากหลาย
+                        <p id="indent">เป็นการทำงานที่มีทางเลือกตั้งแต่ 2 ทางขึ้นไปโดยที่แต่ละเงื่อนไขมีหลากหลาย
                             จึงทำให้มีการทำงานที่แตกต่างกัน</p>
                         <div class="example">
-                            if (เงื่อนไข 1)<br>
-                            {<br>
-                            คำสั่งที่จะทำงานเมื่อเงื่อนไข 1 เป็นจริง;<br>
-                            }<br>
-                            else if (เงื่อนไข 2)<br>
-                            {<br>
-                            คำสั่งที่จะทำงานเมื่อเงื่อนไข 2 เป็นจริง;<br>
-                            }<br>
-                            else<br>
-                            {<br>
-                            คำสั่งที่จะทำงานก็ต่อเมื่อเงื่อนไขก่อนหน้านี้เป็นเท็จ;<br>
-                            }<br>
+                            &nbsp;if ( เงื่อนไข 1 )<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานเมื่อเงื่อนไข 1 เป็นจริง;<br>
+                            &nbsp;}<br>
+                            &nbsp;else if ( เงื่อนไข 2 )<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานเมื่อเงื่อนไข 2 เป็นจริง;<br>
+                            &nbsp;}<br>
+                            &nbsp;else<br>
+                            &nbsp;{<br>
+                            &nbsp;&emsp;คำสั่งที่จะทำงานก็ต่อเมื่อเงื่อนไขก่อนหน้านี้เป็นเท็จ;<br>
+                            &nbsp;}<br>
                         </div>
-                        <p>ตัวอย่าง จงเขียนโปรแกรมที่ตรวจเช็คเกรดของนักศึกษาในภาคเรียนนี้ โดยที่ถ้าหาก</p>
+                        <br>
+                        <p><b><i>ตัวอย่าง</i></b> จงเขียนโปรแกรมที่ตรวจเช็คเกรดของนักศึกษาในภาคเรียนนี้ โดยที่ถ้าหาก</p>
                         <ul>
                             <li>มีคะแนนเท่ากับ 100 จะได้เกรด S</li>
                             <li>มีคะแนนตั้งแต่ 50 เป็นต้นไปจะได้เกรด A</li>
                             <li>มีคะแนนต่ำกว่า 50 ลงมาจะได้เกรด F</li>
                         </ul>
                         <div class="example">
-                            Scanner sc = new Scanner(System.in);<br>
-                            double score = sc.nextDouble();<br>
+                            &nbsp;Scanner sc = new Scanner(System.in);<br>
+                            &nbsp;double score = sc.nextDouble();<br>
                             <br>
-                            if (score < 0 || score> 100) {<br>
-                                System.out.println("Please Enter a correct score.");<br>
+                            &nbsp;if (score < 0 || score> 100) {<br>
+                                &nbsp;&emsp;System.out.println("Please Enter a correct score.");<br>
                                 }<br>
-                                else if (score == 100) {<br>
-                                System.out.println("Grade S");<br>
-                                }<br>
-                                else if (score >= 50) {<br>
-                                System.out.println("Grade F");<br>
-                                }<br>
-                                else {<br>
-                                System.out.println("Grade F");<br>
-                                }<br>
+                                &nbsp;else if (score == 100) {<br>
+                                &nbsp;&emsp;System.out.println("Grade S");<br>
+                                &nbsp;}<br>
+                                &nbsp; &nbsp;else if (score >= 50) {<br>
+                                &nbsp; &emsp;System.out.println("Grade F");<br>
+                                &nbsp;}<br>
+                                &nbsp;else {<br>
+                                &nbsp; &emsp;System.out.println("Grade F");<br>
+                                &nbsp;}<br>
                         </div>
-                        <p>ดังตัวอย่างก็จะเห็นได้ว่าจะมีการตรวจสอบด้วยว่า คะแนนที่ผู้ใช้รับเข้ามามีความถูกต้องหรือไม่ ถ้าหากไม่ถูกต้องก็จะให้ทำการกรอกใหม่อีกครั้ง แต่ถ้าหากถูกต้องก็จะทำการแสดงผลออกทางจอภาพทันที โดยที่จะไม่ทำการเช็คเงื่อนไขถัดมาต่อ
+                        <br><p id="indent">ดังตัวอย่างก็จะเห็นได้ว่าจะมีการตรวจสอบด้วยว่า คะแนนที่ผู้ใช้รับเข้ามามีความถูกต้องหรือไม่
+                            ถ้าหากไม่ถูกต้องก็จะให้ทำการกรอกใหม่อีกครั้ง แต่ถ้าหากถูกต้องก็จะทำการแสดงผลออกทางจอภาพทันที
+                            โดยที่จะไม่ทำการเช็คเงื่อนไขถัดมาต่อ
                         </p>
-                        <p>เนื่องจากการทำงานของคำสั่ง Else-if ถ้าหากตรงตามเงื่อนไขหนึ่งแล้วก็จะทำงานจากนั้นก็จะหยุดการเช็คเงื่อนไขทันที
-                            ( เช็คเป็นแต่ละบล็อกนั่นเอง ) นอกเหนือจากนี้ก็ยังมีรูปแบบคำสั่งที่คล้าย Else-if นั่นก็คือ คำสั่ง Switch</p>
-                            <h4>Switch</h4>
-                            <p>คำสั่ง Switch จะมีความคล้ายคลึงกับคำสั่ง Else-if นั่นก็คือเป็นการเลือกทำงานของเงื่อนไขที่ตรงกันเพียงแค่เงื่อนไขเดียวเท่านั้น โดยจะมีรูปแบบคำสั่งดังนี้</p>
-                            <div class="example">
-                                switch ( นิพจน์ ) {<br>
-                                    case value-1 :       การทำงานที่ 1<br>
-                                                         break;<br>
-                                    case value-2 :       การทำงานที่ 2<br>
-                                                         break;<br>
-                                         :                   :<br>
-                                    case value-N :       การทำงานที่ N<br>
-                                                         break;<br>
-                                    default :            statements N+1;<br>
-                                    }<br>
-                            </div>
-                            <p>โดยที่นิพจน์ ( expression ) ต้องมีชนิดข้อมูลเป็น char, byte, short หรือ int เท่านั้น นอกจากนี้ชนิดข้อมูลของนิพจน์และค่าที่ 1 ถึง N ต้องเป็นชนิดเดียวกันเท่านั้น ถ้าค่าของนิพจน์ไม่ตรงกับค่าใดเลย จะทำชุดคำสั่งของ default ( default จะมีหรือไม่มีก็ได้ )
-                            </p>
-                            <p>แต่คำสั่ง switch มักไม่ได้รับความนิยมมากนัก เนื่องจากมีความไม่ยืดหยุ่นเท่ากับ if-else เพราะสามารถเปรียบเทียบค่าได้เพียงแค่ ==</p>
+                        <p id="indent">เนื่องจากการทำงานของคำสั่ง Else-if
+                            ถ้าหากตรงตามเงื่อนไขหนึ่งแล้วก็จะทำงานจากนั้นก็จะหยุดการเช็คเงื่อนไขทันที
+                            ( เช็คเป็นแต่ละบล็อกนั่นเอง ) นอกเหนือจากนี้ก็ยังมีรูปแบบคำสั่งที่คล้าย Else-if นั่นก็คือ
+                            คำสั่ง Switch</p>
+                        <h4>Switch</h4>
+                        <p id="indent">คำสั่ง Switch จะมีความคล้ายคลึงกับคำสั่ง Else-if
+                            นั่นก็คือเป็นการเลือกทำงานของเงื่อนไขที่ตรงกันเพียงแค่เงื่อนไขเดียวเท่านั้น
+                            โดยจะมีรูปแบบคำสั่งดังนี้</p>
+                        <div class="example">
+                            &nbsp;switch ( นิพจน์ ) {<br>
+                            &nbsp;&emsp;case value-1 : การทำงานที่ 1<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; break;<br>
+                            &nbsp;&emsp;case value-2 : การทำงานที่ 2<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; break;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:<br>
+                            &nbsp;&emsp;case value-N : การทำงานที่ N<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; break;<br>
+                            &nbsp;&emsp;default : statements N+1;<br>
+                            &nbsp;}<br>
                         </div>
+                        <br><p id="indent">โดยที่นิพจน์ ( expression ) ต้องมีชนิดข้อมูลเป็น char, byte, short หรือ int เท่านั้น
+                            นอกจากนี้ชนิดข้อมูลของนิพจน์และค่าที่ 1 ถึง N ต้องเป็นชนิดเดียวกันเท่านั้น
+                            ถ้าค่าของนิพจน์ไม่ตรงกับค่าใดเลย จะทำชุดคำสั่งของ default ( default จะมีหรือไม่มีก็ได้ )
+                        </p>
+                        <p id="indent">แต่คำสั่ง switch มักไม่ได้รับความนิยมมากนัก เนื่องจากมีความไม่ยืดหยุ่นเท่ากับ if-else
+                            เพราะสามารถเปรียบเทียบค่าได้เพียงแค่ ==</p>
+                    </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">

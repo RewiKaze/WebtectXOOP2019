@@ -119,6 +119,15 @@ h4{
     border-radius: 10px;
 }
 
+#tick{
+    width: 3vw;
+}
+
+.choise{
+    height: 2vw;
+    width: 2vw;
+}
+
 @media (max-width: 810px){
     #quizhead{
         font-size: 2rem;
@@ -142,5 +151,8 @@ h4{
     }
     form{
         font-size: 1.5rem;
+    }
+    #tick{
+        width: 5vw;
     }
 }
