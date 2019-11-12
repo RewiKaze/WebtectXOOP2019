@@ -1,30 +1,28 @@
 @font-face {
     font-family: myFirstFont;
     src: url(../../rsufont/RSU_BOLD.ttf) format("truetype");
- }
+}
 
 * {
     font-family: 'myFirstFont', sans-serif;
 }
 
-
-body{
+body {
     background-image: url("../../img/bg-9.jpg");
     background-size: 100vw;
     background-repeat: repeat;
     font-size: 1.5rem;
 }
-#bg{
+
+#bg {
     position: fixed;
     height: 96%;
     width: 98%;
-    
     top: 1%;
     left: 1%;
-    
 }
 
-.desbutton{
+.desbutton {
     top: 3vw;
     left: 4vw;
     padding: 0;
@@ -33,15 +31,23 @@ body{
     width: 31vw;
     text-align: center;
     font-size: 2rem;
-    background-color: rgb(244,119,113);
+    background-color: rgb(244, 119, 113);
     position: relative;
-} 
-
-#start{
-    background-color: #afeeee;
 }
-.center{
-    transform: translate(-50%,-50%);
+
+#start {
+    background-color: #f47772;
+    color: white;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#start:hover {
+    box-shadow: 2px 2px 15px 3px rgb(226, 100, 101, .5);
+}
+
+.center {
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     position: absolute;
@@ -58,8 +64,8 @@ body{
     border-spacing: 1%;
     border: dashed grey 3px;
     font-size: 1.5rem;
-  }
-  
+}
+
 #Content1 {
     font-size: 1.2rem;
     text-indent: 5px;
@@ -68,8 +74,8 @@ body{
     padding-top: 20vh;
     height: 70vh;
     width: 100%;
-    
 }
+
 #Content2 {
     font-size: 1.2rem;
     text-indent: 5px;
@@ -79,31 +85,35 @@ body{
     display: none;
     height: 70vh;
     width: 100%;
-
-
 }
 
-
-#backtomain{
+#backtomain {
     position: absolute;
     top: 85%;
     left: 9%;
-    height: 6%;
-    width: 15%;
+    transition: all .2s;
+    height: 2em;
+    color: white;
+    width: 8em;
     background-color: #c0c0c0;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
+    cursor: pointer;
 }
-#next{
+
+#next {
     position: absolute;
     top: 85%;
     left: 79%;
     height: 6%;
     width: 15%;
     background-color: #afeeee;
+
+    cursor: pointer;
 }
-#back{
+
+#back {
     position: absolute;
     top: 85%;
     left: 60%;
@@ -112,59 +122,71 @@ body{
     background-color: #c0c0c0;
 }
 
-#next:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
+#next:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
+    transition:.3s;
 }
 
-#back:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
-}
-#db1:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-   
+#back:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
 }
 
-#db2:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-   
+#db1:hover {
+    box-shadow: 3px 3px 10px 3px rgba(46, 46, 46, 0.1);
+    transition: .2s;
 }
 
-#db1:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    
+#db2:hover {
+    box-shadow: 3px 3px 10px 3px rgba(46, 46, 46, 0.1);
+    transition:.2s;
 }
 
-#db2:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    
+#db1:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#next:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#db2:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#back:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#next:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#backtomain:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#back:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#backtomain:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
+#backtomain:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#start:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
+#backtomain:hover {
+    box-shadow: 3px 3px 15px 3px #c0c0c0cc;
 }
 
-#start:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
+#start:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
+}
+
+#start:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
