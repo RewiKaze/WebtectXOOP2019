@@ -39,6 +39,8 @@ body{
 
 #start{
     background-color: #afeeee;
+    transition: .3s;
+    cursor:pointer;
 }
 .center{
     transform: translate(-50%,-50%);
@@ -94,6 +96,8 @@ body{
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
+    cursor: pointer;
+    transition: .3s;
 }
 #next{
     position: absolute;
@@ -102,6 +106,8 @@ body{
     height: 6%;
     width: 15%;
     background-color: #afeeee;
+    cursor: pointer;
+    transition: .3s;
 }
 #back{
     position: absolute;
@@ -110,61 +116,76 @@ body{
     height: 6%;
     width: 15%;
     background-color: #c0c0c0;
+    transition: all .3s;
+    cursor:pointer;
 }
 
-#next:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
+#next:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
+    transition:.3s;
 }
 
-#back:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
-}
-#db1:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-   
+#back:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
 }
 
-#db2:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-   
+#db1:hover {
+    box-shadow: 3px 3px 10px 3px rgba(46, 46, 46, 0.1);
+    transition: .2s;
 }
 
-#db1:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    
+#db2:hover {
+    box-shadow: 3px 3px 10px 3px rgba(46, 46, 46, 0.1);
+    transition:.2s;
 }
 
-#db2:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    
+#db1:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#next:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#db2:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#back:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#next:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#backtomain:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
-    background-color: rgb(182, 228, 255);
+#back:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#backtomain:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
-    
+#backtomain:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
 }
 
-#start:hover{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) ;
+#backtomain:hover {
+    box-shadow: 3px 3px 15px 3px #c0c0c0cc;
 }
 
-#start:active{
-    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46) inset;
+#start:hover {
+    box-shadow: 3px 5px 15px 3px rgb(46, 46, 46);
+}
+
+#start:active {
+    background-color: transparent;
+    box-shadow: #e8e9bdaa 3px 3px 10px 3px;
+    border-bottom: 2px solid #2224;
+    color: #444;
+    cursor:pointer;
 }
