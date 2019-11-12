@@ -12,7 +12,7 @@ function description(i){
 
         db2.style.backgroundColor = "rgb(176, 237, 238)";
         db2.style.borderLeft = "";
-        db1.style.boxShadow = "3px 5px 15px 3px rgb(133, 219, 220) inset";
+        db1.style.boxShadow = "3px 5px 15px 3px rgb(156, 195, 195) inset";
         db2.style.boxShadow = "";
         db2.style.cursor = 'pointer';
         db1.style.cursor = '';
@@ -22,7 +22,7 @@ function description(i){
         db1.style.borderLeft = "";
         db1.style.backgroundColor = "rgb(176, 237, 238)";
         db2.style.borderLeft = ".25em solid rgb(255, 143, 159)";
-        db2.style.boxShadow = "3px 5px 15px 3px rgb(133, 219, 220) inset";
+        db2.style.boxShadow = "3px 5px 15px 3px rgb(156, 195, 195) inset";
         d2.style.display = "block";
         db2.style.backgroundColor = "rgb(176, 237, 238)";
         db1.style.boxShadow = "";
