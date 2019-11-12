@@ -24,28 +24,86 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 4 : อินเตอร์เฟส ( Interface )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent"> มีลักษณะคล้ายกับคลาสแบบ abstract แต่จะประกอบด้วยเมธอดที่ยังไม่สมบูรณ์เท่านั้น
+                            ซึ่งอินเตอร์เฟสจะเหมือนกับคลาสแบบ abstract ตรงที่เราจะไม่สามารถสร้างอ็อบเจ็กต์ของ
+                            อินเตอร์เฟสได้</p>
+                        <div class="example">&nbsp;Modifier abstract InterfaceName {<br>
+                            &emsp;&emsp;// methods<br>
+                            &nbsp;}<br>
+                        </div>
+                        <br>
+                        <p id="indent">อินเตอร์เฟสกำหนดขึ้นมาเพื่อให้คลาสอื่นนำไปใช้งาน ควรใช้คีย์เวิร์ด implements
+                            ยกตัวอย่างเช่น</p>
+                        <div class="text-center example">public class Ant implements Animals </div>
+                        <br>
+                        <p id="indent">ซึ่งสามารถอาศัยหลักการของการมีได้หลายรูปแบบมาเรียกใช้เมธอดเหล่านั้นได้จากคลาสที่
+                            implements อินเตอร์เฟส
+                        </p>
+                        <p id="indent">โดยภาษาจาวากำหนดให้คลาสใด
+                            สามารถสืบทอดคลาสอื่นได้เพียงคลาสเดียวเท่านั้นแต่จะสามารถ
+                            implements อินเตอร์เฟสได้หลายอินเตอร์เฟส</p>
+                        <h3>แอททริบิวท์และเมธอดของอินเตอร์เฟส</h3>
+                        <p id="indent">เมธอดของอินเตอร์เฟสจะกำหนดให้เป็น public static final (เป็นค่าคงที่)
+                            และเมธอดของอินเตอร์เฟสจะกำหนดให้เป็น public abstract</p>
+                        <div class="example">&nbsp;interface Moveable {<br>
+                            &emsp;public static final int AVERAGE_SPEED = 40;<br>
+                            &emsp;public abstract void move();<br>
+                            &nbsp;}</div>
+                        <br>
+                        <p id="indent">อินเตอร์เฟส กับ อินเตอร์เฟสจะ extends กันและสามารถ extends ได้มากกว่า 1
+                            อินเตอร์เฟส</p>
+                        <div class="example">&nbsp;public interface Hockey extends Sports, Events { <br>
+                            &emsp;&emsp;// command<br>
+                            &nbsp;}</div>
+                        <br>
+                        <p id="indent">อินเตอร์เฟสไม่สามารถ implements คลาสได้ แต่ สามารถซ้อน ( extends ) กันเองได้</p>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
+                        <div class="example">&nbsp;public interface Student {<br>
+                            &nbsp;&emsp;public void setID(String ID);<br>
+                            &nbsp;&emsp;public void setName(String n);<br>
+                            &nbsp;&emsp;public void showDetails();<br>
+                            &nbsp;}<br>
+
+                            &nbsp;public class PartTimeStudent implements Student {<br>
+                            &nbsp;&emsp;private String id;<br>
+                            &nbsp;&emsp;private String name;<br>
+                            &nbsp;&emsp;private int credit;<br>
+                            &nbsp;&emsp;public PartTimeStudent(int c) {<br>
+                            &emsp;&emsp;credit = c; <br>
+                            &emsp;&emsp;}<br>
+                            &nbsp;&emsp;public void setID(String ID) {<br>
+                            &emsp;&emsp;id = ID; <br>
+                            &emsp;&emsp;}<br>
+                            &nbsp;&emsp;public void setName(String n) { <br>
+                            &ensp;&emsp;name = n;<br>
+                            &emsp;&emsp;}<br>
+                            &nbsp;&emsp;public void showDetails() {<br>
+                            &emsp;&emsp;System.out.println("ID: "+id);<br>
+                            &emsp;&emsp;System.out.println("Name: "+name);<br>
+                            &emsp;&emsp;System.out.println("Credit: "+credit);<br>
+                            &emsp;&nbsp;}<br>
+                            &nbsp;}<br>
                         </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <br>
+                        <p id="indent">จากโปรแกรมข้างต้นจะเป็นตัวอย่างของการที่ทำให้ interface Student
+                            สมบูรณ์ได้โดยผ่าน class ที่ชื่อว่า PartTimeStudent</p>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
                     <div id="go" class="float-right" onclick="location.href='../../signin/signin2.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson5/lesson5-3.html';">กลับ</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson5/lesson5-3.html';">
+                        กลับ</div>
                 </div>
             </div>
         </div>

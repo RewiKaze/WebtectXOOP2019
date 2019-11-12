@@ -31,66 +31,76 @@
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        <p>&emsp;ใช้สำหรับการกำหนดคุณลักษณะ หรือเมธอดที่ใช้งานร่วมกันในทุกวัตถุ
-                            ซึ่งสามารถเรียกใช้งานได้โดยไม่จำเป็นต้องสร้างวัตถุขึ้นมาก่อน</p>
-                        <div class="example">
-                            &emsp;public static int age;</div>
-                        <p>แต่ทว่าเมธอดโดยทั่วไปนั้น จะเป็น Modifier แบบ non-static</p>
+                        <p id="indent">ใช้สำหรับการกำหนดคุณลักษณะ หรือเมธอดที่ใช้งานร่วมกันในทุกวัตถุ
+                            ซึ่งสามารถเรียกใช้งานได้โดย<b>ไม่จำเป็น</b>ต้องสร้างวัตถุขึ้นมาก่อน</p>
+                        <div class="text-center example">
+                            public static int age;</div>
+                        <p id="comment-code" class="text-center">แต่ทว่าเมธอดโดยทั่วไปนั้น จะเป็น Modifier แบบ
+                            <b>non-static</b></p>
 
-                        <p>เมธอดที่มี Modifier เป็นแบบ static จะสามารถถูกเรียกใช้งาน
+                        <p id="indent">เมธอดที่มี Modifier เป็นแบบ static จะสามารถถูกเรียกใช้งาน
                             โดยใช้ชื่อคลาสได้เลยไม่จำเป็นต้องสร้างอ็อปเจ็กต์ของคลาสนั้นขึ้นมาก่อน
                             โดยมีรูปแบบการเรียกใช้งานดังนี้</p>
-                        <div class="example">
-                            &emsp;className.methodName();</div>
+                        <div class="text-center example">
+                            className.methodName();</div>
+                        <br>
                         <ol>
                             <li>แอททริบิวท์แบบ static ส่วนมากจะใช้สำหรับเป็นค่าคงที่ให้ทุกคลาสเห็นและสามารถใช้งานได้
                                 โดยส่วนใหญ่จะมีรูปแบบการประกาศ ดังนี้ </li>
-                            <div class="example">
+                            <div class="text-center example">
                                 public static final type ATTRIBUTE_NAME;</div>
+                            <br>
                             <li>
-                                เมธอดแบบ static ไม่สามารถ overridden ได้แต่ สามารถ overloaded ได้เพื่อที่จะนำไปแก้ปัญหา
+                                เมธอดแบบ static <b>ไม่สามารถ overridden ได้แต่ สามารถ overloaded ได้</b>เพื่อที่จะนำไปแก้ปัญหา
                                 static
                                 binding</li>
                             <li>
-                                ถูกออกแบบมาเพื่ออยู่บนพื้นฐานในการแชร์ทรัพยากรร่วมกันระหว่างวัตถุที่สร้างมาจากคลาสเดียวกัน</li>
+                                ถูกออกแบบมาเพื่ออยู่บนพื้นฐานในการ<b>แชร์ทรัพยากรร่วมกัน</b>ระหว่างวัตถุที่สร้างมาจากคลาสเดียวกัน
+                            </li>
                         </ol>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
                         <h2>Static Initializer</h2>
 
-                        <p>เป็นบล็อกในคลาสใดๆที่อยู่นอกเมธอด และมีคีย์เวิร์ด static เพื่อนิยมให้เป็นบล็อกแบบ static</p>
-<div class="example">
-                        static {
-                        //command
-                        }</div>
-                        <p>
-                        สามารถเรียกใช้ได้เพียงครั้งเดียวเมื่อ JVM โหลดคลาสดังกล่าวขึ้นมา โดยจะใช้ในการดีบักโปรแกรม
-                        หรือใช้ในกรณีที่ต้องการสร้างอ็อกเจ็กต์ของคลาสขึ้นโดยอัตโนมัติ</p>
-<p>
-                        นอกจากนี้ สามารถที่จะกำหนดบล็อกแบบ static ได้มากกว่าหนึ่งบล็อก โดยการทำงานจะถูกเรียงจากบนลงล่าง</p>
-<div class="example">
-                        &emsp;public class TestStaticBlock { <br>
+                        <p id="indent">เป็น<b>บล็อก</b>ในคลาสใดๆที่อยู่นอกเมธอด และมีคีย์เวิร์ด static เพื่อนิยมให้เป็นบล็อกแบบ
+                            static</p>
+                        <div class="example">
+                            &nbsp;static {<br>
+                            &emsp;&emsp;//command<br>
+                            &nbsp;}</div>
+                        <br>
+                        <p id="indent">
+                            สามารถเรียกใช้ได้เพียงครั้งเดียวเมื่อ JVM โหลดคลาสดังกล่าวขึ้นมา โดยจะใช้ในการดีบักโปรแกรม
+                            หรือใช้ในกรณีที่ต้องการสร้างอ็อกเจ็กต์ของคลาสขึ้นโดยอัตโนมัติ</p>
+                        <p id="indent">
+                            นอกจากนี้ สามารถที่จะกำหนดบล็อกแบบ static ได้มากกว่าหนึ่งบล็อก
+                            โดยการทำงานจะถูกเรียงจาก<b>บนลงล่าง</b></p>
+                        <div class="example">
+                            &emsp;public class TestStaticBlock { <br>
                             &emsp;&emsp;static int x=5; <br>
                             &emsp;&emsp;static { <br>
-                                &emsp;&emsp;&emsp;x += 1; <br>
-                                &emsp;&emsp;} <br>
+                            &emsp;&emsp;&emsp;x += 1; <br>
+                            &emsp;&emsp;} <br>
 
-                                &emsp;&emsp;public static void main(String args[]) { <br>
-                                    &emsp;&emsp;&emsp;System.out.println("x = "+x); <br>
-                                    &emsp;&emsp;} <br>
-                                    &emsp;&emsp;static { <br>
-                                        &emsp;&emsp;&emsp;x /= 2; <br>
-                                        &emsp;&emsp;} <br>
-                                        &emsp;}</div><p>
-                        จากโปรแกรมดังกล่าวจะเห็นได้ว่า จะทำการเข้าไปทำงานแต่ละบล็อกของ static
-                        ให้เสร็จก่อนที่จะไปทำงานในส่วนอื่น ลองเดากันเล่นๆ ว่าผลลัพธ์ที่ได้จะออกมาเป็นเท่าไรกัน
-                        เดี๋ยวจะแอบไปเฉลยที่หลังนะ อิอิ</p>
+                            &emsp;&emsp;public static void main(String args[]) { <br>
+                            &emsp;&emsp;&emsp;System.out.println("x = "+x); <br>
+                            &emsp;&emsp;} <br>
+                            &emsp;&emsp;static { <br>
+                            &emsp;&emsp;&emsp;x /= 2; <br>
+                            &emsp;&emsp;} <br>
+                            &emsp;}</div>
+                        <br>
+                        <p id="indent">
+                            จากโปรแกรมดังกล่าวจะเห็นได้ว่า จะทำการเข้าไป<b>ทำงานแต่ละบล็อกของ static</b>
+                            ให้เสร็จก่อนที่จะไปทำงานในส่วนอื่น ลองเดากันเล่นๆ ว่าผลลัพธ์ที่ได้จะออกมาเป็นเท่าไรกัน
+                            เดี๋ยวจะแอบไปเฉลยทีหลังนะ อิอิ</p>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson5/quiz5-1.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson5/quiz5-1.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='../../page1/5/Page1.html';">กลับ</div>
                 </div>
             </div>

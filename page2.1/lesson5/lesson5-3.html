@@ -24,28 +24,78 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 3 : คลาสภายใน ( Inner Class )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">คือ คลาสที่ประกาศอยู่ภายในคลาสอื่นๆ ซึ่งบางครั้งเรียกว่า คลาสแบบซ้อน ( Nested
+                            class )
+                            ซึ่งภายในจะอนุญาตให้ประกาศคุณลักษณะ และเมธอดภายในคลาสอื่นได้ แบ่งได้เป็น 2 ประเภท</p>
+                        <ol>
+                            <li>คลาสภายในที่อยู่ภายในคลาสโดยตรง</li>
+                            <li>คลาสภายในที่อยู่ภายในเมธอด ( ทางอ้อม )</li>
+                        </ol>
+                        <p id="indent">โดยคลาสภายในนั้นจะมีการ<b>จัดกลุ่ม</b>คลาสโดยที่ไม่ให้เข้าถึงได้โดยตรง
+                            แต่สามารถ<b>เรียกใช้คุณลักษณะ</b>หรือเมธอดที่อยู่ภายนอกได้โดยตรง</p>
+                        <h3>คลาสภายในที่อยู่ภายในคลาสโดยตรง</h3>
+                        <p id="indent">การประกาศคลาสภายในคลาสอื่นที่เรียกว่า <b>คลาสภายนอก ( Outer Class )</b>
+                            สามารถที่จะเรียกใช้คุณลักษณะ
+                            และเมธอดของคลาสภายในได้ โดยการสร้างอ็อปเจ็กต์ของคลาสภายในนอกคลาสภายนอก จะต้องทำการสร้าง
+                            อ็อปเจ็กต์ของคลาสภายนอกก่อน แล้วจึงสร้างอ็อบเจ็กต์ของคลาสภายในได้</p>
+                        <div class="example">
+                            &nbsp;public class Outer {<br>
+                            &emsp;public void method1() {<br>
+                            &emsp;&emsp;Inner in1 = new Inner();<br>
+                            &emsp;&emsp;in1.method2();<br>
+                            &emsp;}<br>
+                            &emsp;public class Inner {<br>
+                            &emsp;&nbsp;public void method2() {<br>
+                            &emsp;&emsp;&nbsp;System.out.println("Inner Demo");<br>
+                            &emsp;}<br>
+                            &emsp;}<br>
+                            &emsp;}<br>
+                            &nbsp;public class InnerDemo {<br>
+                            &emsp;public static void main(String args[]) {<br>
+                            &emsp;&emsp;Outer.Inner in2 = new Outer().new Inner();<br>
+                            &emsp;&emsp;in2.method2();<br>
+                            &emsp;}<br>
+                            &nbsp;}
+                        </div>
+                        <br>
+                        <p id="indent">จากโปรแกรมข้างต้นจะสังเกตได้ว่า in2
+                            นั้นมีการสร้างอ็อปเจ็กต์โดยการเรียกคลาสภายนอกก่อนจึงเข้าไปเรียกคลาสภายในได้ตามลำดับ
+                            อย่างตัวอย่างก็จะเห็นได้ว่า มีการเรียกใช้คลาสภายใน โดยผ่านเครื่องหมาย <b>.</b> นั่นเอง</p>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <h3>คลาสภายในที่อยู่ภายในเมธอด</h3>
+                        <p id="indent">มี Access modifier เป็น default เท่านั้น
+                            และจะไม่สามารถที่จะสร้างที่จะสร้างอ็อบเจ็กต์ของคลาสภายในประเภทนี้นอกเมธอดที่ประกาศคลาสได้
+                            แต่จะสามารถกำหนด final และ abstract ได้
+                        </p>
+                        <p id="indent">สามารถเรียกใช้ตัวแปรภายในของเมธอดได้ในกรณีที่ตัวแปรนั้นประกาศเป็น <b>final</b>
+                            เท่านั้น</p>
+                        <h4>คุณสมบัติที่สำคัญอื่นๆ ของคลาสภายใน</h4>
+                        <ul>
+                            <li>คลาสภายในอาจะเป็นแบบ abstract หรือ interface ได้</li>
+                            <li>คลาสภายในไม่สามารถที่ประกาศให้มีคุณลักษณะหรือเมธอดเป็นแบบ static ได้
+                                ยกเว้นแต่คลาสภายในจะเป็นคลาสแบบ static</li>
+                            <div class="text-center example">Outer.Inner in3 = Outer.new Inner();</div>
+                            <br>
+                            <li>คลาสภายในสามารถที่จะใช้ตัวแปรที่เป็นคุณลักษณะของคลาส
+                                หรือคุณลักษณะของอ็อบเจกต์ของคลาสภายนอกได้</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson5/quiz5-3.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson5/lesson5-4.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson5/quiz5-3.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson5/lesson5-4.html';">
+                        กลับ</div>
                 </div>
             </div>
         </div>

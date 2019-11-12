@@ -31,19 +31,17 @@
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        <p>
+                        <p id="indent">
                             จากบทก่อนหน้านู้นนนน ที่เราได้เรียนรู้เกี่ยวกับพื้นฐานของคลาสไปแล้ว
-                            ในบทนี้เราก็จะมาเรียนรู้เกี่ยวกับ คลาสไม่สมบูรณ์ ที่เป็นประเภทหนึ่งของคลาสกัน</p>
-                        <p>
+                            ในบทนี้เราก็จะมาเรียนรู้เกี่ยวกับ <b>คลาสไม่สมบูรณ์</b> ที่เป็นประเภทหนึ่งของคลาสกัน</p>
+                        <p id="indent">
                             ซึ่งคลาสไม่สมบูรณ์เป็นคลาสที่ไม่สามารถระบุการกระทำ หรือเมธอด ให้ชัดเจนได้
                             โดยจะมีเมธอดที่ยังไม่สมบูรณ์อย่างน้อยหนึ่งเมธอดอยู่ในคลาส โดยมีรูปแบบของเมธอด ดังนี้</p>
-                        <p>
-                            Modifier abstract return_type methodName([arguments]);
-                            โดยจะถูกกำหนดมาเพื่อให้คลาสอื่นสืบทอด
+                        <div class="text-center example">Modifier abstract return_type methodName([arguments]);</div>
+                            <br><p id="indent">
+                            โดยจะถูกกำหนดมาเพื่อให้<b>คลาสอื่นสืบทอด</b>
                             โดยคลาสที่มาสืบทอดจะต้องกำหนดบล็อกคำสั่งในเมธอดที่ยังไม่สมบูรณ์ ( บังคับ )</p>
-                        <p>
-
-                            นอกจากนี้ไม่สามารถสร้างอ็อบเจ็กต์ของคลาสแบบ abstract ได้</p>
+                        <p>นอกจากนี้<b>ไม่สามารถ</b>สร้างอ็อบเจ็กต์ของคลาสแบบ abstract ได้</p>
                         <div class="example">
                             &emsp;public abstract class Student { <br>
                             &emsp;&emsp;protected String id; <br>
@@ -59,11 +57,10 @@
 
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <p>จากโปรแกรมข้างต้นจะเห็นได้ว่า มีคลาสไม่สมบูรณ์อยู่นั่นก็คือ public abstract void
+                        <p id="indent">จากโปรแกรมข้างต้นจะเห็นได้ว่า มีคลาสไม่สมบูรณ์อยู่นั่นก็คือ</b> public abstract void
                             showDetails();
-                            ซึ่งหน้าที่ของเราก็คือจะต้องทำให้มันสมบูรณ์ก่อนที่จะนำไปใช้งาน!</p>
+                            ซึ่งหน้าที่ของเราก็คือจะต้องทำให้มันสมบูรณ์<b>ก่อน</b>ที่จะนำไปใช้งาน!</p>
                         <div class="example">
-
                             &emsp;public class FullTimeStudent extends Student { <br>
                             &emsp;&emsp;private int credit; <br>
                             &emsp;&emsp;private final int MAX_YEAR = 4; <br>
@@ -82,7 +79,7 @@
                             &emsp;&emsp;&emsp;p1.showDetails(); <br>
                             &emsp;&emsp;} <br>
                             &emsp;}</div> <br>
-                        <p>
+                        <p id="indent">
                             จะทำให้เห็นได้ว่าตอนนี้คลาสของเราก็มีความสมบูรณ์แล้ว เนื่องจากในคลาส FulltimeStudent
                             ได้ทำให้เมธอด showDetails() ที่ไม่สมบูรณ์ในคลาส Student สมบูรณ์ จึงทำให้สามารถใช้งานได้เลย!
                             โดยผลลัพธ์ที่ออกมาก็จะเป็นดังนี้</p>
