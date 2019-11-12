@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../allLesson.css">
+    <title>Study Planet Lesson 5 - Page 1</title>
+</head>
+
+<body>
+    <nav class=" navbar-light m-0 p-0">
+        <div class="container-fluid">
+            <div class="row p-1">
+                <div class="col-12">
+                    <div id="lognout" class="float-right border border-secondary">Log out</div>
+                    <h5 class="float-right">Hello! , <mark>username</mark></h5>
+                </div>
+            </div>
+            <div class="row text-center p-1">
+                <div id="head" class="col">
+                    ตอนที่ 5 : คีย์เวิร์ด static
+                </div>
+            </div>
+            <div class="row">
+                <div id="content" class="row">
+                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
+                    <div id="left" class="col-12 col-sm-6">
+                        <p>&emsp;ใช้สำหรับการกำหนดคุณลักษณะ หรือเมธอดที่ใช้งานร่วมกันในทุกวัตถุ
+                            ซึ่งสามารถเรียกใช้งานได้โดยไม่จำเป็นต้องสร้างวัตถุขึ้นมาก่อน</p>
+                        <div class="example">
+                            &emsp;public static int age;</div>
+                        <p>แต่ทว่าเมธอดโดยทั่วไปนั้น จะเป็น Modifier แบบ non-static</p>
+
+                        <p>เมธอดที่มี Modifier เป็นแบบ static จะสามารถถูกเรียกใช้งาน
+                            โดยใช้ชื่อคลาสได้เลยไม่จำเป็นต้องสร้างอ็อปเจ็กต์ของคลาสนั้นขึ้นมาก่อน
+                            โดยมีรูปแบบการเรียกใช้งานดังนี้</p>
+                        <div class="example">
+                            &emsp;className.methodName();</div>
+                        <ol>
+                            <li>แอททริบิวท์แบบ static ส่วนมากจะใช้สำหรับเป็นค่าคงที่ให้ทุกคลาสเห็นและสามารถใช้งานได้
+                                โดยส่วนใหญ่จะมีรูปแบบการประกาศ ดังนี้ </li>
+                            <div class="example">
+                                public static final type ATTRIBUTE_NAME;</div>
+                            <li>
+                                เมธอดแบบ static ไม่สามารถ overridden ได้แต่ สามารถ overloaded ได้เพื่อที่จะนำไปแก้ปัญหา
+                                static
+                                binding</li>
+                            <li>
+                                ถูกออกแบบมาเพื่ออยู่บนพื้นฐานในการแชร์ทรัพยากรร่วมกันระหว่างวัตถุที่สร้างมาจากคลาสเดียวกัน</li>
+                        </ol>
+                    </div>
+                    <div id="right" class="col-12 col-sm-6">
+                        <h2>Static Initializer</h2>
+
+                        <p>เป็นบล็อกในคลาสใดๆที่อยู่นอกเมธอด และมีคีย์เวิร์ด static เพื่อนิยมให้เป็นบล็อกแบบ static</p>
+<div class="example">
+                        static {
+                        //command
+                        }</div>
+                        <p>
+                        สามารถเรียกใช้ได้เพียงครั้งเดียวเมื่อ JVM โหลดคลาสดังกล่าวขึ้นมา โดยจะใช้ในการดีบักโปรแกรม
+                        หรือใช้ในกรณีที่ต้องการสร้างอ็อกเจ็กต์ของคลาสขึ้นโดยอัตโนมัติ</p>
+<p>
+                        นอกจากนี้ สามารถที่จะกำหนดบล็อกแบบ static ได้มากกว่าหนึ่งบล็อก โดยการทำงานจะถูกเรียงจากบนลงล่าง</p>
+<div class="example">
+                        &emsp;public class TestStaticBlock { <br>
+                            &emsp;&emsp;static int x=5; <br>
+                            &emsp;&emsp;static { <br>
+                                &emsp;&emsp;&emsp;x += 1; <br>
+                                &emsp;&emsp;} <br>
+
+                                &emsp;&emsp;public static void main(String args[]) { <br>
+                                    &emsp;&emsp;&emsp;System.out.println("x = "+x); <br>
+                                    &emsp;&emsp;} <br>
+                                    &emsp;&emsp;static { <br>
+                                        &emsp;&emsp;&emsp;x /= 2; <br>
+                                        &emsp;&emsp;} <br>
+                                        &emsp;}</div><p>
+                        จากโปรแกรมดังกล่าวจะเห็นได้ว่า จะทำการเข้าไปทำงานแต่ละบล็อกของ static
+                        ให้เสร็จก่อนที่จะไปทำงานในส่วนอื่น ลองเดากันเล่นๆ ว่าผลลัพธ์ที่ได้จะออกมาเป็นเท่าไรกัน
+                        เดี๋ยวจะแอบไปเฉลยที่หลังนะ อิอิ</p>
+                    </div>
+                </div>
+            </div>
+            <div id="buttonrow" class="row">
+                <div class="col-12">
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson5/quiz5-1.html';">ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page1/5/Page1.html';">กลับ</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
