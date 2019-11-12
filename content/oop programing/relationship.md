@@ -34,7 +34,7 @@ public class Account extends Object {
 ```java
 super.methodName([arguements])
 ```
-โดยจะทำกล่าวถึงคีย์เวิร์ด super รวมไปถึงเมธอด `toString()` และ `equals (Object o)`
+โดยจะทำกล่าวถึงคีย์เวิร์ด super รวมไปถึงเมธอด `toString()` และ `equals (Object o)` ในภายหลัง
 
 ## Design Pattern : “The Law of Demeter”
 เป็นรูปแบบหนึ่งที่ช่วยในการออกแบบเชิงวัตถุไม่ผูกติดซึ่งกันและกันมากกันจนเกินไป อีกทั้งยังสามารถที่จะซ่อนข้อมูลจากวัตถุอื่นๆที่ไม่ควรทราบหรือไม่เกี่ยวข้องกัน
