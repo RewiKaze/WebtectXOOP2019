@@ -190,3 +190,20 @@ body {
     border-bottom: 2px solid #2224;
     color: #444;
 }
+
+@media (max-width: 610px){
+    body{
+        font-size: 3vw;
+    }
+    #Content2 {
+        padding-top: 5vh;
+        font-size: 3.5vw;
+    }
+    #Content1 {
+        padding-top: 5vh;
+        font-size: 3.5vw;
+    }
+    .desbutton{
+        font-size: 5vw;
+    }
+}
