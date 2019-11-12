@@ -34,12 +34,12 @@ body{
     width: 31vw;
     text-align: center;
     font-size: 2rem;
-    background-color: rgb(192, 255, 255);
+    background-color: rgb(176, 237, 238);
     position: relative;
 } 
 
 #start{
-    background-color: #afeeee;
+    background-color: rgb(255, 143, 159);
     transition: .3s;
     cursor:pointer;
 }

@@ -33,14 +33,15 @@ body{
     width: 31vw;
     text-align: center;
     font-size: 2rem;
-    background-color: rgb(255,179,170);
+    background-color: rgb(255, 228, 225);
     position: relative;
 } 
 
 #start{
-    background-color: #afeeee;
+    background-color: #ff8f9f;
     transition: .3s;
     cursor:pointer;
+    color: white;
 }
 .center{
     transform: translate(-50%,-50%);
@@ -105,7 +106,7 @@ body{
     left: 79%;
     height: 6%;
     width: 15%;
-    background-color: #afeeee;
+    background-color: #ff8f9f;
     cursor: pointer;
     transition: .3s;
 }
