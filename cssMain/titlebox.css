@@ -76,6 +76,7 @@
     font-size: 2rem;
     color: white;
     background-color: red;
+    transition: .3s;
 }
 #logoutbutton:hover{
     text-align: center;
@@ -96,4 +97,5 @@
     margin: 1vw;
     padding-top: 0vh;
     padding-left: 0vw;
+    transition: .3s;
 }

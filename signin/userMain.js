@@ -7,19 +7,19 @@ function showUserName() {
             if (info_user) {
                 document.getElementById("show-username").innerHTML = "Hello, <mark>" + user.displayName + "</mark>";
                 database.ref().child('users').orderByChild('email').equalTo(user.email).once("value", check => {
-                    if (check.exists()){
-                        database.ref("users/"+user.uid).once("value").then(function(snapshot){
+                    if (check.exists()) {
+                        database.ref("users/" + user.uid).once("value").then(function (snapshot) {
                             var progress = snapshot.val().lesson;
                             console.log(snapshot.val().lesson);
-                            document.getElementsByClassName("success")[0].style.width = (progress/5 * 100) + "%";
-                            document.getElementsByClassName("boxsuccess")[0].innerHTML = (progress/5 * 100) + "%";
+                            document.getElementsByClassName("success")[0].style.width = (progress / 5 * 100) + "%";
+                            document.getElementsByClassName("boxsuccess")[0].innerHTML = (progress / 5 * 100) + "%";
                         })
-                    }else{
+                    } else {
                         writeUserData(user.displayName, user.email, user.uid);
                         console.log("Write New Data");
                     }
                 })
-                
+
 
             }
         } else {
@@ -40,6 +40,28 @@ function writeUserData(name, email, userId) {
     document.getElementsByClassName("boxsuccess")[0].innerHTML = '0%';
 }
 
-function resume(){
-
+function resume() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            var database = firebase.database();
+            database.ref().child('users').orderByChild('email').equalTo(user.email).once("value", check => {
+                if (check.exists()) {
+                    database.ref("users/" + user.uid).once("value").then(function (snapshot) {
+                        var progress = snapshot.val().lesson;
+                        if (progress == 1) {
+                            window.location.href = "../Page1/2/Page1.html";
+                        } else if (progress == 2) {
+                            window.location.href = "../Page1/3/Page1.html";
+                        } else if (progress == 3) {
+                            window.location.href = "../Page1/4/Page1.html";
+                        } else if (progress == 4) {
+                            window.location.href = "../Page1/5/Page1.html";
+                        } else {
+                            window.location.href = "../Page1/1/Page1.html";
+                        }
+                    })
+                }
+            });
+        }
+    });
 }
