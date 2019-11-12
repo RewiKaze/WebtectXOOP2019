@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../allLesson.css">
     <link rel="icon" href="../../img/logo.ico" type="image/icon type">
+
     <title>Study Planet Lesson 3 - Page 3</title>
 </head>
 
@@ -24,28 +25,140 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 3 : คลาส ( Class )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
-                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
+                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">ในบทก่อนหน้านี้เราก็ได้เรียนรู้เกี่ยวกับความรู้พื้นฐานของคลาส
+                            รวมไปถึงการสร้างและประกาศวัตถุ
+                            ( Object ) กันไปแล้วนั้น ในบทนี้เราก็จะมาเจาะลึกเรื่องคลาสกันว่าภายในคลาสนั้น
+                            มีส่วนประกอบใดบ้าง รวมไปถึงการส่งค่า การรับค่า และการประกาศค่าเช่นกัน</p>
+                        <div class="example">
+                            &nbsp;private double realNum ; <br>
+                            &nbsp;private double imagNum ;<br>
+
+                            &nbsp;public ComplexNumber myAdd (ComplexNumber c1, ComplexNumber c2) {<br>
+                            &emsp;this.realNum = c1.realNum + c2.realNum;<br>
+                            &emsp;this.imagNum = c1.imagNum + c2.imagNum;<br>
+                            &emsp;return this;<br>
+                            &nbsp;}<br>
+                            &nbsp;public void myPrint(ComplexNumber c) {<br>
+                            &emsp;System.out.print(c.realNum + “ + ” + c.imagNum + “i”);<br>
+                            &nbsp;}<br>
+                        </div>
+                        <br>
+                        <p id="indent">จากโปรแกรมตัวอย่างข้างต้น เราจะสามารถทำการแบ่งออกเป็น 2 ส่วนหลักๆ ได้แก่
+                            <b>แอททริบิวท์ (
+                                Attribute )
+                                และเมธอด ( Method )</b></p>
+                        <h3>แอททริบิวท์ ( Attribute )</h3>
+                        <p id="indent">คือ สิ่งที่บ่งบอกถึงลักษณะต่างๆของวัตถุในคลาส เช่น สี ขนาด
+                            หรืออาจจะหมายถึงข้อมูลที่เก้บอยู่ในอ็อบเจ็กต์ ซึ่งสามารถแบ่งเป็นตัวแปร และค่าคงที่
+                            ตัวอย่างเช่น คลาส DOG จะประกอบไปด้วยแอทริบิวท์ต่างๆ ดังนี้</p>
+                        <div class="example">+ breed &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; :String<br>
+                            + size &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; :String<br>
+                            + age &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :int</div>
+                        <br>
+                        <p>สำหรับการประกาศแอททริบิวท์นั้นสามารถทำได้โดยโดยใช้รูปแบบ ดังนี้</p>
+                        <div class="text-center example">Modifier DataType AttributeName [ = value ];</div>
+                        <br>
+                        <ul>
+                            <li>
+                                Modifier คือ คีย์เวิร์ดของภาษาจาวาที่อธิบายคุณสมบัติต่างๆ ของตัวแปร หรือค่าคงที่</li>
+                            <li> DataType คือ ชนิดข้อมูลซึ่งอาจเป็น</li>
+                            <li> AttributeName คือ ชื่อของคุณลักษณะ
+                            </li>
+                        </ul>
+
+                        <div class="example">
+
+                            &nbsp;public String breed;<br>
+                            &nbsp;public String size;<br>
+                            &nbsp;public int age;
+                        </div>
+                        <br>
+                        <p>โดยสามารถทำการเรียกใช้งานแอททริบิวท์ได้ ดังนี้</p>
+                        <div class="text-center example">ref.attributeName</div>
+                        <p id="comment-code" class="text-center">ref คือตัวที่อ้างอิงถึงอ็อบเจกต์นั้นๆ</p>
+                        <h3>เมธอด ( Method )</h3>
+                        <p id="indent">คือ สิ่งที่อธิบายการทำงานของวัตถุในคลาส หรือ
+                            วิธีการหรือการกระทำที่นิยามอยู่ในคลาสหรืออ็อบเจกต์เพื่อใช้ในการจัดการกับคุณลักษณะของอ็อบเจ็กต์โดยปกติ
+                            ชื่อของเมธอดควรเป็นคํากริยา</p>
+                        <div class="example">&nbsp;+ eat()<br>
+                            &nbsp;+ sleep()<br>
+                            &nbsp;+ sit()<br>
+                            &nbsp;+ run()</div>
+                        <br>
+                        <p>สำหรับการประกาศเมธอดนั้นสามารถทำได้โดยโดยใช้รูปแบบ ดังนี้</p>
+                        <div class="example">&nbsp;Modifier DataType Method Name (input 1 - input N) <br>
+                            &nbsp;{<br>
+                            &emsp;//command<br>
+                            &nbsp;}</div>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p>ในการประกาศเมธอดนั้นสามารถประกาศได้ทั้งหมด 4 รูปแบบดังนี้</p>
+                        <ol>
+                            <li>รับค่า รีเทิร์นค่า</li>
+                            <li>รับค่า ไม่รีเทิร์นค่า</li>
+                            <li>ไม่รับค่า รีเทิร์นค่า</li>
+                            <li>ไม่รับค่า ไม่รีเทิร์นค่า</li>
+                        </ol>
+                        <p>สำหรับการเรียกใช้เมธอดนั้นสามารถทำได้โดยใช้รูปแบบ ดังนี้</p>
+                        <div class="text-center example">obj.methodName([arguments]);</div>
+                        <br>
+                        <p id="indent">โดยชนิดข้อมูลของ arguments ที่<b>ใช้ในการเรียกเมธอด</b>
+                            จะต้องสอดคล้องกันกับชนิดข้อมูลของ arguments
+                            ของเมธอด</p>
+                        <h4>การเรียกใช้เมธอดภายในคลาสเดียวกัน</h4>
+                        <ul>
+                            <li>บางกรณีไม่จำเป็นต้องสร้างอ็อบเจกต์ของคลาสขึ้นมาก่อน</li>
+                            <li>สามารถเรียกได้ทุกเมธอด</li>
+                        </ul>
+                        <h4>การเรียกใช้เมธอดภายในคลาสที่ต่างกัน</h4>
+                        <p id="indent">ต้องมีการสร้างอ็อบเจกต์ของคลาสที่มีเมธอดที่จะถุกเรียกใช้งานก่อนจึงจะสามารถเรียกใช้เมธอดได้
+                        </p>
+                        <h3>การส่งค่าเข้าไปในเมธอด ( Arguement )</h3>
+                        <p id="indent">พารามิเตอร์ ( parameter ) และ อาร์กิวเมนต์ ( arguement ) คือ
+                            ตัวแปรที่ใช้สำหรับในการรับและส่งค่าตัวแปรของระหว่างวัตถุ ผ่านทางเมธอดต่างๆ</p>
+                        <p id="indent">แต่จะใช้คำว่า parameter ก็ต่อเมื่อค่าตัวแปรเข้ามาในเมธอด ( อยู่ในเมธอด ) และใช้
+                            arguement
+                            ขณะที่ส่งค่าเข้าเมธอด ( เรียกใช้งาน )</p>
+                        <h4>การส่งค่าผ่าน arguement</h4>
+                        <p>สามารถแบ่งออกได้เป็น 2 ประเภทได้แก่</p>
+                        <ol>
+                            <li>
+                                ชนิดข้อมูลพื้นฐาน : สามารถส่งค่าคงที่ข้อมูล ตัวแปร และนิพจน์</li>
+                            <li> ชนิดข้อมูลวัตถุ/อ้างอิง : ส่งตำแหน่งอ้างอิงของอ็อบเจกต์ไปให้กับเมธอดที่ถูกเรียกใช้งาน
+                            </li>
+                        </ol>
+                        <p id="indent">เมธอดใดๆอาจมี arguement รับค่าได้มากกว่าหนึ่งตัว แต่การเรียกใช้เมธอดจะต้องส่ง
+                            arguement
+                            ที่มีข้อมูลชนิดที่สอดคล้องและมีจำนวนเท่ากัน หรือ ถ้าหากเป็นข้อมูล ชนิดต่างกัน
+                            จะต้องเป็นชนิดข้อมูลที่สามารถแปลงข้อมูลให้กว้างขึ้นได้โดยอัตโนมัติ</p>
+                        <h3>การรับค่าที่ส่งกลับมาจากเมธอด</h3>
+                        <p>เมธอดที่มีค่าที่จะส่งกลับมาจะต้องมีคำสั่ง <b>return</b> ซึ่งจะระบุค่าที่ส่งกลับมา</p>
+                        <h3>การเปลี่ยนแปลงค่าของ Arguement</h3>
+                        <p>สามารถแบ่งออกได้เป็น 2 ประเภทได้แก่</p>
+                        <ol>
+                            <li>ชนิดข้อมูลพื้นฐาน : หากเปลี่ยนแปลง จะ<b>ไม่มีผล</b>ทำให้ค่าของ arguement
+                                ที่ส่งไปเปลี่ยนค่า
+                            </li>
+                            <li>ชนิดข้อมูลวัตถุ/อ้างอิง :
+                                <b>มีผล</b>ทำให้ค่าของคุณลักษณะของอ็อบเจ็กต์ที่ส่งไปเกิดการเปลี่ยนแปลง</li>
+                        </ol>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson3/quiz3-3.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson3/lesson3-2.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson3/quiz3-3.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson3/lesson3-2.html';">
+                        กลับ</div>
                 </div>
             </div>
         </div>

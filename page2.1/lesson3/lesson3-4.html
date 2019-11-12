@@ -24,30 +24,48 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    บทที่ 1 : ชื่อหัวข้อ
+                    ตอนที่ 4 : แพคเก็จ ( Package )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
-                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../main/index.html';" alt="">
+                    <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">เป็นซอฟต์แวร์ที่ช่วยในการจัดการการพัฒนาของโปรแกรมขนาดใหญ่
+                            โดยจะเป็นที่รวมคลาสของภาษาจาวาในหลายๆคลาส ซึ่งอาจแบ่งได้เป็นแพคเก็จ และแพคเก็จย่อย
+                            รวมไปถึงจะเก็บไว้ในไดเร็กทอรี่ ( Directory ) ซึ่งจะเป็นชื่อของแพคเก็จ</p>
+                        <p id="indent">แพคเก็จจะมีได้เพียงคำสั่งเดียว โดยจะเป็นคำสั่งเเรกของโปรแกรม แต่ถ้าหากไม่มีคำสั่ง package
+                            คลาสจะถูกกำหนดไว้ในเเพคเก็จ default</p>
+                        <p id="indent">โดยแพคเก็จถูกออกแบบมาเพื่อจัดเก็บคลาสต่างๆ ให้มีความเป็นหมวดหมู่มากขึ้น
+                            ซึ่งสามารถทำกันแยกแต่ละคลาสเป็นคลาสย่อยๆได้ จะทำให้การทำงานของโปรแกรมไวขึ้น เนื่องจาก
+                            เรียกใช้เฉพาะคลาสที่ต้องการ ซึ่งแพคเก็จจะมีรูปแบบในการเรียกใช้ดังนี้</p>
+                        <div class="text-center example">package < package_name >[< sub_package_name >];</div>
+
                     </div>
                     <div id="right" class="col-12 col-sm-6">
+                        <p><i>ยกตัวอย่างเช่น</i> ถ้าหากชื่อคลาสของเราชื่อว่า <b>labExample</b></p>
+                        <div class="text-center example">package labExample;</div>
+                        <br><p id="indent">ซึ่งเราสามารถทำการเรียกใช้คลาสแพคเก็จโดยการ <b>import</b> เข้ามา แต่ทว่าจะอยู่ก่อนหน้าการประกาศคลาส
+                            ทำให้สามารถมีคำสั่ง import ได้หลายคำสั่งนั่นเอง
+                        </p>
+                        <p>โดยรูปแบบการเรียกใช้ <b>import</b> จะเป็นดังนี้</p>
                         <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                            import < package_name >[.< sub_package_name >].< Class_name>; </div>
+                        <p id="comment-code" class="text-center">import เฉพาะคลาสที่ต้องการใช้ในแพคเก็จ</p>
+                        <div class="text-center example">import < package_name >[.< sub_package_name >].*; </div> 
+                        <p id="comment-code" class="text-center">import ทุกคลาสในแพคเก็จนั้น</p>
                     </div>
                 </div>
             </div>
-            <div id="buttonrow" class="row">
-                <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson3/quiz3-4.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson3/lesson3-3.html';">กลับ</div>
-                </div>
+        </div>
+        <div id="buttonrow" class="row">
+            <div class="col-12">
+                <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson3/quiz3-4.html';">
+                    ไปต่อ!</div>
+                <div id="back" class="float-right" onclick="location.href='../../page2.1/lesson3/lesson3-3.html';">
+                    กลับ</div>
             </div>
+        </div>
         </div>
     </nav>
 </body>
