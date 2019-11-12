@@ -1,11 +1,40 @@
 <html lang="en">
 
 <head>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#avail]able-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+ 
+     <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+             apiKey: "AIzaSyA8cOLj9QR6rirG9SR6t03CTakVThbVaNc",
+             authDomain: "webtect-x-oop-2019-login.firebaseapp.com",
+             databaseURL: "https://webtect-x-oop-2019-login.firebaseio.com",
+             projectId: "webtect-x-oop-2019-login",
+             storageBucket: "webtect-x-oop-2019-login.appspot.com",
+             messagingSenderId: "582247773729",
+             appId: "1:582247773729:web:f60a0230ea9bc9ddb1d560",
+             measurementId: "G-4HQD4MWNY2"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+     </script>
+ 
+     <!--แอพFirebase-->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+     <!--อย่ามายุ่งของฉัน-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+    <script src="../backToMain.js"></script>
     <script src="script.js"></script>
     <title>Document</title>
 </head>
@@ -15,7 +44,7 @@
         <div id="db1" class="desbutton" onclick="description(1)"> <b class="center">Introduction</b></div>
         <div id="db2" class="desbutton" onclick="description(2)"> <b class="center">How to</b></div>
 
-            <div id="start" class="desbutton" onclick="location.href='../../page2.1/lesson1/lesson1-1.html';"><b class="center">Start Lesson</b> </div>
+            <div id="start" class="desbutton" onclick="start(1)"><b class="center">Start Lesson</b> </div>
      
         <div id="contentBox">
             <div id="Content1">
@@ -40,7 +69,7 @@
 
                 ถ้าพร้อมแล้วก็ไปเริ่มเรียนกันได้เลย !</div>
         </div>
-        <div id="backtomain" onclick="location.href='../../signin/signin2.html'"><b class="center">BACK TO MAIN</b></div>
+        <div id="backtomain" onclick="backToMain()"><b class="center">BACK TO MAIN</b></div>
         <div id="next" onclick="location.href='../2/Page1.html';"> <b class="center">NEXT</b></div>
     </div>
 </body>
