@@ -9,6 +9,8 @@ function register() {
 
         if (errorCode == 'auth/email-already-in-use') {
             alert("Email already registed");
+        }else{
+            alert(errorMessage);
         }
     }).then(function (cred) {
         if (cred) {
