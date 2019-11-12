@@ -32,34 +32,50 @@
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
 
-                        <p>ในบทเรียนนี้เราจะมาเรียนรู้เรื่องการมีได้หลากหลายรูปแบบ
+                        <p id="indent">ในบทเรียนนี้เราจะมาเรียนรู้เรื่องการมีได้หลากหลายรูปแบบ
                             ซึ่งถือว่าเป็นอีกคุณสมบัติของอ็อบเจ็กต์ของคลาสที่ต่างกันสามารถตอบสนองต่อเมธอดเดียวกันในวิธีการต่างกันได้
                             เช่น Overloaded, Overridden และการใช้ Dynamic Binding</p>
+                        <h3>Virtual Method Invocation</h3>
 
-                        <h2>Dynamic Binding</h2>
+                        <p id="indent">โปรแกรมภาษาจาวาจะพิจารณาเรียกใช้เมธอดจากชนิดของอ็อบเจ็กต์ที่สร้างขึ้น
+                            แต่<b>คอมไพเลอร์</b>ของภาษาจาวาจะ<b>ไม่อนุญาต</b>ให้เรียกใช้เมธอดใดๆก็ตามที่ไม่มีการประกาศ
+                            อยู่ในเมธอดของคลาสแม่ ที่กำหนดไว้</p>
+                        <div class="example">
+                            &nbsp;Student s1 = new GradStudent();<br>
+                            &nbsp;s1.getThesisTitle();
+                        </div><br>
+                        <p id="indent">จากตัวอย่างโปรแกรมด้านบนจะไม่สามารถรันโปรแกรมได้เนื่องจากเราไม่ได้ทำการประกาศเมธอด
+                            <i>getThesisTitle()</i> ไว้ในคลาส Student นั่นเอง</p>
+                        <h3>Dynamic Binding</h3>
 
-                        <p>คือ ชนิดข้อมูลของตัวแปรชนิดอ้างอิง โดยจะถูกกำหนดก็ต่อเมื่อโปรแกรมประมวลผล( runtime )
+                        <p id="indent">คือ ชนิดข้อมูลของตัวแปรชนิดอ้างอิง โดยจะถูกกำหนดก็ต่อเมื่อโปรแกรมประมวลผล( runtime )
                             ซึ่งเป็นหลักการของการสร้างวัตถุของคลาสที่มีการสิบทอดกันได้หลากหลายรูปแบบ</p>
                         <div class="example text-center">
                             Superclass obj;</div><br>
                         <p>โดยสามารถสร้างได้ 2 แบบได้แก่</p>
                         <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;obj = new Superclass();&nbsp;&nbsp;&nbsp;&nbsp; // คลาสนั้นเอง<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;obj = new Subclass();&nbsp;&nbsp;&nbsp;&nbsp; //
-                            คลาสอื่นๆที่เป็นคลาสลูก
+                            &nbsp;obj = new Superclass();&nbsp;&nbsp;&nbsp;&nbsp; ——  คลาสนั้นเอง<br>
+                            &nbsp;obj = new Subclass();&nbsp;&nbsp;&nbsp;&nbsp; —— คลาสอื่นๆที่เป็นคลาสลูก
                         </div><br>
-                        <h2>Overloaded</h2>
+                        <h3>Overloaded</h3>
 
-                        <p>เป็นการทำให้เมธอดที่มีชื่อเหมือนกัน ภายในคลาสเดียวกันมีการทำงาน อินพุท หรือ
+                        <p id="indent">เป็นการทำให้เมธอดที่มีชื่อเหมือนกัน <b>ภายในคลาสเดียวกัน</b>มีการทำงาน อินพุท หรือ
                             มีผลลัพธ์ที่แตกต่างกัน เพื่อรองรับอินพุทอย่างหลากหลาย ส่งผลให้เมธอดมีความ
                             ยืดหยุ่นในการใช้งานมากยิ่งขึ้น ยกตัวอย่างเช่น</p>
                         <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;public void setDetail ( String ID, String n ) {}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;public void setDatail ( String ID, double GPA ) {}
+                            &nbsp;public void setDetail ( String ID, String n ) {}<br>
+                            &nbsp;public void setDatail ( String ID, double GPA ) {}
                         </div> <br>
-                        <h2>Overridden</h2>
 
-                        <p>เป็นการอนุญาตให้คลาสลูก ( Sublclass ) สามารถเพิ่มเติมการทำงานจำเพาะเช่น
+
+
+                    </div>
+                    <div id="right" class="col-12 col-sm-6">
+
+
+                        <h3>Overridden</h3>
+
+                        <p id="indent">เป็นการอนุญาตให้คลาสลูก ( Sublclass ) สามารถเพิ่มเติมการทำงานจำเพาะเช่น
                             เพิ่มโค้ดในเมธอดที่คลาสแม่ ( Superclass ) มีไว้แล้วก็ได้ โดยมีเงื่อนไขดังนี้</p>
                         <ol>
                             <li>จำนวนและชนิดของ arguement จะต้องเหมือนเดิม</li>
@@ -67,68 +83,58 @@
                             <li>Access Modifier จะต้องมีระดับไม่ต่ำกว่าเดิม</li>
                         </ol>
                         <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String id;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String name;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected double gpa;<br>
+                            &nbsp;public class Student{<br>
+                            &emsp;protected String id;<br>
+                            &emsp;protected String name;<br>
+                            &emsp;protected double gpa;<br>
 
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void printDetail(){<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID
+                            &emsp;public void printDetail(){<br>
+                            &emsp;&emsp;System.out.println(“ID
                             ”+id);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name
+                            &emsp;&emsp;System.out.println(“Name
                             ”+name);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}</div>
-
-                    </div>
-                    <div id="right" class="col-12 col-sm-6">
-
-                        <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;public class GradStudent extends Student{<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String thesisTitle;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String getThesisTitle(){<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+                            &emsp;}<br>
+                            &nbsp;}<br>
+                            &nbsp;public class GradStudent extends Student {<br>
+                            &emsp;protected String thesisTitle;<br>
+                            &emsp;public String getThesisTitle(){<br>
+                                &emsp;&emsp;return
                             this.thesisTitle;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void printDetail(){<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID
+                            &emsp;&emsp;}<br>
+                            &emsp;public void printDetail(){<br>
+                            &emsp;&emsp;System.out.println(“ID
                             ”+id);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name
+                            &emsp;&emsp;System.out.println(“Name
                             ”+name);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“GPA
+                            &emsp;&emsp;System.out.println(“GPA
                             ”+gpa);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Title
+                            &emsp;&emsp;System.out.println(“Title
                             ”+thesisTitle);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}</div>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;จากโปรแกรมดังกล่าวข้างบน เราจะสามารถสังเกตเห็นได้ว่ามีการทำงานบางส่วนที่ซ้ำกัน นั่นก็คือ</p>
+                            &emsp;}<br>
+                            &nbsp;}
+                        </div>
+                        <br><p id="indent">จากโปรแกรมดังกล่าวข้างบน
+                            เราจะสามารถสังเกตเห็นได้ว่ามีการทำงานบางส่วนที่<b>ซ้ำกัน</b> นั่นก็คือ</p>
                         <div class="example">
                             &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“ID ”+id);<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(“Name ”+name);</div>
-                        <p>ทำให้เราสามารถที่จะนำหลักการ Overridden มาใช้ได้โดยเปลี่ยนส่วนที่ซ้ำกันในเมธอด printDetail()
+                            <br>
+                            <p id="indent">ทำให้เราสามารถที่จะนำหลักการ <b>Overridden</b> มาใช้ได้โดยเปลี่ยนส่วนที่ซ้ำกันในเมธอด
+                            printDetail()
                             ได้ดังนี้</p>
-                        <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;super.printDetail();</div>
-                        <p>ซึ่งเป็นการเรียกใช้เมธอด printDetail() จากคลาส Student ได้เนื่องจากเราได้ทำการ extends
+                        <div class="text-center example">
+                            super.printDetail();</div>
+                       <br> <p id="indent">ซึ่งเป็นการเรียกใช้เมธอด printDetail() จากคลาส Student ได้เนื่องจากเราได้ทำการ <b>extends</b>
                             คลาสมาแล้วจ้า ~</p>
 
-                        <h2>Virtual Method Invocation</h2>
 
-                        <p>โปรแกรมภาษาจาวาจะพิจารณาเรียกใช้เมธอดจากชนิดของอ็อบเจ็กต์ที่สร้างขึ้น
-                            แต่คอมไพเลอร์ของภาษาจาวาจะไม่อนุญาตให้เรียกใช้เมธอดใดๆก็ตามที่ไม่มีการประกาศ
-                            อยู่ในเมธอดของคลาสแม่ ที่กำหนดไว้</p>
-                        <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Student s1 = new GradStudent();<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;s1.getThesisTitle();
-                        </div><br>
-                        <p>จากตัวอย่างโปรแกรมด้านบนจะไม่สามารถรันโปรแกรมได้เนื่องจากเราไม่ได้ทำการประกาศเมธอด
-                            getThesisTitle() ไว้ในคลาส Student นั่นเอง</p>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-4.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-4.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson4-3.html';">กลับ</div>
                 </div>
             </div>

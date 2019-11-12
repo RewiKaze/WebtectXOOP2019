@@ -24,28 +24,67 @@
             </div>
             <div class="row text-center p-1">
                 <div id="head" class="col">
-                    ตอนที่ 3 : 
+                    ตอนที่ 3 : ความสัมพันธ์ ( Relationship )
                 </div>
             </div>
             <div class="row">
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <p id="indent">การพิจารณาการสืบทอดโดยอ้างอิงจากความสัมพันธ์สามารถแบ่งแยกความสัมพันธ์ออกได้เป็น 2 แบบได้แก่
+                        </p>
+                        <ol>
+                            <li>Is-a relationship : ความสัมพันธ์ที่สิ่งหนึ่ง<b>เป็น</b>อีกสิ่งหนึ่งด้วย เช่น
+                                คนเป็นสิ่งมีชีวิต
+                                หรือสามารถเปรียบเทียบได้ว่าเป็น</li>
+                            <div class="text-center example">การสืบทอด ( Inheritance )</div>
+                            <br><li>Has-a relationship คือ ความสัมพันธ์ที่สิ่งหนึ่ง<b>มี</b>อีกสิ่งหนึ่งด้วย เช่น คนมีจมูก
+                                หรือสามารถเปรียบเทียบได้ว่าเป็น</li>
+                            <div class="text-center example">อินเตอร์เฟส ( Interface )</div>
+                        </ol>
+                        <h3>คีย์เวิร์ด protected</h3>
+                        <p id="indent">คุณลักษณะ หรือเมธอดของคลาสแม่ ที่มี Modifier เป็นแบบ private จะทําให้คลาสลูก
+                            ไม่สามารถที่จะเรียกใช้ได้ แต่ในภาษาจาวามีการกําหนดให้มี Access Modifier ที่ชื่อ protected
+                            ซึ่งจะทําให้คลาสลูกสามารถเรียกใช้เมธอดหรือคุณลักษณะของคลาสแม่ได้</p>
+                        <p>โดยมีรูปแบบการใช้ดังนี้</p>
+                        <div class="text-center example">protected DataType VariableName</div>
+                        <br><h3>คีย์เวิร์ด super</h3>
+                        <p id="indent">เป็นคีย์เวิร์ดที่ใช้ในการอ้างอิงถึง superclass ( คลาสแม่ ) เพื่อที่จะเรียกใช้เมธอดของคลาสแม่
+                            โดยคีย์เวิร์ด super จะสามารถอ้างอิงได้
+                            เฉพาะเมธอด โดยมีรูปแบบคำสั่งดังนี้</p>
+                        <div class="text-center example">super.methodName([arguements])</div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <div class="text-center example">
-                            System.out.println("Hello World");
-                        </div>
-                        <p class="text-center">ตัวอย่างโค้ด</p>
-                        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                        <h3>คลาส Object</h3>
+                        <p id="indent">ภาษาจาวาได้กําหนดให้คลาสใดๆ สามารถจะสืบทอดคลาสอื่นได้เพียงคลาสเดียวเท่านั้น
+                            ดังนั้นถ้าไม่ได้สืบทอดจากคลาสใดเลยจะถือว่าสืบทอดจากคลาสที่ชื่อ Objects</p>
+                        <div class="example">&nbsp;public class Account {<br>
+                            &emsp;// code<br>
+                            &nbsp;}<br>
+                            &nbsp;public class Account extends Object {<br>
+                                &emsp;// code<br> 
+                                &nbsp;}</div>
+                        <br><p>โดยจะมีเมธอดที่สำคัญคือเมธอด toString() และ equals (Object o)</p>
+                       
+                       
+                        <h3> Design Pattern : “The Law of Demeter”</h3>
+                        <p id="indent">เป็นรูปแบบหนึ่งที่ช่วยในการออกแบบเชิงวัตถุไม่ผูกติดซึ่งกันและกันมากกันจนเกินไป
+                            อีกทั้งยังสามารถที่จะซ่อนข้อมูลจากวัตถุอื่นๆที่ไม่ควรทราบหรือไม่เกี่ยวข้องกัน</p>
+                        <p>โดยแต่ละ Object ควรเข้าถึงเพียง Object ที่มันรู้จักเท่านั้น ได้แก่</p>
+                        <ul>
+                            <li>การอ้างอิงตัวเอง เช่น การเรียกใช้ this เป็นต้น</li>
+                            <li> การอ้างอิงภายในตัวมันเอง เช่น การเรียกแอททริบิวท์ หรือเมธอด เป็นต้น</li>
+                            <li>การเรียกใช้อ็อปเจกต์ที่สัมพันธ์กัน ( โดยตรง ) เช่น การใช้พารามิเตอร์ที่ส่งเข้ามาในเมธอด เป็นต้น
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson1/quiz1-1.html';">ไปต่อ!</div>
-                    <div id="back" class="float-right" onclick="location.href='lesson1-2.html';">กลับ</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-3.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='lesson4-2.html';">กลับ</div>
                 </div>
             </div>
         </div>

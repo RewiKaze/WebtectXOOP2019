@@ -31,7 +31,8 @@
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        <p>คือ เมธอดที่ชื่อเหมือนกับคลาส ซึ่งใช้กำหนดค่าเริ่มต้นให้กับแอททริบิวท์หรือการทำงานเบื้องต้น</p>
+                        <p id="indent">คือ เมธอดที่ชื่อเหมือนกับคลาส
+                            ซึ่งใช้กำหนดค่าเริ่มต้นให้กับแอททริบิวท์หรือการทำงานเบื้องต้น</p>
                         <div class="example">
                             &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String id, name; <br>
@@ -68,31 +69,34 @@
                         </div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <b>Default constructor</b> จะถูกสร้างอัตโนมัติในกรณีที่คลาสนั้นไม่มี constructor แต่<b>ถ้ามีคอนสตรีคเตอร์อยู่แล้วก็จะไม่ถูกสร้างขึ้นนั่นเอง
-                        </b>
-                        <br><br>
-                        <p>โดยคอนสตรัคเตอร์จะมีหลักการทำงานของคอนสตรัคเตอร์ประกอบไปด้วย 4 ขั้นตอนดังนี้</p>
+                        <p id="indent"><b>Default constructor</b> จะถูกสร้างอัตโนมัติในกรณีที่คลาสนั้นไม่มี constructor
+                            แต่<b>ถ้ามีคอนสรัคเตอร์อยู่แล้วก็จะไม่ถูกสร้างขึ้นนั่นเอง
+                            </b>
+                        </p>
+
+                        <p id="indent">โดยคอนสตรัคเตอร์จะมีหลักการทำงานของคอนสตรัคเตอร์ประกอบไปด้วย 4 ขั้นตอนดังนี้</p>
                         <ol>
                             <li>จองพื้นที่หน่วยความจำให้กับวัตถุ</li>
-                            <br>
+                            
                             <div class="example">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;Student s3 = new Student("204", "Pamnana", "99.99"); <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;// จะทำการจองพื้นที่หน่วยความจำใน s3</div>
-                            <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Student s3 = new Student("204", "Pamnana", "99.99");</div>
+                            <p id="comment-code" class="text-center">จะทำการจองพื้นที่หน่วยความจำใน s3</p>
+                    
                             <li>กำหนดค่าเริ่มต้นให้กับแอททริบิวท์ของวัตถุ</li>
-                            <br>
+                            
+                            
                             <div class="example">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;// ทำการเรียกคอนสตรัคเตอร์มากำหนดค่าเริ่มต้น <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;id = "unknown"; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;name = "unknown"; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;gpa = 0.0;</div>
-                            <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;id = "unknown"; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;name = "unknown"; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;gpa = 0.0;</div>
+                            
+                            <p id="comment-code" class="text-center">ทำการเรียกคอนสตรัคเตอร์มากำหนดค่าเริ่มต้น</p>
                             <li>กำหนดค่าแอททริบิวท์ของวัตถุตามที่ได้ประกาศไว้</li>
-                            <br>
+                            
                             <div class="example">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;id = "204"; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;name = "Pamnana"; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;gpa = 99.99;</div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;id = "204"; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;name = "Pamnana"; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;gpa = 99.99;</div>
                             <br>
                             <li>เรียกใช้งานคอนสตรัคเตอร์</li>
                             <br>
@@ -102,7 +106,8 @@
             </div>
             <div id="buttonrow" class="row">
                 <div class="col-12">
-                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-5.html';">ไปต่อ!</div>
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-5.html';">
+                        ไปต่อ!</div>
                     <div id="back" class="float-right" onclick="location.href='lesson4-4.html';">กลับ</div>
                 </div>
             </div>

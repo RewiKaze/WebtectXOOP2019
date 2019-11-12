@@ -31,109 +31,125 @@
                 <div id="content" class="row">
                     <img id="logo" src="../../img/logo.png" onclick="location.href='../../signin/signin2.html';" alt="">
                     <div id="left" class="col-12 col-sm-6">
-                        <p>ในบทเรียนนี้เราจะมาเรียนรู้กันถึงเมธอดต่างๆ
+                        <p id="indent">ในบทเรียนนี้เราจะมาเรียนรู้กันถึงเมธอดต่างๆ
                             ที่ถ้าหากใช้งานเป็นก็จะสามารถทำให้การเขียนโปรแกรมเชิงวัตถุนั้น มองภาพรวมได้ง่ายขึ้น
-                            รวมไปถึงจะไปเรียนรู้กันว่า ตัวดำเนินการ instance of คืออะไร?
-                            ปิดท้ายด้วยคียเวิร์ดที่สำคัญอีกตัวอย่าง final อีกด้วย
+                            รวมไปถึงจะไปเรียนรู้กันว่า ตัวดำเนินการ <b>instance of</b> คืออะไร?
+                            ปิดท้ายด้วยคียเวิร์ดที่สำคัญอีกตัวอย่าง <b>final</b> อีกด้วย
                         </p>
-                        <h2>
-                            เมธอด toString()</h2>
-                        <p>
+                        <h3>ตัวดำเนินการ instance of</h3>
+
+                        <p id="indent">เป็นอีกหนึ่งตัวดำเนินการที่ใช้กับอ็อบเจ็กต์และคลาส
+                            เพื่อตรวจสอบว่าเป็นอ็อบเจ็กต์ของคลาสนั้นหรือไม่ ซึ่งจะให้ผลลัพธ์เป็นข้อมูลชนิด boolean</p>
+
+                        <div class="example">
+                            &nbsp;&nbsp;&nbsp;&nbsp;GradStudent s1 = new GradStudent(); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof GradStudent)</div>
+                        <p id="comment-code" class="text-center">จะได้ผลลัพธ์ออกมาเป็น true</p>
+                        <div class="text-center example">&nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof String)</div>
+
+                        <p id="comment-code" class="text-center">ไม่สามารถรันโปรแกรมได้ เนื่องจาก s1
+                            เป็นวัตถุไม่ใช่ตัวแปร String</p>
+                        <p id="indent">โดยตัวดำเนินการ instance of จะสามารถนำไปใช้ได้หลากหลายรูปแบบ
+                            ขึ้นอยู่กับว่าผู้เขียนต้องการจะนำไปประยุกต์กับอะไร เช่น คำสั่ง if-else</p> <br>
+                        <h3>
+                            เมธอด toString()</h3>
+                        <p id="indent">
                             ใช้สำหรับแปลงข้อมูลของแอททริบิวท์ในวัตถุนั้นๆ เป็น String ซึ่งจะต้อง Overridden เมธอด
                             toString() จากคลาส Object มาด้วย โดยเมื่อมีการเรียกใช้ วัตถุดังกล่าวจะถูกเรียก toString()
                             เองโดยอัตโนมัติ</p>
                         <div class="example">
-                            &nbsp;&nbsp;&nbsp;&nbsp;public class Student{<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String id; <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String name; <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (String ID, String n) { <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id = ID; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = n; <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String toString() { <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "ID is " + this.id + " Name is " + this.name; <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br><br>
+                            &nbsp;&nbsp;&nbsp;public class Student{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String id; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private String name; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Student (String ID, String n) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id = ID; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = n; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public String toString() { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "ID is " +
+                            this.id + " Name is " + this.name; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;} <br><br>
 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;public class TestStudent{ <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main( String[] args) { <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student s = new Student("00","Study Planet");<br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println( s.toString() );<br><br>
+                            &nbsp;&nbsp;&nbsp;public class TestStudent{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main( String[] args) {
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student s = new
+                            Student("00","Study Planet");<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(
+                            s.toString() );<br><br>
 
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;}
                         </div>
+                        <br>
                         <p>ผลลัพธ์ที่ได้จะออกมาเป็นดังนี้</p>
-                    <div class="example">
-                    ID is 00 Name is Study Planet
+                        <div class="text-center example">
+                            ID is 00 Name is Study Planet
+                        </div>
+
+                    </div>
+                    <div id="right" class="col-12 col-sm-6">
+
+                        <h3>
+                            เมธอด equals()</h3>
+                        <p id="indent">
+                            ใช้สำหรับสร้างเงื่อนไขการเปรียบเทียบ 2 วัตถุว่ามีความคล้ายกันหรือไม่</p>
+                        <div class="example">
+                            &nbsp;&nbsp;public class Student{<br>
+                            &emsp;&nbsp;private String id;<br>
+                            &emsp;&nbsp;private String name;<br>
+                            &emsp;&nbsp;public Student (String ID, String n) {<br>
+                            &emsp;&emsp;&nbsp;id = ID;<br>
+                            &emsp;&emsp;&nbsp;name = n;<br>
+                            &emsp;&nbsp;}<br>
+                            &nbsp;&nbsp;public boolean equals(Student s){<br>
+                            &nbsp;&emsp;&nbsp;return (this.id.equals(s.id));<br>
+                            &nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;public class Main{<br>
+                            &nbsp;&nbsp;&nbsp;public static void main( String[] args) {<br>
+                            &nbsp;&emsp;&nbsp;Student s1 = new Student("203", "Tara");<br>
+                            &nbsp;&emsp;&nbsp;Student s2 = new Student("203", "Bank");<br>
+                            &nbsp;&emsp;&nbsp;System.out.println(s1.equals(s2));<br>
+                            &nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;}</div><br>
+                        <p id="indent">
+                            จากโปรแกรมตัวอย่างจะเห็นได้ว่า เราได้ทำการเปรียบเทียบตัวแปร id ของทั้ง 2 วัตถุด้วยกัน
+                            โดยผ่านเมธอด equals() ซึ่งตัวเมธอดจะทำการ return ค่าออกมา เป็น boolean นั่นเอง</p>
+                        <p id="indent">โดย s1.equals(s2) เปรียบเสมือนว่าเป็นการโยนวัตถุ s2 เข้าไปเปรียบเทียบกับ s1 (
+                            เหมือนว่า s1
+                            เป็นตัวตั้ง )</p>
+                        <ul>
+                            <li>this.id ภายในเมธอด equals() จะหมายถึงวัตถุ s1</li>
+                            <li>s.id จะหมายถึงวัตถุของ s2 โดยผลลัพธ์ที่ออกมาได้ก็จะเป็น ดังนี้</li>
+                        </ul>
+                        <div class="text-center example">
+                            true</div>
+                        <p id="comment-code" class="text-center">เนื่องจาก id ของทั้ง 2 วัตถุเท่ากัน</p>
+                        
+
+                        <h3>คีย์เวิร์ด final</h3>
+
+                        <p id="indent">คีย์เวิร์ด final สามารถจะใช้ได้กับคลาส เมธอด และตัวแปร
+                            โดยถ้าหากอยู่ในตำแหน่งที่ต่างกัน
+                            ก็จะมีความหมายที่แตกต่างกัน ได้แก่</p>
+                        <ul>
+                            <li>คลาส : ทำให้คลาสอื่นไม่สามารถสืบทอดคลาสนี้ได้</li>
+                            <li>เมธอด : ไม่สามารถ overridden ได้</li>
+                            <li>ตัวแปร : เป็นค่าคงที่ โดยกำหนดค่าได้เพียงครั้งเดียวเท่านั้น</li>
+                        </ul>
+                        <div class="text-center example">final dataType VariableName</div>
+                    </div>
                 </div>
-                <br>
-                <h2>
-                    เมธอด equals()</h2>
-                <p>
-                    ใช้สำหรับสร้างเงื่อนไขการเปรียบเทียบ 2 วัตถุว่ามีความคล้ายกันหรือไม่</p>
-                <div class="example">
-                    public class Student{
-                    private String id;
-                    private String name;
-                    public Student (String ID, String n) {
-                    id = ID;
-                    name = n;
-                    }
-                    public boolean equals(Student s){
-                    return (this.id.equals(s.id));
-                    }
-                    }
-                    public class Main{
-                    public static void main( String[] args) {
-                    Student s1 = new Student("203", "Tara");
-                    Student s2 = new Student("203", "Bank");
-                    System.out.println(s1.equals(s2));
-                    }
-                    }</div><br>
-                <p>
-                    จากโปรแกรมตัวอย่างจะเห็นได้ว่า เราได้ทำการเปรียบเทียบตัวแปร id ของทั้ง 2 วัตถุด้วยกัน
-                    โดยผ่านเมธอด equals() ซึ่งตัวเมธอดจะทำการ return ค่าออกมา เป็น boolean นั่นเอง</p>
             </div>
-            <div id="right" class="col-12 col-sm-6">
-                <p>โดย s1.equals(s2) เปรียบเสมือนว่าเป็นการโยนวัตถุ s2 เข้าไปเปรียบเทียบกับ s1 ( เหมือนว่า s1
-                เป็นตัวตั้ง )</p>
-<ol>
-                <li>this.id ภายในเมธอด equals() จะหมายถึงวัตถุ s1</li>
-                <li>s.id จะหมายถึงวัตถุของ s2 โดยผลลัพธ์ที่ออกมาได้ก็จะเป็น ดังนี้</li>
-</ol><div class="example">
-        &nbsp;&nbsp;&nbsp;&nbsp;true&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // เนื่องจาก id ของทั้ง 2 วัตถุเท่ากัน</div>
-                <h2>ตัวดำเนินการ instance of</h2>
-
-                <p>เป็นอีกหนึ่งตัวดำเนินการที่ใช้กับอ็อบเจ็กต์และคลาส
-                เพื่อตรวจสอบว่าเป็นอ็อบเจ็กต์ของคลาสนั้นหรือไม่ ซึ่งจะให้ผลลัพธ์เป็นข้อมูลชนิด boolean</p> <br>
-<div class="example">
-        &nbsp;&nbsp;&nbsp;&nbsp;GradStudent s1 = new GradStudent(); <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof GradStudent) &nbsp;&nbsp;&nbsp;&nbsp;// จะได้ผลลัพธ์ออกมาเป็น true <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;(s1 instanceof String) &nbsp;&nbsp;&nbsp;&nbsp;// ไม่สามารถรันโปรแกรมได้ เนื่องจาก s1 เป็นวัตถุไม่ใช่ตัวแปร String</div><br>
-                <p>โดยตัวดำเนินการ instance of จะสามารถนำไปใช้ได้หลากหลายรูปแบบ
-                ขึ้นอยู่กับว่าผู้เขียนต้องการจะนำไปประยุกต์กับอะไร เช่น คำสั่ง if-else</p> <br>
-
-                <h2>คีย์เวิร์ด final</h2><br>
-
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;คีย์เวิร์ด final สามารถจะใช้ได้กับคลาส เมธอด และตัวแปร โดยถ้าหากอยู่ในตำแหน่งที่ต่างกัน
-                ก็จะมีความหมายที่แตกต่างกัน ได้แก่</p>
-<ol>
-                <li>คลาส : ทำให้คลาสอื่นไม่สามารถสืบทอดคลาสนี้ได้</li>
-                <li>เมธอด : ไม่สามารถ overridden ได้</li>
-                <li>ตัวแปร : เป็นค่าคงที่ โดยกำหนดค่าได้เพียงครั้งเดียวเท่านั้น</li>
-</ol>
-                <div class="example">
-                        &nbsp;&nbsp;&nbsp;&nbsp;final dataType VariableName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// final อยู่ที่ตำแหน่งตัวแปร</div>
+            <div id="buttonrow" class="row">
+                <div class="col-12">
+                    <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-7.html';">
+                        ไปต่อ!</div>
+                    <div id="back" class="float-right" onclick="location.href='lesson4-6.html';">กลับ</div>
+                </div>
             </div>
-        </div>
-        </div>
-        <div id="buttonrow" class="row">
-            <div class="col-12">
-                <div id="go" class="float-right" onclick="location.href='../../page2.2/lesson4/quiz4-7.html';">ไปต่อ!</div>
-                <div id="back" class="float-right" onclick="location.href='lesson4-6.html';">กลับ</div>
-            </div>
-        </div>
         </div>
     </nav>
 </body>
