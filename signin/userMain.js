@@ -48,13 +48,13 @@ function resume() {
                 if (check.exists()) {
                     database.ref("users/" + user.uid).once("value").then(function (snapshot) {
                         var progress = snapshot.val().lesson;
-                        if (progress == 1) {
+                        if (progress >= 1 & progress < 2) {
                             window.location.href = "../Page1/2/Page1.html";
-                        } else if (progress == 2) {
+                        } else if (progress >= 2 & progress < 3) {
                             window.location.href = "../Page1/3/Page1.html";
-                        } else if (progress == 3) {
+                        } else if (progress >= 3 & progress < 4) {
                             window.location.href = "../Page1/4/Page1.html";
-                        } else if (progress == 4) {
+                        } else if (progress >= 4 & progress < 5) {
                             window.location.href = "../Page1/5/Page1.html";
                         } else {
                             window.location.href = "../Page1/1/Page1.html";
