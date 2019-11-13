@@ -196,14 +196,17 @@ body {
         font-size: 3vw;
     }
     #Content2 {
-        padding-top: 5vh;
-        font-size: 3.5vw;
+        
+        padding-top: 0vh;
+        font-size: 3.2vw;
     }
     #Content1 {
-        padding-top: 5vh;
-        font-size: 3.5vw;
+    
+        padding-top: 0vh;
+        font-size: 3.2vw;
     }
     .desbutton{
         font-size: 5vw;
     }
+ 
 }
