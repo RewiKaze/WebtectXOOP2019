@@ -1,6 +1,35 @@
 <html lang="en">
 
 <head>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#avail]able-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+ 
+     <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+             apiKey: "AIzaSyA8cOLj9QR6rirG9SR6t03CTakVThbVaNc",
+             authDomain: "webtect-x-oop-2019-login.firebaseapp.com",
+             databaseURL: "https://webtect-x-oop-2019-login.firebaseio.com",
+             projectId: "webtect-x-oop-2019-login",
+             storageBucket: "webtect-x-oop-2019-login.appspot.com",
+             messagingSenderId: "582247773729",
+             appId: "1:582247773729:web:f60a0230ea9bc9ddb1d560",
+             measurementId: "G-4HQD4MWNY2"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+     </script>
+ 
+     <!--แอพFirebase-->
+     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+     <script src="../user.js"></script>
+     <!--อย่ามายุ่งของฉัน-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,13 +42,13 @@
     <title>Study Planet Lesson 4 - Page 6</title>
 </head>
 
-<body>
+<body onload="userdata()">
     <nav class=" navbar-light m-0 p-0">
         <div class="container-fluid">
             <div class="row p-1">
                 <div class="col-12">
                     <div id="lognout" class="float-right border border-secondary">Log out</div>
-                    <h5 class="float-right">Hello! , <mark>username</mark></h5>
+                    <h5 class="float-right" id="username">Hello! , <mark>--------</mark></h5>
                 </div>
             </div>
             <div class="row text-center p-1">
