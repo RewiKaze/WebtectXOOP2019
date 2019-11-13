@@ -1,6 +1,35 @@
 <html lang="en">
 
 <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#avail]able-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8cOLj9QR6rirG9SR6t03CTakVThbVaNc",
+            authDomain: "webtect-x-oop-2019-login.firebaseapp.com",
+            databaseURL: "https://webtect-x-oop-2019-login.firebaseio.com",
+            projectId: "webtect-x-oop-2019-login",
+            storageBucket: "webtect-x-oop-2019-login.appspot.com",
+            messagingSenderId: "582247773729",
+            appId: "1:582247773729:web:f60a0230ea9bc9ddb1d560",
+            measurementId: "G-4HQD4MWNY2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <!--แอพFirebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+    <script src="../user.js"></script>
+    <!--อย่ามายุ่งของฉัน-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,13 +42,13 @@
     <title>Study Planet Lesson 2 - Page 2</title>
 </head>
 
-<body>
+<body onload="userdata()">
     <nav class=" navbar-light m-0 p-0">
         <div class="container-fluid">
             <div class="row p-1">
                 <div class="col-12">
                     <div id="lognout" class="float-right border border-secondary">Log out</div>
-                    <h5 class="float-right">Hello! , <mark>username</mark></h5>
+                    <h5 class="float-right" id="username">Hello! , <mark>--------</mark></h5>
                 </div>
             </div>
             <div class="row text-center p-1">
@@ -96,11 +125,14 @@
                             &nbsp;&emsp;System.out.println("No");<br>
                             &nbsp;}<br>
                         </div>
-                        <br><p id="indent">นอกจากนี้เราสามารถเขียน Double Selection ในรูปแบบย่อได้
+                        <br>
+                        <p id="indent">นอกจากนี้เราสามารถเขียน Double Selection ในรูปแบบย่อได้
                             แต่ก็อย่าลืมที่จะสร้างตัวแปรมารองรับด้วย สามารถทำได้ดังนี้</p>
                         <div class="text-center example">ตัวแปร = เงื่อนไข ? a : b ;</div>
-                        <p class="text-center" id="comment-code">โดยที่ถ้าค่าความจริงเป็นจริง a ก็จะทำงาน แต่ถ้าหากค่าความจริงเป็นเท็จ b ก็จะทำงาน</p>
-                        <p id="indent">ถ้าหากลองนำตัวอย่างด้านบนมาเขียนในรูปย่อ Double Selection ก็จะสามารถเขียนได้ดังนี้</p>
+                        <p class="text-center" id="comment-code">โดยที่ถ้าค่าความจริงเป็นจริง a ก็จะทำงาน
+                            แต่ถ้าหากค่าความจริงเป็นเท็จ b ก็จะทำงาน</p>
+                        <p id="indent">ถ้าหากลองนำตัวอย่างด้านบนมาเขียนในรูปย่อ Double Selection
+                            ก็จะสามารถเขียนได้ดังนี้</p>
                         <div class="text-center example">String answer = (num%3 == 0) ? "Yes": "No"; </div>
 
                     </div>
@@ -146,7 +178,9 @@
                                 &nbsp; &emsp;System.out.println("Grade F");<br>
                                 &nbsp;}<br>
                         </div>
-                        <br><p id="indent">ดังตัวอย่างก็จะเห็นได้ว่าจะมีการตรวจสอบด้วยว่า คะแนนที่ผู้ใช้รับเข้ามามีความถูกต้องหรือไม่
+                        <br>
+                        <p id="indent">ดังตัวอย่างก็จะเห็นได้ว่าจะมีการตรวจสอบด้วยว่า
+                            คะแนนที่ผู้ใช้รับเข้ามามีความถูกต้องหรือไม่
                             ถ้าหากไม่ถูกต้องก็จะให้ทำการกรอกใหม่อีกครั้ง แต่ถ้าหากถูกต้องก็จะทำการแสดงผลออกทางจอภาพทันที
                             โดยที่จะไม่ทำการเช็คเงื่อนไขถัดมาต่อ
                         </p>
@@ -170,11 +204,14 @@
                             &nbsp;&emsp;default : statements N+1;<br>
                             &nbsp;}<br>
                         </div>
-                        <br><p id="indent">โดยที่นิพจน์ ( expression ) ต้องมีชนิดข้อมูลเป็น char, byte, short หรือ int เท่านั้น
+                        <br>
+                        <p id="indent">โดยที่นิพจน์ ( expression ) ต้องมีชนิดข้อมูลเป็น char, byte, short หรือ int
+                            เท่านั้น
                             นอกจากนี้ชนิดข้อมูลของนิพจน์และค่าที่ 1 ถึง N ต้องเป็นชนิดเดียวกันเท่านั้น
                             ถ้าค่าของนิพจน์ไม่ตรงกับค่าใดเลย จะทำชุดคำสั่งของ default ( default จะมีหรือไม่มีก็ได้ )
                         </p>
-                        <p id="indent">แต่คำสั่ง switch มักไม่ได้รับความนิยมมากนัก เนื่องจากมีความไม่ยืดหยุ่นเท่ากับ if-else
+                        <p id="indent">แต่คำสั่ง switch มักไม่ได้รับความนิยมมากนัก เนื่องจากมีความไม่ยืดหยุ่นเท่ากับ
+                            if-else
                             เพราะสามารถเปรียบเทียบค่าได้เพียงแค่ ==</p>
                     </div>
                 </div>
