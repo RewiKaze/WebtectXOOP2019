@@ -3,7 +3,7 @@ function backToMain() {
         if (user) {
             window.location.href = "../../signin/signin2.html";
         } else {
-            window.location.href = "../../main/index.html";
+            window.location.href = "../index.html";
         }
     });
 }

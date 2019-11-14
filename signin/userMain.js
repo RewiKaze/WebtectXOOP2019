@@ -24,7 +24,7 @@ function showUserName() {
             }
         } else {
             console.log("not signed");
-            window.location.href = "../main/index.html";
+            window.location.href = "../index.html";
         }
     });
 
