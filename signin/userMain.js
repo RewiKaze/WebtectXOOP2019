@@ -11,8 +11,8 @@ function showUserName() {
                         database.ref("users/" + user.uid).once("value").then(function (snapshot) {
                             var progress = snapshot.val().lesson;
                             console.log(snapshot.val().lesson);
-                            document.getElementsByClassName("success")[0].style.width = (progress / 5 * 100) + "%";
-                            document.getElementsByClassName("boxsuccess")[0].innerHTML = (progress / 5 * 100) + "%";
+                            document.getElementsByClassName("success")[0].style.width = parseInt(progress / 5 * 100) + "%";
+                            document.getElementsByClassName("boxsuccess")[0].innerHTML = parseInt(progress / 5 * 100) + "%";
                         })
                     } else {
                         writeUserData(user.displayName, user.email, user.uid);

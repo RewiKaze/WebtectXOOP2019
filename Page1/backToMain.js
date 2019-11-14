@@ -91,7 +91,7 @@ function start(x) {
                 }
             });
         } else {
-            window.location.href = "../../signin/signin.html";
+            checkPopup(1);
         }
 
 
@@ -110,27 +110,27 @@ function checkGoNextLesson(y) {
                             if (progress == 1) {
                                 window.location.href = "../2/Page1.html";
                             } else {
-                                alert("บทนี้มึงยังเรียนไม่ถึง ไอ้ควาย");
+                                checkPopup(3);
                             }
                         } else if (y == 2) {
                             if (progress == 2) {
                                 window.location.href = "../3/Page1.html";
                             } else {
-                                alert("บทนี้มึงยังเรียนไม่ถึง ไอ้ควาย");
+                                checkPopup(3);
                             }
                         }
                         else if (y == 3) {
                             if (progress == 3) {
                                 window.location.href = "../4/Page1.html";
                             } else {
-                                alert("บทนี้มึงยังเรียนไม่ถึง ไอ้ควาย");
+                                checkPopup(3);
                             }
                         }
                         else if (y == 4) {
                             if (progress == 4) {
                                 window.location.href = "../5/Page1.html";
                             } else {
-                                alert("บทนี้มึงยังเรียนไม่ถึง ไอ้ควาย");
+                                checkPopup(3);
                             }
                         }
 
@@ -138,6 +138,82 @@ function checkGoNextLesson(y) {
                     });
                 };
             })
+        }else{
+            if (y == 1){
+                window.location.href = "../2/Page1.html";
+            }else if(y==2){
+                window.location.href = "../3/Page1.html"
+            }else if(y==3){
+                window.location.href = "../4/Page1.html"
+            }else if(y==4){
+                window.location.href = "../5/Page1.html"
+            }
         }
     });
 }
+
+
+
+
+function checkPopup(whatPopUp) {
+    let bgpopup = document.createElement("div");
+    bgpopup.className = "background";
+    let popup = document.createElement("div");
+    popup.className = "popup";
+    let h1 = document.createElement("h1");
+    let icon = document.createElement("img");
+    let X = document.createElement("div");
+    X.className = "X";
+    icon.className = "icon";
+    X.innerHTML = "X";
+
+    if (whatPopUp == 1) {
+        popup.style.backgroundColor = "#afeeee";
+        h1.innerHTML = "กรุณาเข้าสู่ระบบก่อนเรียน";
+        icon.src = "../../img/icon/alarm (1).png";
+        X.onclick = function main() {
+           
+            window.location.href ="../../signin/signin.html";
+        };
+    }
+    else if (whatPopUp == 2) {
+        popup.style.backgroundColor = "#ffad5b";
+        h1.innerHTML = "มี e-mail นี้อยู่ในระบบแล้ว";
+        icon.src = "../../img/icon/notification.png";
+        X.onclick = function miss() {
+            let bgpopup = document.querySelector('.background');
+            bgpopup.remove();
+        };
+        
+    }
+    else if (whatPopUp == 3) {
+        popup.style.backgroundColor = "#ff7979";
+        h1.innerHTML = "คุณยังเรียนไม่ถึงบทเรียนนี้";
+        icon.src = "../../img/icon/warning (4).png";
+        X.onclick = function miss() {
+            let bgpopup = document.querySelector('.background');
+            bgpopup.remove();
+        };
+    }
+    else if (whatPopUp == 4) {
+        popup.style.backgroundColor = "#c0c0c0";
+        h1.innerHTML = "ดูเหมือนคุณจะจำรหัสผิดนะ";
+        icon.src = "../../img/icon/choice.png";
+        X.onclick = function miss() {
+            let bgpopup = document.querySelector('.background');
+            bgpopup.remove();
+        };
+    }
+    popup.appendChild(X);
+    popup.appendChild(icon);
+    popup.appendChild(h1);
+
+    bgpopup.appendChild(popup);
+    document.body.appendChild(bgpopup);
+}
+
+function miss() {
+    let bgpopup = document.querySelector('.background');
+    bgpopup.remove();
+}
+
