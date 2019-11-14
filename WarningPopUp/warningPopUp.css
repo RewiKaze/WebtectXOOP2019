@@ -49,6 +49,7 @@ body{
     color: white;
     padding-left: 1vw;
     padding-right: 1vw;
+    cursor: pointer;
 }
 
 /* correct and wrong ใช้backgroundเดียวกัน แผ่นดำๆข้างหลัง */

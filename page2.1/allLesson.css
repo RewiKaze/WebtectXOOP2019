@@ -42,6 +42,7 @@ h5{
     padding-right: 2vw;
     border-radius: 10px;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 #head{
@@ -54,6 +55,7 @@ h5{
     top: 13vh;
     left: 12vw;
     width: 20vw;
+    cursor: pointer;
 }
 
 #content{
