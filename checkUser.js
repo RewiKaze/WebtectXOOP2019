@@ -70,6 +70,18 @@ function checkLesson(x) {
                 }
             })
 
+        }else{
+            if(x==1){
+                window.location.href = "Page1/1/Page1.html";
+            }else if(x==2){
+                window.location.href = "Page1/2/Page1.html";
+            }else if (x==3){
+                window.location.href = "Page1/3/Page1.html";
+            }else if (x==4){
+                window.location.href = "Page1/4/Page1.html";
+            }else if(x==5){
+                window.location.href = "Page1/5/Page1.html";
+            }
         }
     })
 }
