@@ -136,3 +136,14 @@ function miss() {
     let bgpopup = document.querySelector('.background');
     bgpopup.remove();
 }
+
+
+function gostart(){
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            window.location.href = "signin/signin2.html";
+        }else{
+            window.location.href = "signin/signin.html";
+        }
+    })
+}
