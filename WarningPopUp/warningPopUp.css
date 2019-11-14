@@ -1,9 +1,9 @@
 body{
-    font-family: RSU;
+    font-family: "RSU";
 }
 
 @font-face{
-    font-family: RSU;
+    font-family: "RSU";
     src: url(../rsufont/RSU_BOLD.ttf) format(truetype);
 }
 /* wrong */
@@ -36,7 +36,6 @@ body{
 .icon{
     width: 20vw;
     margin: 2vw;
-    animation: imgPop 1s;
     margin-top: 10vh;
 }
 
@@ -65,10 +64,10 @@ body{
 }
 
 @keyframes correctPop{
-    from {height: 0vh;width: 0vw;color: rgb(0, 0, 0, 0.0);}
+    from {top: 150%;color: rgb(0, 0, 0, 0.0);}
     90% {color: rgb(0, 0, 0, 0.4);}
     91% {color: rgb(0, 0, 0, 0.1);}
-    to {height: 70%;width: 70%;color: white;}
+    to {top: 50%;color: white;}
 }
 
 @keyframes backgroundpop{
@@ -78,7 +77,7 @@ body{
 
 @keyframes imgPop{
     from {width: 0;}
-    90% {width: 0;}
+    
     to {width: 100;}
 }
 
