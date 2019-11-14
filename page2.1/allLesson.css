@@ -76,7 +76,7 @@ h5{
     
 }
 #indent {
-    text-indent: 5vw;
+    text-indent: 4vw;
 }
 
 #right{
@@ -141,7 +141,9 @@ h5{
 
 .example{
     padding: 0.8vh;
-    
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     background-color: #333;
     border-radius: 5px;
     color: white;
@@ -151,11 +153,15 @@ h5{
     color: #6a6a6a;
 }
 
-h2, h3 {
-    text-align: center;
-    background-color: #afeeee;
-}
 
+#topic {
+    font-size: 1.5rem;
+    padding: 0.8vh;
+    text-align: center;
+    background-color: #ffad5b;
+    color: white;
+    border-radius: 5px;
+}
 p {
     padding-top: 1rem;
 }
