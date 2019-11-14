@@ -87,6 +87,12 @@ h4{
     padding-right: 2vw;
     border-radius: 10px;
     font-size: 1.5rem;
+    cursor:pointer;
+    transition:.3s;
+
+}
+#lognout:hover{
+    background-color: rgb(255, 152, 178);
 }
 
 #buttonrow{
