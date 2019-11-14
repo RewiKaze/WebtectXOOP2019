@@ -10,7 +10,7 @@ body{
 
 @font-face{
     font-family: RSU;
-    src: url(../rsufont/RSU_BOLD.ttf) format(truetype);
+    src: url("../rsufont/RSU_light.ttf") format("truetype");
 }
 
 .container-fluid{
@@ -69,7 +69,7 @@ h5{
 
 #left{
     font-size: 1.2rem;
-
+    border-right: 1px dotted black;
     word-wrap:break-word;
     padding: 2vw;
     padding-right: 1vw;
@@ -141,4 +141,13 @@ h5{
 }
 #comment-code {
     color: #6a6a6a;
+}
+
+h2, h3 {
+    text-align: center;
+    background-color: #afeeee;
+}
+
+p {
+    padding-top: 1rem;
 }
