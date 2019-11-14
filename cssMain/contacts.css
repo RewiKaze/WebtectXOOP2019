@@ -29,6 +29,7 @@
 
 .col-3 img{
     width: 100%;
+    cursor: pointer;
 }
 
 /*css contact user 1*/
