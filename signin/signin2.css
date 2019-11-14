@@ -20,6 +20,7 @@ body{
 }
 
 #namePage{
+    cursor: pointer;
     font-size: 3rem;
     margin-left: 2.5%;
 }
