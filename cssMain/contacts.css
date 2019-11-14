@@ -9,12 +9,12 @@
     border-bottom-right-radius: 10px;
 }
 
-#contacts .col-4{
+#contacts .col-xl-4{
     padding-top: 4vh;
 }
 
 #contacts h2{
-    font-size: 5rem;
+    font-size: 4.5rem;
     text-align: center;
 }
 
@@ -23,11 +23,11 @@
     text-align: center;
 }
 
-.col-2{
+.col-3{
     padding: 0;
 }
 
-.col-2 img{
+.col-3 img{
     width: 100%;
 }
 

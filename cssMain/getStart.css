@@ -1,0 +1,37 @@
+#getStarted{
+    width: 96vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background-color: rgb(255, 173, 91);
+    text-align: center;
+    padding: 5vh;
+    color: white;
+}
+
+
+#getStarted h1{
+    font-size: 4rem;
+}
+
+#getStartButton{
+    transform: translate(-50%,0);
+    position: relative;
+    font-size: 3rem;
+    left: 50%;
+    width: 30vw;
+    
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+}
+
+#getStartButton:hover{
+    border-radius: 0px;
+}
+
+@media (max-width: 600px){
+    #getStartButton{
+        font-size: 8vw;
+        width: 40vw;
+    }
+}
