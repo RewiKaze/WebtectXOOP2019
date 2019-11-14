@@ -2,7 +2,7 @@ function checkUser() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             document.getElementById("signupbox").innerHTML = "<div id='logoutbutton' style='cursor:pointer;' onclick='logout()'>Sign Out</div>";
-            document.getElementById("signinbox").innerHTML = "<div id='username'>" + user.displayName + "</div>";
+            document.getElementById("signinbox").innerHTML = "<div id='username' onclick='window.location.href=\"signin/signin2.html\"'>" + user.displayName + "</div>";
             document.getElementById("signinbox").style.display = "";
             document.getElementById("signupbox").style.display = "";
         } else {
