@@ -75,7 +75,7 @@
     border-radius: 50px;
     font-size: 2rem;
     color: white;
-    background-color: red;
+    background-color:#fe8182;
     transition: .3s;
 }
 #logoutbutton:hover{
