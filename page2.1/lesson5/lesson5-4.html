@@ -67,31 +67,31 @@
                             &emsp;&emsp;// methods<br>
                             &nbsp;}<br>
                         </div>
-                        <br>
+                        
                         <p id="indent">อินเตอร์เฟสกำหนดขึ้นมาเพื่อให้คลาสอื่นนำไปใช้งาน ควรใช้คีย์เวิร์ด implements
                             ยกตัวอย่างเช่น</p>
                         <div class="text-center example">public class Ant implements Animals </div>
-                        <br>
+                        
                         <p id="indent">ซึ่งสามารถอาศัยหลักการของการมีได้หลายรูปแบบมาเรียกใช้เมธอดเหล่านั้นได้จากคลาสที่
                             implements อินเตอร์เฟส
                         </p>
                         <p id="indent">โดยภาษาจาวากำหนดให้คลาสใด
                             สามารถสืบทอดคลาสอื่นได้เพียงคลาสเดียวเท่านั้นแต่จะสามารถ
                             implements อินเตอร์เฟสได้หลายอินเตอร์เฟส</p>
-                        <h3>แอททริบิวท์และเมธอดของอินเตอร์เฟส</h3>
+                            <div id="topic"><b>แอททริบิวท์และเมธอดของอินเตอร์เฟส</b></div>
                         <p id="indent">เมธอดของอินเตอร์เฟสจะกำหนดให้เป็น public static final (เป็นค่าคงที่)
                             และเมธอดของอินเตอร์เฟสจะกำหนดให้เป็น public abstract</p>
                         <div class="example">&nbsp;interface Moveable {<br>
                             &emsp;public static final int AVERAGE_SPEED = 40;<br>
                             &emsp;public abstract void move();<br>
                             &nbsp;}</div>
-                        <br>
+                       
                         <p id="indent">อินเตอร์เฟส กับ อินเตอร์เฟสจะ extends กันและสามารถ extends ได้มากกว่า 1
                             อินเตอร์เฟส</p>
-                        <div class="example">&nbsp;public interface Hockey extends Sports, Events { <br>
+                        <div class="example">&nbsp;public interface Hockey extends Sports, Events {
                             &emsp;&emsp;// command<br>
                             &nbsp;}</div>
-                        <br>
+                       
                         <p id="indent">อินเตอร์เฟสไม่สามารถ implements คลาสได้ แต่ สามารถซ้อน ( extends ) กันเองได้</p>
 
                     </div>
@@ -122,7 +122,7 @@
                             &emsp;&nbsp;}<br>
                             &nbsp;}<br>
                         </div>
-                        <br>
+                        
                         <p id="indent">จากโปรแกรมข้างต้นจะเป็นตัวอย่างของการที่ทำให้ interface Student
                             สมบูรณ์ได้โดยผ่าน class ที่ชื่อว่า PartTimeStudent</p>
                     </div>
