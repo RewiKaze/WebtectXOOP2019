@@ -106,6 +106,10 @@ h5{
     font-size: 2rem;
     border-radius: 10px;
     margin-right: 2vw;
+    transition: .3s ;
+}
+#go:hover{
+    background-color: #d6ff97;
 }
 
 #back{
@@ -117,6 +121,10 @@ h5{
     background-color: rgb(255, 47, 99);
     font-size: 2rem;
     border-radius: 10px;
+    transition: .3s;
+}
+#back:hover{
+    background-color: rgb(255, 152, 178);
 }
 
 @media (max-width:776px){
