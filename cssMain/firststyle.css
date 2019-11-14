@@ -10,7 +10,7 @@ body{
 
 @font-face {
   font-family: "RSU";
-  src: url(rsufont/RSU_BOLD.ttf) format(truetype);
+  src: url(../rsufont/RSU_BOLD.ttf) format(truetype);
 }
 
 
