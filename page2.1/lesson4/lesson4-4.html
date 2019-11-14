@@ -64,7 +64,7 @@
                         <p id="indent">ในบทเรียนนี้เราจะมาเรียนรู้เรื่องการมีได้หลากหลายรูปแบบ
                             ซึ่งถือว่าเป็นอีกคุณสมบัติของอ็อบเจ็กต์ของคลาสที่ต่างกันสามารถตอบสนองต่อเมธอดเดียวกันในวิธีการต่างกันได้
                             เช่น Overloaded, Overridden และการใช้ Dynamic Binding</p>
-                        <h3>Virtual Method Invocation</h3>
+                        <div id="topic"><b>Virtual Method Invocation</b></div>
 
                         <p id="indent">โปรแกรมภาษาจาวาจะพิจารณาเรียกใช้เมธอดจากชนิดของอ็อบเจ็กต์ที่สร้างขึ้น
                             แต่<b>คอมไพเลอร์</b>ของภาษาจาวาจะ<b>ไม่อนุญาต</b>ให้เรียกใช้เมธอดใดๆก็ตามที่ไม่มีการประกาศ
@@ -75,18 +75,18 @@
                         </div><br>
                         <p id="indent">จากตัวอย่างโปรแกรมด้านบนจะไม่สามารถรันโปรแกรมได้เนื่องจากเราไม่ได้ทำการประกาศเมธอด
                             <i>getThesisTitle()</i> ไว้ในคลาส Student นั่นเอง</p>
-                        <h3>Dynamic Binding</h3>
+                        <div id="topic"><b>Dynamic Binding</b></div>
 
                         <p id="indent">คือ ชนิดข้อมูลของตัวแปรชนิดอ้างอิง โดยจะถูกกำหนดก็ต่อเมื่อโปรแกรมประมวลผล( runtime )
                             ซึ่งเป็นหลักการของการสร้างวัตถุของคลาสที่มีการสิบทอดกันได้หลากหลายรูปแบบ</p>
                         <div class="example text-center">
-                            Superclass obj;</div><br>
+                            Superclass obj;</div>
                         <p>โดยสามารถสร้างได้ 2 แบบได้แก่</p>
                         <div class="example">
                             &nbsp;obj = new Superclass();&nbsp;&nbsp;&nbsp;&nbsp; ——  คลาสนั้นเอง<br>
                             &nbsp;obj = new Subclass();&nbsp;&nbsp;&nbsp;&nbsp; —— คลาสอื่นๆที่เป็นคลาสลูก
                         </div><br>
-                        <h3>Overloaded</h3>
+                        <div id="topic"><b>Overloaded</b></div>
 
                         <p id="indent">เป็นการทำให้เมธอดที่มีชื่อเหมือนกัน <b>ภายในคลาสเดียวกัน</b>มีการทำงาน อินพุท หรือ
                             มีผลลัพธ์ที่แตกต่างกัน เพื่อรองรับอินพุทอย่างหลากหลาย ส่งผลให้เมธอดมีความ
@@ -102,7 +102,7 @@
                     <div id="right" class="col-12 col-sm-6">
 
 
-                        <h3>Overridden</h3>
+                        <div id="topic"><b>Overridden</b></div>
 
                         <p id="indent">เป็นการอนุญาตให้คลาสลูก ( Sublclass ) สามารถเพิ่มเติมการทำงานจำเพาะเช่น
                             เพิ่มโค้ดในเมธอดที่คลาสแม่ ( Superclass ) มีไว้แล้วก็ได้ โดยมีเงื่อนไขดังนี้</p>
