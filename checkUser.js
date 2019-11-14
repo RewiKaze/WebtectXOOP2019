@@ -43,27 +43,27 @@ function checkLesson(x) {
                             if (progress >= 1) {
                                 window.location.href = "Page1/2/Page1.html";
                             }else{
-                                alert("กรุณาทำบทก่อนหน้าให้เสร็จก่อน");
+                                checkPopup(1);
                             }
                         }else if (x == 3) {
                             if (progress >= 2) {
                                 window.location.href = "Page1/3/Page1.html";
                             }else{
-                                alert("กรุณาทำบทก่อนหน้าให้เสร็จก่อน");
+                                checkPopup(1);
                             }
                         }
                         else if (x == 4) {
                             if (progress >= 3) {
                                 window.location.href = "Page1/4/Page1.html";
                             }else{
-                                alert("กรุณาทำบทก่อนหน้าให้เสร็จก่อน");
+                                checkPopup(1);
                             }
                         }
                         else if (x == 5) {
                             if (progress >= 4) {
                                 window.location.href = "Page1/5/Page1.html";
                             }else{
-                                alert("กรุณาทำบทก่อนหน้าให้เสร็จก่อน");
+                                checkPopup(1);
                             }
                         }
                     })
@@ -88,7 +88,7 @@ function checkLesson(x) {
 
 
 //alert
-function check(whatPopUp) {
+function checkPopup(whatPopUp) {
     let bgpopup = document.createElement("div");
     bgpopup.className = "background";
     let popup = document.createElement("div");
