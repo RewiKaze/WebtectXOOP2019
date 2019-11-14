@@ -1,0 +1,167 @@
+#contacts{
+    height: auto;
+    width: 96vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background-color: #c0c0c0;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#contacts .col-4{
+    padding-top: 4vh;
+}
+
+#contacts h2{
+    font-size: 5rem;
+    text-align: center;
+}
+
+#contacts p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.col-2{
+    padding: 0;
+}
+
+.col-2 img{
+    width: 100%;
+}
+
+/*css contact user 1*/
+#member-1{
+    position: relative;
+    width:100%;
+}
+
+#member-1:hover #member-data-1{
+    opacity: 1;
+}
+
+#member-data-1{
+    opacity: 0;
+    transition: .3s ease;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:#afeeee;
+}
+
+
+#member-text-1{
+    text-align: center;
+    color :black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:1.25rem;
+    transform: translate(-50%, -50%);
+}
+
+/*user 2*/
+
+#member-2{
+    position: relative;
+    width:100%;
+}
+
+#member-2:hover #member-data-2{
+    opacity: 1;
+}
+
+#member-data-2{
+    opacity: 0;
+    transition: .3s ease;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:#ffffe0;
+}
+
+
+#member-text-2{
+    text-align: center;
+    color : black;
+    position: absolute;
+    top: 50%;
+    font-size:1.25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*user 3*/
+#member-3{
+    position: relative;
+    width:100%;
+}
+
+#member-3:hover #member-data-3{
+    opacity: 1;
+}
+
+#member-data-3{
+    opacity: 0;
+    transition: .3s ease;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(255,173,91);
+}
+
+
+#member-text-3{
+    text-align: center;
+    color :black;
+    position: absolute;
+    top: 50%;
+    font-size:1.25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*user4*/
+#member-4{
+    position: relative;
+    width:100%;
+}
+
+#member-4:hover #member-data-4{
+    opacity: 1;
+}
+
+#member-data-4{
+    opacity: 0;
+    transition: .3s ease;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255,228,225);
+}
+
+
+#member-text-4{
+    text-align: center;
+    color :black;
+    position: absolute;
+    top: 50%;
+    font-size:1.25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
