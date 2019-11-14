@@ -7,7 +7,7 @@ body{
     background-image: url(../img/bg-3.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: auto;
+    height: 100vh;
 }
   
 
@@ -16,8 +16,25 @@ body{
     src: url("../rsufont/RSU_BOLD.ttf") format("truetype");
 }
 
-.container{
+.r-1{
+    height: 5vh;
+}
+
+.r-2{
+    height: 78vh;
+}
+
+.r-3{
+    height: 5vh;
+}
+
+.r-4{
+    height: 10vh;
+}
+
+.container-fluid{
     margin: 0;
+    height: 100vh;
     
 }
 
@@ -37,8 +54,8 @@ body{
     border-radius: 20px;
     border-style: dashed;
     padding: 5vw;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
+    padding-top: 10vh;
+    padding-bottom: 0vh;
     margin: 5vw;
     margin-left: 15vw;
     margin-right: 15vw;
@@ -59,7 +76,7 @@ form{
     padding-right: 2vw;
     font-size: 6rem;
     position: absolute;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%,-60%);
     top: 0;
     left: 50%;
 }
@@ -78,6 +95,7 @@ h5{
 
 h4{
     font-size: 1.5rem;
+    margin: 0;
 }
 
 #lognout{
@@ -99,7 +117,7 @@ h4{
     width: 96vw;
     margin: 0;
     padding: 0;
-    padding-top: 1.5vh;
+    bottom: 0;
 }
 
 #buttonrow .col-12{
