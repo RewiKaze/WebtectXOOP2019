@@ -3,17 +3,6 @@ html{
 }
 
 
-body{
-    padding: 0%;
-    font-family: "RSU";
-}
-
-@font-face {
-  font-family: "RSU";
-  src: url(rsufont/RSU_BOLD.ttf) format(truetype);
-}
-
-
 .container{
     margin: 0 0;
     padding: 0 0;

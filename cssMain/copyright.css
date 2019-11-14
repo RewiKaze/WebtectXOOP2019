@@ -2,6 +2,10 @@
     width: 5%;
 }
 
+#copyright{
+    margin-left: 2vw;
+    width: 96vw;
+}
 
 
 @media (min-width:320px){
@@ -19,4 +23,13 @@
     #copyright{
         font-size: 2rem;
     }
+}
+
+.contactBox .row .col-3 img{
+    background-color: #ffffe0;
+}
+
+@keyframes slideUp{
+    from {height: 0;}
+    to {height: 20vh;}
 }

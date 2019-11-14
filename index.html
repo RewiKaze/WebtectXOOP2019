@@ -48,6 +48,16 @@
     <script src="jsMain/smile.js"></script>
     <script src="checkUser.js"></script>
     <title>Planet</title>
+    <style>
+        body{
+            font-family: 'RSU';
+            padding: 0%;
+        }
+        @font-face {
+            font-family: 'RSU';
+            src: url("rsufont/RSU_BOLD.ttf") format('truetype');
+        }
+    </style>
 </head>
 
 <body onload="checkUser()">
@@ -169,7 +179,7 @@
                 </h5>
                 <div class="row">
                     <div class="col-6">
-                        <div id="golesson" style="cursor:pointer;" onclick="location.href='Page1/1/Page1.html';">
+                        <div id="golesson" style="cursor:pointer;" onclick="checkLesson(1);">
                             เข้าสู่บทเรียน
                         </div>
                     </div>
@@ -198,7 +208,7 @@
                 </h5>
                 <div class="row">
                     <div class="col-6">
-                        <div id="golesson" style="cursor:pointer;" onclick="location.href='Page1/2/Page1.html';">
+                        <div id="golesson" style="cursor:pointer;" onclick="checkLesson(2);">
                             เข้าสู่บทเรียน
                         </div>
                     </div>
@@ -221,7 +231,7 @@
                 </h5>
                 <div class="row">
                     <div class="col-6">
-                        <div id="golesson" style="cursor:pointer;" onclick="location.href='Page1/3/Page1.html';">
+                        <div id="golesson" style="cursor:pointer;" onclick="checkLesson(3);">
                             เข้าสู่บทเรียน
                         </div>
                     </div>
@@ -251,7 +261,7 @@
                 </h5>
                 <div class="row">
                     <div class="col-6">
-                        <div id="golesson" style="cursor:pointer;" onclick="location.href='Page1/4/Page1.html';">
+                        <div id="golesson" style="cursor:pointer;" onclick="checkLesson(4);">
                             เข้าสู่บทเรียน
                         </div>
                     </div>
@@ -276,7 +286,7 @@
                 </h5>
                 <div class="row">
                     <div class="col-6">
-                        <div id="golesson" style="cursor:pointer;" onclick="location.href='Page1/5/Page1.html';">
+                        <div id="golesson" style="cursor:pointer;" onclick="checkLesson(5);">
                             เข้าสู่บทเรียน
                         </div>
                     </div>
@@ -296,7 +306,7 @@
         <!-- copyright -->
         <div id="copyright" class="row">
             <div class="col-12 text-right">
-                Copyright, Study Planet 2019 <img src="../img/icon/github (1).png" alt="">
+                Copyright, Study Planet 2019 <img src="../img/icon/github (1).png" onclick="location.href='https://github.com/RewiKaze/WebtectXOOP2019'" alt="">
             </div>
         </div>
         <!-- popup 1-1 -->
