@@ -13,6 +13,18 @@ function showUserName() {
                             console.log(snapshot.val().lesson);
                             document.getElementsByClassName("success")[0].style.width = parseInt(progress / 5 * 100) + "%";
                             document.getElementsByClassName("boxsuccess")[0].innerHTML = parseInt(progress / 5 * 100) + "%";
+                            var percent = parseInt(progress / 5 * 100);
+                            if(percent<20){
+                                document.getElementById("progress-text").innerHTML = "<center>ยินดีต้อนรับสมาชิกใหม่ มาเริ่มเรียนกันดีกว่า 🎉</center>"
+                            }else if(percent>=20 && percent < 50){
+                                document.getElementById("progress-text").innerHTML = "<center>เรียนได้นิดนึงแล้ว พยายามเข้า! 💪</center>";
+                            }else if (percent >= 50 && percent < 70){
+                                document.getElementById("progress-text").innerHTML = "<center>ถึงครึ่งทางแล้วนะ! มาเรียนกันต่อเลย! 👍</center>";
+                            }else if (percent >= 70 && percent < 100){
+                                document.getElementById("progress-text").innerHTML = "<center>ใกล้จบแล้วพยายามอีกนิดนึง!! 👏👏</center>";
+                            }else{
+                                document.getElementById("progress-text").innerHTML = "<center>🎊ยินดีด้วยคุณเรียนจบแล้ว🎊 <br> สามารถย้อนไปเรียนบทเก่าๆได้นะ</center>";
+                            }
                         })
                     } else {
                         writeUserData(user.displayName, user.email, user.uid);

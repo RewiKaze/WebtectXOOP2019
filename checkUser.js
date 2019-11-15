@@ -107,22 +107,22 @@ function checkPopup(whatPopUp) {
     if (whatPopUp == 1) {
         popup.style.backgroundColor = "#afeeee";
         h1.innerHTML = "กรุณาเข้าสู่ระบบก่อนเรียน";
-        icon.src = "../img/icon/alarm (1).png";
+        icon.src = "img/icon/alarm (1).png";
     }
     else if (whatPopUp == 2) {
         popup.style.backgroundColor = "#ffad5b";
         h1.innerHTML = "มี e-mail นี้อยู่ในระบบแล้ว";
-        icon.src = "../img/icon/notification.png";
+        icon.src = "img/icon/notification.png";
     }
     else if (whatPopUp == 3) {
         popup.style.backgroundColor = "#ff7979";
         h1.innerHTML = "คุณยังเรียนไม่ถึงบทเรียนนี้";
-        icon.src = "../img/icon/warning (4).png";
+        icon.src = "img/icon/warning (4).png";
     }
     else if (whatPopUp == 4) {
         popup.style.backgroundColor = "#c0c0c0";
         h1.innerHTML = "ดูเหมือนคุณจะจำรหัสผิดนะ";
-        icon.src = "../img/icon/choice.png";
+        icon.src = "img/icon/choice.png";
     }
     popup.appendChild(X);
     popup.appendChild(icon);
