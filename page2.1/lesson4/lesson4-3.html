@@ -71,20 +71,20 @@
                                 หรือสามารถเปรียบเทียบได้ว่าเป็น</li>
                             <div class="text-center example">อินเตอร์เฟส ( Interface )</div>
                         </ol>
-                        <h3>คีย์เวิร์ด protected</h3>
+                        <div id="topic"><b>คีย์เวิร์ด protected</b></div>
                         <p id="indent">คุณลักษณะ หรือเมธอดของคลาสแม่ ที่มี Modifier เป็นแบบ private จะทําให้คลาสลูก
                             ไม่สามารถที่จะเรียกใช้ได้ แต่ในภาษาจาวามีการกําหนดให้มี Access Modifier ที่ชื่อ protected
                             ซึ่งจะทําให้คลาสลูกสามารถเรียกใช้เมธอดหรือคุณลักษณะของคลาสแม่ได้</p>
                         <p>โดยมีรูปแบบการใช้ดังนี้</p>
                         <div class="text-center example">protected DataType VariableName</div>
-                        <br><h3>คีย์เวิร์ด super</h3>
+                        <br><div id="topic"><b>คีย์เวิร์ด super</b></div>
                         <p id="indent">เป็นคีย์เวิร์ดที่ใช้ในการอ้างอิงถึง superclass ( คลาสแม่ ) เพื่อที่จะเรียกใช้เมธอดของคลาสแม่
                             โดยคีย์เวิร์ด super จะสามารถอ้างอิงได้
                             เฉพาะเมธอด โดยมีรูปแบบคำสั่งดังนี้</p>
                         <div class="text-center example">super.methodName([arguements])</div>
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <h3>คลาส Object</h3>
+                        <div id="topic"><b>คลาส Object</b></div>
                         <p id="indent">ภาษาจาวาได้กําหนดให้คลาสใดๆ สามารถจะสืบทอดคลาสอื่นได้เพียงคลาสเดียวเท่านั้น
                             ดังนั้นถ้าไม่ได้สืบทอดจากคลาสใดเลยจะถือว่าสืบทอดจากคลาสที่ชื่อ Objects</p>
                         <div class="example">&nbsp;public class Account {<br>
@@ -93,10 +93,10 @@
                             &nbsp;public class Account extends Object {<br>
                                 &emsp;// code<br> 
                                 &nbsp;}</div>
-                        <br><p>โดยจะมีเมธอดที่สำคัญคือเมธอด toString() และ equals (Object o)</p>
+                        <p>โดยจะมีเมธอดที่สำคัญคือเมธอด toString() และ equals (Object o)</p>
                        
                        
-                        <h3> Design Pattern : “The Law of Demeter”</h3>
+                        <div id="topic"><b> Design Pattern : “The Law of Demeter”</b></div>
                         <p id="indent">เป็นรูปแบบหนึ่งที่ช่วยในการออกแบบเชิงวัตถุไม่ผูกติดซึ่งกันและกันมากกันจนเกินไป
                             อีกทั้งยังสามารถที่จะซ่อนข้อมูลจากวัตถุอื่นๆที่ไม่ควรทราบหรือไม่เกี่ยวข้องกัน</p>
                         <p>โดยแต่ละ Object ควรเข้าถึงเพียง Object ที่มันรู้จักเท่านั้น ได้แก่</p>

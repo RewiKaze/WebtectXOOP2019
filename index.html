@@ -48,10 +48,11 @@
     <link rel="icon" href="img/logo.ico" type="image/icon type">
     <link rel="stylesheet" href="cssMain/contacts.css">
     <link rel="stylesheet" href="cssMain/getStart.css">
+    
     <script src="jsMain/smile.js"></script>
     <script src="checkUser.js"></script>
 
-    <title>Planet</title>
+    <title>Study Planet</title>
     <style>
         body{
             font-family: 'RSU';
@@ -73,12 +74,10 @@
                 <p>Study Planet</p>
             </div>
             <div id="signinbox" style="display:none" class="col-md-2">
-                <div id="signinbutton" style="cursor:pointer;" onclick="window.location.href='../signin/signin.html'">
-                    Sign in</div>
+                <div id="signinbutton" style="cursor:pointer;" onclick="window.location.href='signin/signin.html'">Sign in</div>
             </div>
             <div id="signupbox" style="display:none" class="col-md-3">
-                <div id="signupbutton" style="cursor:pointer;" onclick="window.location.href='../signin/create1.html'">
-                    Sign up</div>
+                <div id="signupbutton" style="cursor:pointer;" onclick="window.location.href='signin/create1.html'">Sign up</div>
             </div>
         </div>
 
@@ -351,7 +350,7 @@
         <div id="copyright" class="row">
             <div class="col-12 text-right">
                 Copyright, Study Planet 2019 <img src="img/icon/github (1).png" onclick="location.href='https://github.com/RewiKaze/WebtectXOOP2019'"
-                    alt="">
+                    alt="" onmouseover="hovergit(this)" onmouseout="unhovergit(this)">
             </div>
         </div>
         <!-- popup 1-1 -->

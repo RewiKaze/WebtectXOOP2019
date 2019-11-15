@@ -70,7 +70,7 @@
                         <p id="indent">สามารถห่อหุ้มได้โดยการกำหนดให้ทุกแอททริบิวท์เป็น private
                             และทำการสร้างเมธอดเพื่อใช้ในการเข้าถึงเป็น public โดยเมธอดเหล่านั้นจะเรียกว่า set และ get
                         </p>
-                        <h3>Modifier</h3>
+                        <div id="topic"><b>Modifier</b></div>
                         <p id="indent">คือ ตัวกำหนดขอบเขตและสิทธิในการเข้าถึงคลาส แอททริบิวท์ และเมธอด
                             โดยสามารถแบ่งได้ทั้งหมด 4
                             ประเภท ได้แก่</p>
@@ -99,7 +99,7 @@
 
                     </div>
                     <div id="right" class="col-12 col-sm-6">
-                        <p>จากตัวอย่างข้างต้นจะแสดงให้เห็นถึงการเรียกใช้คลาส <i>Rectangle</i> แต่ทว่าผลลัพธ์ที่ได้จะออกมาเป็น
+                        <p id="indent">จากตัวอย่างข้างต้นจะแสดงให้เห็นถึงการเรียกใช้คลาส <i>Rectangle</i> แต่ทว่าผลลัพธ์ที่ได้จะออกมาเป็น
                             ดังนี้</p>
                         <div class="text-center example">TestPrivate.java:5: width has private access in Rectangle</div>
                         <br><p id="indent">เนื่องจาก การเรียกใช้ <b>rect.width = 10;</b> เป็นการเรียกใช้ตัวแปร<b> width </b>ซึ่งมีข้อแม้ว่า Modifier
@@ -107,14 +107,14 @@
                             ทำให้ไม่สามารถที่จะเรียกใช้ข้ามระหว่างคลาสได้</p>
                         <p id="indent">ซึ่งวิธีแก้ก็สามารถทำได้หลายแบบ แต่ในบทเรียนนี้เราจะมาสอนวิธีการใช้<b>เมธอดแบบ accesstor</b> กัน!
                         </p>
-                        <h3>Method ( set/get )</h3>
+                        <div id="topic"><b>Method ( set/get )</b></div>
                         <p id="indent">เมธอดแบบ accesstor สามารถแบ่งออกได้เป็น 2 ประเภทได้แก่ เมธอดแบบ setter และเมธอดแบบ getter</p>
-                        <h4>setter :</h4>
+                        <h4><b>setter :</b></h4>
                         <p>กำหนดค่าของคุณลักษณะ มักจะขึ้นต้นด้วยคำว่า set แล้วตามด้วยชื่อของคุณลักษณะ</p>
                         <div class="example">&nbsp;public void setAttributeName( dataType arg ) {<br>
                             &emsp;attributeName = arg;<br>
                             &nbsp;}</div>
-                        <br><h4>getter :</h4>
+                        <br><h4><b>getter :</b></h4>
                         <p>เรียกค่าของคุณลักษณะ มักจะขึ้นต้นด้วยคำว่า set แล้วตามด้วยชื่อของคุณลักษณะ</p>
                         <div class="example">&nbsp;public dataType getAttributeName() {<br>
                             &emsp;return attributeName;<br>

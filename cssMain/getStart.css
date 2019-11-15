@@ -27,6 +27,8 @@
 }
 
 #getStartButton:hover{
+    background-color: white;
+    color: rgb(255, 173, 91);
     border-radius: 0px;
 }
 
