@@ -33,6 +33,7 @@
     width: 100;
     margin: 2vw;
     animation: imgPop 1s;
+    cursor: pointer;
 }
 
 /* wrong */
@@ -66,6 +67,7 @@
     width: 100;
     margin: 2vw;
     animation: imgPop 1s;
+    cursor: pointer;
 }
 
 /* correct and wrong ใช้backgroundเดียวกัน แผ่นดำๆข้างหลัง */
