@@ -138,7 +138,7 @@ function updateScore(currentPage) {
                             });;
                         } else if (progress == 4.3 && currentPage == 5.4) {
                             database.ref("users/" + user.uid).update({ lesson: 5 }).then(function () {
-                                document.getElementById("play").onclick = function () { location.href = "../../signin/signin2.html" }
+                                document.getElementById("play").onclick = function () { location.href = "../../signin/signin2.html";console.log("Hello");}
                             });;
                         } else {
                             if (currentPage == 1.1) {
@@ -186,7 +186,7 @@ function updateScore(currentPage) {
                             }else if (currentPage == 5.3) {
                                 document.getElementById("play").onclick = function () { location.href = "../../page2.1/lesson5/lesson5-4.html" }
                             }else if (currentPage == 5.4) {
-                                document.getElementById("play").onclick = function () { location.href = "../../signin/signin2.html" }
+                                document.getElementById("play").onclick = function () { location.href = "../../signin/signin2.html";console.log("Hello"); }
                             }
                         }
                     })

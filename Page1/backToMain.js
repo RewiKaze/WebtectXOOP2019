@@ -107,27 +107,27 @@ function checkGoNextLesson(y) {
                     database.ref("users/" + user.uid).once("value").then(function (snapshot) {
                         var progress = snapshot.val().lesson;
                         if (y == 1) {
-                            if (progress == 1) {
+                            if (progress >= 1) {
                                 window.location.href = "../2/Page1.html";
                             } else {
                                 checkPopup(3);
                             }
                         } else if (y == 2) {
-                            if (progress == 2) {
+                            if (progress >= 2) {
                                 window.location.href = "../3/Page1.html";
                             } else {
                                 checkPopup(3);
                             }
                         }
                         else if (y == 3) {
-                            if (progress == 3) {
+                            if (progress >= 3) {
                                 window.location.href = "../4/Page1.html";
                             } else {
                                 checkPopup(3);
                             }
                         }
                         else if (y == 4) {
-                            if (progress == 4) {
+                            if (progress >= 4) {
                                 window.location.href = "../5/Page1.html";
                             } else {
                                 checkPopup(3);
