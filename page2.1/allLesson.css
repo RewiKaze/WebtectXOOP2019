@@ -10,7 +10,7 @@ body{
 
 @font-face{
     font-family: RSU;
-    src: url("../rsufont/RSU_light.ttf") format("truetype");
+    src: url("../rsufont/RSU_Regular.ttf") format("truetype");
 }
 
 .container-fluid{

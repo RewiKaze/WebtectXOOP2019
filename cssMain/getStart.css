@@ -6,6 +6,7 @@
     text-align: center;
     padding: 5vh;
     color: white;
+    transition: .3s;
 }
 
 
@@ -27,6 +28,8 @@
 }
 
 #getStartButton:hover{
+    background-color: white;
+    color: rgb(255, 173, 91);
     border-radius: 0px;
 }
 
